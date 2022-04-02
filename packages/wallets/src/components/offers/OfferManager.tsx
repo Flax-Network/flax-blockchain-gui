@@ -18,12 +18,12 @@ import {
   TableControlled,
   TooltipIcon,
   useOpenDialog,
-  chiaToMojo,
+  flaxToMojo,
   mojoToCATLocaleString,
   useShowSaveDialog,
   Tooltip,
-} from '@chia/core';
-import { OfferTradeRecord } from '@chia/api';
+} from '@flax/core';
+import { OfferTradeRecord } from '@flax/api';
 import fs from 'fs';
 import { Remote } from 'electron';
 import {
@@ -43,8 +43,8 @@ import {
   Typography
 } from '@material-ui/core';
 import { Cancel, GetApp as Download, Info, Reply as Share, Visibility } from '@material-ui/icons';
-import { Trade as TradeIcon } from '@chia/icons';
-import { useCancelOfferMutation, useGetOfferDataMutation, useGetWalletsQuery } from '@chia/api-react';
+import { Trade as TradeIcon } from '@flax/icons';
+import { useCancelOfferMutation, useGetOfferDataMutation, useGetWalletsQuery } from '@flax/api-react';
 import { colorForOfferState, displayStringForOfferState, formatAmountForWalletType, suggestedFilenameForOffer } from './utils';
 import useAssetIdName from '../../hooks/useAssetIdName';
 import useWalletOffers from '../../hooks/useWalletOffers';
@@ -84,11 +84,11 @@ function ConfirmOfferCancellation(props: ConfirmOfferCancellationProps) {
   }
 
   async function handleConfirm() {
-    const { fee: xchFee } = methods.getValues();
+    const { fee: xfxFee } = methods.getValues();
     var fee = 0;
 
     if (cancelWithTransaction) {
-      fee = Number.parseFloat(chiaToMojo(xchFee));
+      fee = Number.parseFloat(flaxToMojo(xfxFee));
     }
     onClose([true, { cancelWithTransaction, cancellationFee: fee }]);
   }
@@ -521,7 +521,7 @@ export function OfferManager() {
             <StyledTradeIcon color="primary" />
             <Typography variant="body1">
               <Trans>
-                Create an offer to exchange XCH or other tokens. View an offer to inspect and accept an offer made by another party.
+                Create an offer to exchange XFX or other tokens. View an offer to inspect and accept an offer made by another party.
               </Trans>
             </Typography>
             <Button onClick={handleCreateOffer} variant="contained" color="primary">

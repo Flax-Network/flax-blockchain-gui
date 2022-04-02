@@ -3,8 +3,8 @@ import { Trans } from '@lingui/macro';
 import { useForm } from 'react-hook-form';
 import { Alert } from '@material-ui/lab';
 import styled from 'styled-components';
-import { Flex, Form, TextField, Loading, fromBech32m } from '@chia/core';
-import { useSetRewardTargetsMutation, useGetRewardTargetsQuery } from '@chia/api-react';
+import { Flex, Form, TextField, Loading, fromBech32m } from '@flax/core';
+import { useSetRewardTargetsMutation, useGetRewardTargetsQuery } from '@flax/api-react';
 import {
   Button,
   Dialog,
@@ -175,7 +175,7 @@ export default function FarmManageFarmingRewards(props: Props) {
                   <Trans>
                     Note that this does not change your pooling payout
                     addresses. This only affects old format plots, and the
-                    0.25XCH reward for pooling plots.
+                    0.25XFX reward for pooling plots.
                   </Trans>
                 </Typography>
               </>

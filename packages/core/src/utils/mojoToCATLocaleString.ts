@@ -1,9 +1,9 @@
 import Big from 'big.js';
 import Unit from '../constants/Unit';
-import chiaFormatter from './chiaFormatter';
+import flaxFormatter from './flaxFormatter';
 
 export default function mojoToCATLocaleString(mojo: string | number | Big) {
-  return chiaFormatter(Number(mojo), Unit.MOJO)
+  return flaxFormatter(Number(mojo), Unit.MOJO)
     .to(Unit.CAT)
     .toLocaleString();
 }

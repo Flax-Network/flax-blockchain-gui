@@ -1,4 +1,4 @@
-import { type WalletType } from '@chia/api';
+import { type WalletType } from '@flax/api';
 
 type OfferRowData = {
   amount: number | string;

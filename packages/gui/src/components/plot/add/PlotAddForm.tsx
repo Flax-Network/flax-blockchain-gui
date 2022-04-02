@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router';
 import { t, Trans } from '@lingui/macro';
-import { defaultPlotter } from '@chia/api';
-import { useStartPlottingMutation, useCreateNewPoolWalletMutation } from '@chia/api-react';
+import { defaultPlotter } from '@flax/api';
+import { useStartPlottingMutation, useCreateNewPoolWalletMutation } from '@flax/api-react';
 import { ChevronRight as ChevronRightIcon } from '@material-ui/icons';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { useShowError, ButtonLoading, Flex, Form, FormBackButton, toBech32m } from '@chia/core';
+import { useShowError, ButtonLoading, Flex, Form, FormBackButton, toBech32m } from '@flax/core';
 import { PlotHeaderSource } from '../PlotHeader';
 import PlotAddChoosePlotter from './PlotAddChoosePlotter';
 import PlotAddChooseSize from './PlotAddChooseSize';
@@ -71,7 +71,7 @@ export default function PlotAddForm(props: Props) {
   }
 
   const methods = useForm<FormData>({
-    defaultValues: defaultsForPlotter(PlotterName.CHIAPOS),
+    defaultValues: defaultsForPlotter(PlotterName.FLAXPOS),
   });
 
   const { watch, setValue, reset } = methods;
@@ -116,10 +116,7 @@ export default function PlotAddForm(props: Props) {
           initialTargetState,
           initialTargetState: { state },
         } = nftData;
-        const { transaction, p2SingletonPuzzleHash } = await createNewPoolWallet({
-          initialTargetState,
-          fee,
-        }).unwrap();
+        const { transaction, p2SingletonPuzzleHash } = await createNewPoolWallet(initialTargetState, fee).unwrap();
 
         if (!p2SingletonPuzzleHash) {
           throw new Error(t`p2SingletonPuzzleHash is not defined`);
@@ -184,7 +181,6 @@ export default function PlotAddForm(props: Props) {
           <PlotAddSelectTemporaryDirectory step={step++} plotter={plotter} />
         )}
         <PlotAddSelectFinalDirectory step={step++} plotter={plotter} />
-        <PlotAddNFT ref={addNFTref} step={step++} plotter={plotter} />
         <Flex gap={1}>
           <FormBackButton variant="outlined" />
           <ButtonLoading

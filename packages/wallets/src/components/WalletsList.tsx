@@ -3,8 +3,8 @@ import { Trans } from '@lingui/macro';
 import {
   Grid, Typography,
 } from '@material-ui/core';
-import { useGetWalletsQuery } from '@chia/api-react';
-import { Flex, Loading } from '@chia/core';
+import { useGetWalletsQuery } from '@flax/api-react';
+import { Flex, Loading } from '@flax/core';
 import { useNavigate } from 'react-router';
 import { Eco as HomeWorkIcon, Add as AddIcon } from '@material-ui/icons';
 import Wallet from '../../types/Wallet';
@@ -48,13 +48,6 @@ export default function WalletsList() {
             ))}
           </>
         )}
-        <Grid xs={12} sm={6} md={4} item>
-          <WalletCreateCard
-            onSelect={handleAddToken}
-            title={<Trans>Add Token</Trans>}
-            icon={<AddIcon fontSize="large" color="primary" />}
-          />
-        </Grid>
       </Grid>
     </Flex>
   );

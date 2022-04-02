@@ -1,9 +1,9 @@
 import React, { useMemo, ReactElement } from 'react';
 import { Trans } from '@lingui/macro';
-import { useGetWalletBalanceQuery } from '@chia/api-react';
+import { useGetWalletBalanceQuery } from '@flax/api-react';
 import styled from 'styled-components';
 import WalletGraph from '../WalletGraph';
-import { CardSimple } from '@chia/core';
+import { CardSimple } from '@flax/core';
 import useWallet from '../../hooks/useWallet';
 import getWalletHumanValue from '../../utils/getWalletHumanValue';
 

@@ -6,16 +6,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: id_ID\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: flax-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2021-09-17 17:39\n"
 "Last-Translator: \n"
 "Language-Team: Indonesian\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: flax-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: id\n"
-"X-Crowdin-File: /[Chia-Network.chia-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[Flax-Network.flax-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:74
@@ -31,8 +31,8 @@ msgstr ""
 #~ msgstr "(Pilihan)"
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:58
-#~ msgid "*Want to explore Chia’s blocks further? Check out <0>Chia Explorer</0> built by an open source developer."
-#~ msgstr "*Ingin tahu soal blok Chia lebih jauh? Periksa laman <0>Chia Explorer</0> yang dibuat oleh software sumber terbuka."
+#~ msgid "*Want to explore Flax’s blocks further? Check out <0>Flax Explorer</0> built by an open source developer."
+#~ msgstr "*Ingin tahu soal blok Flax lebih jauh? Periksa laman <0>Flax Explorer</0> yang dibuat oleh software sumber terbuka."
 
 #: src/components/WalletHistory.tsx:150
 msgid "+"
@@ -72,8 +72,8 @@ msgstr ""
 
 #: src/electron/main.tsx:433
 #: src/electron/main.tsx:520
-#~ msgid "About Chia Blockchain"
-#~ msgstr "Tentang Chia Blockchain"
+#~ msgid "About Flax Blockchain"
+#~ msgstr "Tentang Flax Blockchain"
 
 #: src/components/trading/ViewOffer.jsx:74
 #~ msgid "Accept"
@@ -292,7 +292,7 @@ msgstr "Saldo"
 #~ msgstr "Jumlah Upah Pokok Farmer"
 
 #: src/components/offers/OfferShareDialog.tsx:734
-msgid "Before posting an offer in Keybase to the #{KeybaseChannelName} channel, you must first join the {KeybaseTeamName} team. Please note that it might take a few moments to join the channel."
+msgid "Before posting an offer in Discord to the #{DiscordChannelName} channel, you must first join the {DiscordTeamName} team. Please note that it might take a few moments to join the channel."
 msgstr ""
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:33
@@ -329,8 +329,8 @@ msgstr ""
 #~ msgstr "Perulangan blok VDF"
 
 #: src/components/block/Block.jsx:326
-#~ msgid "Block at height {0} in the Chia blockchain"
-#~ msgstr "Blok pada puncak {0} dalam rantai blok Chia"
+#~ msgid "Block at height {0} in the Flax blockchain"
+#~ msgstr "Blok pada puncak {0} dalam rantai blok Flax"
 
 #: src/components/fullNode/FullNode.jsx:331
 #~ msgid "Block hash"
@@ -409,7 +409,7 @@ msgstr ""
 
 #: src/components/WalletSend.tsx:100
 #: src/components/cat/WalletCATSend.tsx:119
-msgid "Cannot send chia to coloured address. Please enter a chia address."
+msgid "Cannot send flax to coloured address. Please enter a flax address."
 msgstr ""
 
 #: src/components/plot/PlotsNotFound.tsx:36
@@ -440,25 +440,25 @@ msgstr ""
 #~ msgstr "Ubah Pool"
 
 #: src/electron/main.tsx:412
-#~ msgid "Chat on KeyBase"
-#~ msgstr "Hubung Chat di KeyBase"
+#~ msgid "Chat on Discord"
+#~ msgstr "Hubung Chat di Discord"
 
 #: src/electron/main.tsx:430
-#~ msgid "Chia"
-#~ msgstr "Chia"
+#~ msgid "Flax"
+#~ msgstr "Flax"
 
 #: src/components/cat/WalletCATSelect.tsx:25
 #: src/components/create/WalletCreateList.tsx:32
-msgid "Chia Asset Token"
+msgid "Flax Asset Token"
 msgstr ""
 
 #: src/electron/main.tsx:369
-#~ msgid "Chia Blockchain Wiki"
-#~ msgstr "Wiki Chia Blockchain"
+#~ msgid "Flax Blockchain Wiki"
+#~ msgstr "Wiki Flax Blockchain"
 
 #: src/components/standard/WalletStandard.tsx:23
-msgid "Chia Wallet"
-msgstr "Wallet Chia"
+msgid "Flax Wallet"
+msgstr "Wallet Flax"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:34
 #~ msgid "Choose Number of Plots"
@@ -640,7 +640,7 @@ msgid "Create An Attestation Packet"
 msgstr "Buat Paket Pengesahan"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:77
-msgid "Create Chia Asset Token Wallet from Existing TAIL"
+msgid "Create Flax Asset Token Wallet from Existing TAIL"
 msgstr ""
 
 #: src/components/wallet/create/WalletCreate.jsx:290
@@ -652,7 +652,7 @@ msgid "Create Distributed Identity Wallet"
 msgstr "Buat Dompet Distribusi Identiti"
 
 #: src/components/cat/WalletCATCreateNew.tsx:76
-msgid "Create New Chia Asset Token Wallet"
+msgid "Create New Flax Asset Token Wallet"
 msgstr ""
 
 #: src/components/cat/WalletCATSelect.tsx:32
@@ -712,7 +712,7 @@ msgid "Create an Offer"
 msgstr ""
 
 #: src/components/offers/OfferManager.tsx:479
-msgid "Create an offer to exchange XCH or other tokens. View an offer to inspect and accept an offer made by another party."
+msgid "Create an offer to exchange XFX or other tokens. View an offer to inspect and accept an offer made by another party."
 msgstr ""
 
 #: src/components/cat/WalletCATCreateExisting.tsx:76
@@ -861,7 +861,7 @@ msgstr "Hapus transaksi yang belum di konfirmasi"
 #~ msgstr "Menghapus semua kunci akan menghilangkan kunci-kunci tersebut dari komputer anda, pastikan anda telah memiliki cadangan. Apa anda yakin ingin melanjutkan?"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:92
-#~ msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Chia Proof of Space plotter. If unsure, use the default Chia Proof of Space plotter."
+#~ msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Flax Proof of Space plotter. If unsure, use the default Flax Proof of Space plotter."
 #~ msgstr ""
 
 #: src/components/offers/OfferViewer.tsx:499
@@ -978,8 +978,8 @@ msgstr "Seret dan lepas berkas cadangan anda"
 #~ msgstr ""
 
 #: src/components/WalletImport.tsx:84
-msgid "Enter the 24 word mnemonic that you have saved in order to restore your Chia wallet."
-msgstr "Masukkan 24 kata mnemonik yang telah anda simpan untuk mengembalikan dompet Chia anda."
+msgid "Enter the 24 word mnemonic that you have saved in order to restore your Flax wallet."
+msgstr "Masukkan 24 kata mnemonik yang telah anda simpan untuk mengembalikan dompet Flax anda."
 
 #: src/components/settings/RemovePassphrasePrompt.tsx:104
 #~ msgid "Enter your passphrase:"
@@ -1000,8 +1000,8 @@ msgid "Error the entered address appears to be for a different colour."
 msgstr ""
 
 #: src/components/_wallet_old/standard/WalletStandard.tsx:450
-#~ msgid "Error: Cannot send chia to coloured address. Please enter a chia address."
-#~ msgstr "Error: Tidak dapat mengirim Chia ke alamat berwarna. Mohon masukkan sebuah alamat Chia."
+#~ msgid "Error: Cannot send flax to coloured address. Please enter a flax address."
+#~ msgstr "Error: Tidak dapat mengirim Flax ke alamat berwarna. Mohon masukkan sebuah alamat Flax."
 
 #: src/components/fullNode/card/FullNodeEstimatedNetworkSpace.tsx:14
 #~ msgid "Estimated Network Space"
@@ -1031,7 +1031,7 @@ msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:231
 #: src/components/offers/OfferShareDialog.tsx:231
-msgid "Failed to execute Keybase command: {stderr}"
+msgid "Failed to execute Discord command: {stderr}"
 msgstr ""
 
 #: src/components/plot/PlotsFailed.tsx:34
@@ -1132,7 +1132,7 @@ msgid "Fee"
 msgstr "Biaya"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
-#~ msgid "Fee (TXCH)"
+#~ msgid "Fee (TXFX)"
 #~ msgstr ""
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
@@ -1208,7 +1208,7 @@ msgstr "Nama file"
 
 #: src/components/offers/OfferShareDialog.tsx:689
 #: src/components/offers/OfferShareDialog.tsx:758
-msgid "Go to #{KeybaseChannelName}"
+msgid "Go to #{DiscordChannelName}"
 msgstr ""
 
 #: src/components/pool/PoolOverview.tsx:173
@@ -1351,7 +1351,7 @@ msgid "Initialize a Rate Limited User Wallet:"
 msgstr "Mulai Wallet Pengguna dengan Batasan Koneksi:"
 
 #: src/components/offers/OfferShareDialog.tsx:729
-msgid "Install Keybase"
+msgid "Install Discord"
 msgstr ""
 
 #: src/components/offers/OfferViewer.tsx:358
@@ -1390,19 +1390,19 @@ msgstr "Interval"
 #~ msgstr "Gabung ke Pool"
 
 #: src/components/plot/add/PlotAddNFT.tsx:49
-#~ msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile."
+#~ msgid "Join a pool and get consistent XFX farming rewards. The average returns are the same, but it is much less volatile."
 #~ msgstr ""
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:63
-#~ msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+#~ msgid "Join a pool and get consistent XFX farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
 #~ msgstr ""
 
 #: src/components/plot/add/PlotAddNFT.tsx:138
-#~ msgid "Join a pool and get more consistent XCH farming rewards. Create a plot NFT and assign your new plots to a group."
+#~ msgid "Join a pool and get more consistent XFX farming rewards. Create a plot NFT and assign your new plots to a group."
 #~ msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:747
-msgid "Join {KeybaseTeamName}"
+msgid "Join {DiscordTeamName}"
 msgstr ""
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:63
@@ -1410,11 +1410,11 @@ msgstr ""
 #~ msgstr "Ukuran-K"
 
 #: src/components/offers/OfferShareDialog.tsx:629
-msgid "Keybase command failed {e}. If you haven't installed Keybase, you can download from https://keybase.io"
+msgid "Discord command failed {e}. If you haven't installed Discord, you can download from https://keybase.io"
 msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:718
-msgid "Keybase is a secure messaging and file sharing application. To share an offer in the Keybase {KeybaseTeamName} team, you must first have Keybase installed."
+msgid "Discord is a secure messaging and file sharing application. To share an offer in the Discord {DiscordTeamName} team, you must first have Discord installed."
 msgstr ""
 
 #: src/components/app/AppKeyringMigrator.tsx:94
@@ -1731,7 +1731,7 @@ msgstr ""
 #~ msgstr "Tidak dijumpai plot-plot"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:164
-#~ msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XCH reward for pooling plots."
+#~ msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XFX reward for pooling plots."
 #~ msgstr ""
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:117
@@ -2146,9 +2146,9 @@ msgstr "Harap tunggu sampai sinkronisasi dompet selesai"
 #~ msgstr "Plot Diterima Seleksi"
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:33
-#~ msgid "Plots are allocated space on your hard drive used to farm and earn Chia. <0>Learn more</0>"
+#~ msgid "Plots are allocated space on your hard drive used to farm and earn Flax. <0>Learn more</0>"
 #~ msgstr ""
-#~ "Plot adalah penempatan ruang dalam hard drive yang digunakan untuk disewakan dan memperoleh Chia\n"
+#~ "Plot adalah penempatan ruang dalam hard drive yang digunakan untuk disewakan dan memperoleh Flax\n"
 #~ "<0>Pelajari lebih lanjut</0>"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:103
@@ -2605,7 +2605,7 @@ msgstr "Pilih fail pulihan:"
 #~ msgstr ""
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:104
-#~ msgid "Self pool. When you win a block you will earn XCH rewards."
+#~ msgid "Self pool. When you win a block you will earn XFX rewards."
 #~ msgstr ""
 
 #: src/components/trading/CreateOffer.jsx:164
@@ -2663,7 +2663,7 @@ msgid "Share on Hashgreen DEX"
 msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:713
-msgid "Share on Keybase"
+msgid "Share on Discord"
 msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:366
@@ -2717,7 +2717,7 @@ msgstr ""
 #~ msgstr "Lewati saja penambahan sebuah direktori akhir ke harvester unuk farming"
 
 #: src/components/pool/PoolHero.tsx:26
-#~ msgid "Smooth out your XCH farming rewards by joining a pool."
+#~ msgid "Smooth out your XFX farming rewards by joining a pool."
 #~ msgstr ""
 
 #: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:60
@@ -2756,8 +2756,8 @@ msgstr "Durasi Interval Pengeluaran (jumlah blok)"
 
 #: src/components/rateLimited/WalletRateLimited.jsx:400
 #: src/components/rateLimited/WalletRateLimited.jsx:447
-msgid "Spending Limit (chia per interval): {0}"
-msgstr "Batas Pengeluaran (chia per jarak waktu): {0}"
+msgid "Spending Limit (flax per interval): {0}"
+msgstr "Batas Pengeluaran (flax per jarak waktu): {0}"
 
 #: src/constants/WalletName.ts:5
 msgid "Standard Wallet"
@@ -2806,8 +2806,8 @@ msgstr "Status:"
 #~ msgstr "Sub Block Height"
 
 #: src/components/block/Block.jsx:338
-#~ msgid "Sub Block at height {0} in the Chia blockchain"
-#~ msgstr "Sub Block at height {0} in the Chia blockchain"
+#~ msgid "Sub Block at height {0} in the Flax blockchain"
+#~ msgstr "Sub Block at height {0} in the Flax blockchain"
 
 #: src/components/did/WalletDID.tsx:885
 #: src/components/rateLimited/WalletRateLimited.jsx:346
@@ -2845,23 +2845,23 @@ msgstr "Sinkronisasi"
 #~ msgstr "Syncing {progress}/{tip}"
 
 #: src/components/farm/card/FarmCardBlockRewards.tsx:15
-#~ msgid "TXCH Block Rewards"
+#~ msgid "TXFX Block Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardCoinbaseRewards.tsx:12
-#~ msgid "TXCH Farming Rewards"
+#~ msgid "TXFX Farming Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardFeesReward.tsx:12
-#~ msgid "TXCH Fees Collected"
+#~ msgid "TXFX Fees Collected"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardUserFees.tsx:12
-#~ msgid "TXCH User Fees"
-#~ msgstr "TXCH User Fees"
+#~ msgid "TXFX User Fees"
+#~ msgstr "TXFX User Fees"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:15
-#~ msgid "TXCH User Transaction Fees"
+#~ msgid "TXFX User Transaction Fees"
 #~ msgstr ""
 
 #: src/components/pool/PoolInfo.tsx:37
@@ -2947,7 +2947,7 @@ msgstr "Jumlah nombor Backup ID yang diperlukan tidak boleh lebih dari Backup ID
 #~ msgstr "Total dari biaya transaksi pada block ini. Diberikan kepada farmer."
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:107
-#~ msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XCH address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+#~ msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XFX address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
 #~ msgstr ""
 
 #: src/components/plot/PlotsFailed.tsx:36
@@ -2978,8 +2978,8 @@ msgid "This is not a valid address for sending funds to"
 msgstr ""
 
 #: src/components/standard/WalletStandardCards.tsx:23
-msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
-msgstr "Ini adalah jumlah Chia yang ada yang bisa anda gunakan untuk transaksi. Ini tidak berikut penghasilan farming yang masih tertahan, transaksi masuk yang masih tertahan, dan Chia yang sudah anda pakai tapi belum terdaftar di blockchain."
+msgid "This is the amount of Flax that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Flax that you have just spent but is not yet in the blockchain."
+msgstr "Ini adalah jumlah Flax yang ada yang bisa anda gunakan untuk transaksi. Ini tidak berikut penghasilan farming yang masih tertahan, transaksi masuk yang masih tertahan, dan Flax yang sudah anda pakai tapi belum terdaftar di blockchain."
 
 #: src/components/standard/WalletStandardCards.tsx:44
 msgid "This is the pending change, which are change coins which you have sent to yourself, but have not been confirmed yet."
@@ -2998,8 +2998,8 @@ msgstr "Ini ada jumlah dari transaksi masuk dan keluar yang masih dalam antrian 
 #~ msgstr "Ini adalah waktu dimana blok di hasilkan oleh farmer, sebelum di finalisasi dengan bukti dari waktu"
 
 #: src/components/standard/WalletStandardCards.tsx:16
-msgid "This is the total amount of chia in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
-msgstr "Ini adalah jumlah total Chia di dalam blockchain di pucak terbaru sub blok yang di kontrol oleh kunci privat anda. Termasuk hadiah farming yang masi beku, tapi tidak termasuk transaksi masuk atau keluar yang masih tertahan."
+msgid "This is the total amount of flax in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgstr "Ini adalah jumlah total Flax di dalam blockchain di pucak terbaru sub blok yang di kontrol oleh kunci privat anda. Termasuk hadiah farming yang masi beku, tapi tidak termasuk transaksi masuk atau keluar yang masih tertahan."
 
 #: src/components/standard/WalletStandardCards.tsx:31
 msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
@@ -3056,8 +3056,8 @@ msgstr ""
 #~ msgstr "Perdagangan ini sudah termasuk di blockchain pada ketinggian block ini"
 
 #: src/components/app/AppTimeBombAlert.tsx:19
-#~ msgid "This version of Chia is no longer compatible with the blockchain and can not safely farm."
-#~ msgstr "Versi Chia anda tidak serasi kepada blockchain dan tidak boleh ditransaksi."
+#~ msgid "This version of Flax is no longer compatible with the blockchain and can not safely farm."
+#~ msgstr "Versi Flax anda tidak serasi kepada blockchain dan tidak boleh ditransaksi."
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:154
 #~ msgid "Thread Multiplier for Phase 2"
@@ -3096,8 +3096,8 @@ msgstr ""
 msgid "Total Balance"
 msgstr "Jumlah Saldo"
 
-#: src/components/farm/card/FarmCardTotalChiaFarmed.tsx:27
-#~ msgid "Total Chia Farmed"
+#: src/components/farm/card/FarmCardTotalFlaxFarmed.tsx:27
+#~ msgid "Total Flax Farmed"
 #~ msgstr ""
 
 #: src/components/fullNode/card/FullNodeCardTotalIterations.tsx:14
@@ -3178,11 +3178,11 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:642
-msgid "Unable to open Keybase. Install Keybase from https://keybase.io"
+msgid "Unable to open Discord. Install Discord from https://keybase.io"
 msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:565
-msgid "Unable to open browser. Install Keybase from https://keybase.io"
+msgid "Unable to open browser. Install Discord from https://keybase.io"
 msgstr ""
 
 #: src/components/plotNFT/PlotNFTCard.tsx:147
@@ -3339,7 +3339,7 @@ msgstr "Berkas tidak ada"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:30
-#~ msgid "WalletItem.chiaWallet"
+#~ msgid "WalletItem.flaxWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48
@@ -3375,8 +3375,8 @@ msgstr "Wallets"
 #~ msgstr "Mau bergabung ke Pool? Buat sebuah Plot NFT"
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:139
-#~ msgid "Want to earn more Chia? Add more plots to your farm."
-#~ msgstr "Ingin mendapatkan lebih banyak Chia? Tambahkan lebih banyak plot ke farm anda."
+#~ msgid "Want to earn more Flax? Add more plots to your farm."
+#~ msgstr "Ingin mendapatkan lebih banyak Flax? Tambahkan lebih banyak plot ke farm anda."
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:87
 #~ msgid "Want to have a delay before the next plot starts?"
@@ -3416,8 +3416,8 @@ msgstr ""
 #~ msgstr "Beban adalah jumlah total ke rumitan semua sub blok sampai dengan blok ini"
 
 #: src/components/_selectKey_old/SelectKey.tsx:183
-#~ msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-#~ msgstr "Selamat datang di Chia. Silahkan masuk dengan key eksisting atau dengan membuat key baru."
+#~ msgid "Welcome to Flax. Please log in with an existing key, or create a new key."
+#~ msgstr "Selamat datang di Flax. Silahkan masuk dengan key eksisting atau dengan membuat key baru."
 
 #: src/components/WalletAdd.tsx:76
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
@@ -3495,8 +3495,8 @@ msgstr ""
 #~ msgstr "Anda harus mengambil penghargaan terlebih dahulu"
 
 #: src/components/app/AppTimeBomb.tsx:28
-#~ msgid "You need to upgrade the Chia application as this version will stop working soon!"
-#~ msgstr "You need to upgrade the Chia application as this version will stop working soon!"
+#~ msgid "You need to upgrade the Flax application as this version will stop working soon!"
+#~ msgstr "You need to upgrade the Flax application as this version will stop working soon!"
 
 #: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:36
 #~ msgid "You need {currencyCode} to join a pool."
@@ -3559,7 +3559,7 @@ msgstr "DID anda perlu {dids_num_req} berkas pengesahan untuk pemulihan fail{0}.
 #~ msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:680
-msgid "Your offer has been successfully posted to Keybase."
+msgid "Your offer has been successfully posted to Discord."
 msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:372
@@ -3570,7 +3570,7 @@ msgstr ""
 #: src/components/app/AppKeyringMigrator.tsx:181
 #: src/components/settings/ChangePassphrasePrompt.tsx:211
 #: src/components/settings/SetPassphrasePrompt.tsx:193
-#~ msgid "Your passphrase can be stored in your system's secure credential store. Chia will be able to access your keys without prompting for your passphrase."
+#~ msgid "Your passphrase can be stored in your system's secure credential store. Flax will be able to access your keys without prompting for your passphrase."
 #~ msgstr ""
 
 #: src/components/settings/Settings.tsx:85
@@ -3654,9 +3654,9 @@ msgstr "sinkronisasi"
 #~ msgid "{currencyCode} Block Rewards"
 #~ msgstr "{currencyCode} Blok Ganjaran"
 
-#: src/components/farm/card/FarmCardTotalChiaFarmed.tsx:29
-#~ msgid "{currencyCode} Total Chia Farmed"
-#~ msgstr "{currencyCode} Total Chia yang di-Farm"
+#: src/components/farm/card/FarmCardTotalFlaxFarmed.tsx:29
+#~ msgid "{currencyCode} Total Flax Farmed"
+#~ msgstr "{currencyCode} Total Flax yang di-Farm"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:28
 #~ msgid "{currencyCode} User Transaction Fees"

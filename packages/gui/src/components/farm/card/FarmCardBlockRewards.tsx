@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Trans } from '@lingui/macro';
-import { useCurrencyCode, mojoToChiaLocaleString, CardSimple } from '@chia/core';
-import { useGetFarmedAmountQuery } from '@chia/api-react';
+import { useCurrencyCode, mojoToFlaxLocaleString, CardSimple } from '@flax/core';
+import { useGetFarmedAmountQuery } from '@flax/api-react';
 
 export default function FarmCardBlockRewards() {
   const currencyCode = useCurrencyCode();
@@ -17,7 +17,7 @@ export default function FarmCardBlockRewards() {
         BigInt(poolRewardAmount.toString());
       return (
         <>
-          {mojoToChiaLocaleString(val)}
+          {mojoToFlaxLocaleString(val)}
           &nbsp;
           {currencyCode}
         </>

@@ -1,8 +1,8 @@
 {
-  "name": "@chia/core",
-  "author": "Chia Network <hello@chia.net> (https://chia.net/)",
-  "description": "Chia Core Library",
-  "productName": "Chia Blockchain",
+  "name": "@flax/core",
+  "author": "Flax Network <hello@flaxnetwork.org> (https://flaxnetwork.org/)",
+  "description": "Flax Core Library",
+  "productName": "Flax Blockchain",
   "private": true,
   "version": "1.0.0",
   "engines": {
@@ -22,7 +22,7 @@
   "dependencies": {
     "@babel/runtime": "7.16.7",
     "@lingui/macro": "3.13.0",
-    "@chia/icons": "1.0.0",
+    "@flax/icons": "1.0.0",
     "@fontsource/roboto": "4.5.1",
     "@rehooks/local-storage": "2.4.4",
     "bech32": "2.0.0",
@@ -52,8 +52,8 @@
     "@babel/preset-env": "7.16.8",
     "@babel/preset-react": "7.16.7",
     "@babel/preset-typescript": "7.16.7",
-    "@chia/api": "1.0.0",
-    "@chia/api-react": "1.0.0",
+    "@flax/api": "1.0.0",
+    "@flax/api-react": "1.0.0",
     "@lingui/cli": "3.13.0",
     "@lingui/core": "3.13.0",
     "@lingui/react": "3.13.0",
@@ -88,8 +88,8 @@
     "typescript": "4.5.4"
   },
   "peerDependencies": {
-    "@chia/api": "1.0.0",
-    "@chia/api-react": "1.0.0",
+    "@flax/api": "1.0.0",
+    "@flax/api-react": "1.0.0",
     "@lingui/core": "3.13.0",
     "@lingui/react": "3.13.0",
     "@material-ui/core": "4.12.3",

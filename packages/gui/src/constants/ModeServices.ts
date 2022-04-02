@@ -1,5 +1,5 @@
-import { ServiceName } from '@chia/api';
-import { Mode } from '@chia/core';
+import { ServiceName } from '@flax/api';
+import { Mode } from '@flax/core';
 
 export default {
   [Mode.WALLET]: [

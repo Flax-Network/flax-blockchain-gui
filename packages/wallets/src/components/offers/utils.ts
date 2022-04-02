@@ -1,9 +1,9 @@
-import { WalletType } from '@chia/api';
-import type { OfferSummaryRecord } from '@chia/api';
+import { WalletType } from '@flax/api';
+import type { OfferSummaryRecord } from '@flax/api';
 import {
-  mojoToChiaLocaleString,
+  mojoToFlaxLocaleString,
   mojoToCATLocaleString,
-} from '@chia/core';
+} from '@flax/core';
 import OfferState from './OfferState';
 import { AssetIdMapEntry } from '../../hooks/useAssetIdName';
 
@@ -124,7 +124,7 @@ export function colorForOfferState(state: OfferState): OfferStateColor {
 export function formatAmountForWalletType(amount: string | number, walletType: WalletType): string {
   let amountString = '';
   if (walletType === WalletType.STANDARD_WALLET) {
-    amountString = mojoToChiaLocaleString(amount);
+    amountString = mojoToFlaxLocaleString(amount);
   }
   else if (walletType === WalletType.CAT) {
     amountString = mojoToCATLocaleString(amount);

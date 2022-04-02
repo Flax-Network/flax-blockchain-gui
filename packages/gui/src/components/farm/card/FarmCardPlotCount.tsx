@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { FormatLargeNumber, CardSimple } from '@chia/core';
+import { FormatLargeNumber, CardSimple } from '@flax/core';
 import usePlots from '../../../hooks/usePlots';
 
 export default function FarmCardPlotCount() {

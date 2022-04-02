@@ -10,8 +10,8 @@ import {
   useOpenDialog,
   useShowError,
   useOpenExternal,
-} from '@chia/core';
-import { OfferTradeRecord } from '@chia/api';
+} from '@flax/core';
+import { OfferTradeRecord } from '@flax/api';
 import {
   Button,
   Checkbox,
@@ -45,7 +45,7 @@ type CommonDialogProps = {
 
 type OfferShareOfferBinDialogProps = CommonOfferProps & CommonDialogProps;
 type OfferShareHashgreenDialogProps = CommonOfferProps & CommonDialogProps;
-type OfferShareKeybaseDialogProps = CommonOfferProps & CommonDialogProps;
+type OfferShareDiscordDialogProps = CommonOfferProps & CommonDialogProps;
 type OfferShareOfferpoolDialogProps = CommonOfferProps & CommonDialogProps;
 
 async function writeTempOfferFile(offerData: string, filename: string): Promise<string> {
@@ -88,7 +88,7 @@ async function postToOfferBin(offerData: string, sharePrivately: boolean): Promi
 
 enum HashgreenErrorCodes {
   OFFERED_AMOUNT_TOO_SMALL = 40020, // The offered amount is too small
-  MARKET_NOT_FOUND = 50029, // Pairing doesn't exist e.g. XCH/RandoCoin
+  MARKET_NOT_FOUND = 50029, // Pairing doesn't exist e.g. XFX/RandoCoin
   OFFER_FILE_EXISTS = 50037, // Offer already shared
   COINS_ALREADY_COMMITTED = 50041, // Coins in the offer are already committed in another offer
 };
@@ -151,25 +151,25 @@ async function postToHashgreen(offerData: string): Promise<string> {
   }
 }
 
-enum KeybaseCLIActions {
+enum DiscordCLIActions {
   JOIN_TEAM = 'JOIN_TEAM',
   JOIN_CHANNEL = 'JOIN_CHANNEL',
   UPLOAD_OFFER = 'UPLOAD_OFFER',
   CHECK_TEAM_MEMBERSHIP = 'CHECK_TEAM_MEMBERSHIP',
 };
 
-type KeybaseCLIRequest = {
-  action: KeybaseCLIActions,
+type DiscordCLIRequest = {
+  action: DiscordCLIActions,
   uploadArgs?: {
     title: string,
     filePath: string,
   }
 };
 
-const KeybaseTeamName = 'chia_offers';
-const KeybaseChannelName = 'offers-trading';
+const DiscordTeamName = 'flax_offers';
+const DiscordChannelName = 'offers-trading';
 
-async function execKeybaseCLI(request: KeybaseCLIRequest): Promise<boolean> {
+async function execDiscordCLI(request: DiscordCLIRequest): Promise<boolean> {
   return new Promise((resolve, reject) => {
     try {
       const options: any = {};
@@ -179,7 +179,7 @@ async function execKeybaseCLI(request: KeybaseCLIRequest): Promise<boolean> {
 
         // Add /usr/local/bin and a direct path to the keybase binary on macOS.
         // Without these additions, the keybase binary may not be found.
-        env.PATH = `${env.PATH}:/usr/local/bin:/Applications/Keybase.app/Contents/SharedSupport/bin`;
+        env.PATH = `${env.PATH}:/usr/local/bin:/Applications/Discord.app/Contents/SharedSupport/bin`;
 
         options['env'] = env;
       }
@@ -187,26 +187,26 @@ async function execKeybaseCLI(request: KeybaseCLIRequest): Promise<boolean> {
       let command: string | undefined = undefined;
 
       switch (request.action) {
-        case KeybaseCLIActions.JOIN_TEAM:
-          command = `keybase team request-access ${KeybaseTeamName}`;
+        case DiscordCLIActions.JOIN_TEAM:
+          command = `keybase team request-access ${DiscordTeamName}`;
           break;
-        case KeybaseCLIActions.JOIN_CHANNEL:
-          command = `keybase chat join-channel ${KeybaseTeamName} '#${KeybaseChannelName}'`;
+        case DiscordCLIActions.JOIN_CHANNEL:
+          command = `keybase chat join-channel ${DiscordTeamName} '#${DiscordChannelName}'`;
           break;
-        case KeybaseCLIActions.UPLOAD_OFFER:
+        case DiscordCLIActions.UPLOAD_OFFER:
           const { title, filePath } = request.uploadArgs!;
           if (title && filePath) {
-            command = `keybase chat upload "${KeybaseTeamName}" --channel "${KeybaseChannelName}" --title "${title}" "${filePath}"`;
+            command = `keybase chat upload "${DiscordTeamName}" --channel "${DiscordChannelName}" --title "${title}" "${filePath}"`;
           }
           else {
             reject(new Error(`Missing title or filePath in request.uploadArgs`));
           }
           break;
-        case KeybaseCLIActions.CHECK_TEAM_MEMBERSHIP:
+        case DiscordCLIActions.CHECK_TEAM_MEMBERSHIP:
           command = 'keybase team list-memberships';
           break;
         default:
-          reject(new Error(`Unknown KeybaseCLI action: ${request.action}`));
+          reject(new Error(`Unknown DiscordCLI action: ${request.action}`));
           break;
       }
 
@@ -216,12 +216,12 @@ async function execKeybaseCLI(request: KeybaseCLIRequest): Promise<boolean> {
           options,
           (error, stdout, stderr) => {
             if (error) {
-              console.error(`Keybase error: ${error}`);
+              console.error(`Discord error: ${error}`);
               switch (request.action) {
-                case KeybaseCLIActions.CHECK_TEAM_MEMBERSHIP:
-                  resolve(stdout.indexOf(`${KeybaseTeamName}`) === 0);
+                case DiscordCLIActions.CHECK_TEAM_MEMBERSHIP:
+                  resolve(stdout.indexOf(`${DiscordTeamName}`) === 0);
                   break;
-                case KeybaseCLIActions.JOIN_TEAM:
+                case DiscordCLIActions.JOIN_TEAM:
                   resolve(stderr.indexOf('(code 2665)') !== -1);
                   break;
                 default:
@@ -229,7 +229,7 @@ async function execKeybaseCLI(request: KeybaseCLIRequest): Promise<boolean> {
                     resolve(false);
                   }
                   else {
-                    reject(new Error(t`Failed to execute Keybase command: ${stderr}`));
+                    reject(new Error(t`Failed to execute Discord command: ${stderr}`));
                   }
               }
             }
@@ -248,7 +248,7 @@ async function execKeybaseCLI(request: KeybaseCLIRequest): Promise<boolean> {
   });
 }
 
-async function postToKeybase(
+async function postToDiscord(
   offerRecord: OfferTradeRecord,
   offerData: string,
   lookupByAssetId: (assetId: string) => AssetIdMapEntry | undefined): Promise<boolean> {
@@ -262,7 +262,7 @@ async function postToKeybase(
   filePath = await writeTempOfferFile(offerData, filename);
 
   try {
-    success = await execKeybaseCLI({ action: KeybaseCLIActions.UPLOAD_OFFER, uploadArgs: { title: summary, filePath } });
+    success = await execDiscordCLI({ action: DiscordCLIActions.UPLOAD_OFFER, uploadArgs: { title: summary, filePath } });
   }
   finally {
     if (filePath) {
@@ -575,7 +575,7 @@ OfferShareHashgreenDialog.defaultProps = {
   onClose: () => {},
 };
 
-function OfferShareKeybaseDialog(props: OfferShareKeybaseDialogProps) {
+function OfferShareDiscordDialog(props: OfferShareDiscordDialogProps) {
   const { offerRecord, offerData, onClose, open } = props;
   const { lookupByAssetId } = useAssetIdName();
   const showError = useShowError();
@@ -587,29 +587,29 @@ function OfferShareKeybaseDialog(props: OfferShareKeybaseDialogProps) {
     onClose(false);
   }
 
-  async function handleKeybaseInstall() {
+  async function handleDiscordInstall() {
     try {
       const shell: Shell = (window as any).shell;
       await shell.openExternal('https://keybase.io/download');
     }
     catch (e) {
-      showError(new Error(t`Unable to open browser. Install Keybase from https://keybase.io`));
+      showError(new Error(t`Unable to open browser. Install Discord from https://keybase.io`));
     }
   }
 
-  async function handleKeybaseJoinTeam() {
+  async function handleDiscordJoinTeam() {
     setIsJoiningTeam(true);
 
     try {
       const shell: Shell = (window as any).shell;
-      const joinTeamSucceeded = await execKeybaseCLI({ action: KeybaseCLIActions.JOIN_TEAM });
+      const joinTeamSucceeded = await execDiscordCLI({ action: DiscordCLIActions.JOIN_TEAM });
       let joinTeamThroughURL = false;
       if (joinTeamSucceeded) {
         let attempts = 0;
         let isMember = false;
         while (attempts < 20) {
           await new Promise(resolve => setTimeout(resolve, 1000));
-          isMember = await execKeybaseCLI({ action: KeybaseCLIActions.CHECK_TEAM_MEMBERSHIP });
+          isMember = await execDiscordCLI({ action: DiscordCLIActions.CHECK_TEAM_MEMBERSHIP });
 
           if (isMember) {
             console.log("Joined team successfully");
@@ -624,7 +624,7 @@ function OfferShareKeybaseDialog(props: OfferShareKeybaseDialogProps) {
           let joinChannelSucceeded = false;
           while (attempts < 30) {
             await new Promise(resolve => setTimeout(resolve, 1000));
-            joinChannelSucceeded = await execKeybaseCLI({ action: KeybaseCLIActions.JOIN_CHANNEL });
+            joinChannelSucceeded = await execDiscordCLI({ action: DiscordCLIActions.JOIN_CHANNEL });
 
             if (joinChannelSucceeded) {
               break;
@@ -636,11 +636,11 @@ function OfferShareKeybaseDialog(props: OfferShareKeybaseDialogProps) {
           if (joinChannelSucceeded) {
             console.log("Joined channel successfully");
             await new Promise(resolve => setTimeout(resolve, 1000));
-            await shell.openExternal(`keybase://chat/${KeybaseTeamName}#${KeybaseChannelName}`);
+            await shell.openExternal(`keybase://chat/${DiscordTeamName}#${DiscordChannelName}`);
           }
           else {
             console.error("Failed to join channel");
-            shell.openExternal(`keybase://chat/${KeybaseTeamName}#${KeybaseChannelName}`);
+            shell.openExternal(`keybase://chat/${DiscordTeamName}#${DiscordChannelName}`);
           }
         }
         else {
@@ -653,33 +653,33 @@ function OfferShareKeybaseDialog(props: OfferShareKeybaseDialogProps) {
       }
 
       if (joinTeamThroughURL) {
-        await shell.openExternal(`keybase://team-page/${KeybaseTeamName}/join`);
+        await shell.openExternal(`keybase://team-page/${DiscordTeamName}/join`);
       }
     }
     catch (e) {
-      showError(new Error(t`Keybase command failed ${e}. If you haven't installed Keybase, you can download from https://keybase.io`));
+      showError(new Error(t`Discord command failed ${e}. If you haven't installed Discord, you can download from https://keybase.io`));
     }
     finally {
       setIsJoiningTeam(false);
     }
   }
 
-  async function handleKeybaseGoToChannel() {
+  async function handleDiscordGoToChannel() {
     try {
       const shell: Shell = (window as any).shell;
-      await shell.openExternal(`keybase://chat/${KeybaseTeamName}#${KeybaseChannelName}`);
+      await shell.openExternal(`keybase://chat/${DiscordTeamName}#${DiscordChannelName}`);
     }
     catch (e) {
-      showError(new Error(t`Unable to open Keybase. Install Keybase from https://keybase.io`));
+      showError(new Error(t`Unable to open Discord. Install Discord from https://keybase.io`));
     }
   }
 
-  async function handleKeybaseShare() {
+  async function handleDiscordShare() {
     let success = false;
 
     try {
       setIsSubmitting(true);
-      success = await postToKeybase(offerRecord, offerData, lookupByAssetId);
+      success = await postToDiscord(offerRecord, offerData, lookupByAssetId);
 
       if (success) {
         setShared(true);
@@ -708,16 +708,16 @@ function OfferShareKeybaseDialog(props: OfferShareKeybaseDialogProps) {
         </DialogTitle>
         <DialogContent dividers>
           <Flex flexDirection="column" gap={3}>
-            <Trans>Your offer has been successfully posted to Keybase.</Trans>
+            <Trans>Your offer has been successfully posted to Discord.</Trans>
           </Flex>
         </DialogContent>
         <DialogActions>
           <Button
-            onClick={handleKeybaseGoToChannel}
+            onClick={handleDiscordGoToChannel}
             color="secondary"
             variant="contained"
           >
-            <Trans>Go to #{KeybaseChannelName}</Trans>
+            <Trans>Go to #{DiscordChannelName}</Trans>
           </Button>
           <Button
             onClick={handleClose}
@@ -741,52 +741,52 @@ function OfferShareKeybaseDialog(props: OfferShareKeybaseDialogProps) {
       fullWidth
     >
       <DialogTitle id="alert-dialog-title">
-        <Trans>Share on Keybase</Trans>
+        <Trans>Share on Discord</Trans>
       </DialogTitle>
       <DialogContent dividers>
         <Flex flexDirection="column" gap={2}>
           <Typography variant="body2">
             <Trans>
-              Keybase is a secure messaging and file sharing application. To share an offer
-              in the Keybase {KeybaseTeamName} team, you must first have Keybase installed.
+              Discord is a secure messaging and file sharing application. To share an offer
+              in the Discord {DiscordTeamName} team, you must first have Discord installed.
             </Trans>
           </Typography>
           <Flex justifyContent="center" flexGrow={0} >
             <Button
-              onClick={handleKeybaseInstall}
+              onClick={handleDiscordInstall}
               color="secondary"
               variant="contained"
             >
-              <Trans>Install Keybase</Trans>
+              <Trans>Install Discord</Trans>
             </Button>
           </Flex>
           <Divider />
           <Typography variant="body2">
             <Trans>
-              Before posting an offer in Keybase to the #{KeybaseChannelName} channel, you must
-              first join the {KeybaseTeamName} team. Please note that it might take a few moments
+              Before posting an offer in Discord to the #{DiscordChannelName} channel, you must
+              first join the {DiscordTeamName} team. Please note that it might take a few moments
               to join the channel.
             </Trans>
           </Typography>
           <Flex justifyContent="center" flexGrow={0}>
             <ButtonLoading
-              onClick={handleKeybaseJoinTeam}
+              onClick={handleDiscordJoinTeam}
               color="secondary"
               variant="contained"
               loading={isJoiningTeam}
             >
-              <Trans>Join {KeybaseTeamName}</Trans>
+              <Trans>Join {DiscordTeamName}</Trans>
             </ButtonLoading>
           </Flex>
         </Flex>
       </DialogContent>
       <DialogActions>
         <Button
-          onClick={handleKeybaseGoToChannel}
+          onClick={handleDiscordGoToChannel}
           color="primary"
           variant="contained"
         >
-          <Trans>Go to #{KeybaseChannelName}</Trans>
+          <Trans>Go to #{DiscordChannelName}</Trans>
         </Button>
         <Flex flexGrow={1}></Flex>
         <Button
@@ -798,7 +798,7 @@ function OfferShareKeybaseDialog(props: OfferShareKeybaseDialogProps) {
           <Trans>Cancel</Trans>
         </Button>
         <ButtonLoading
-          onClick={handleKeybaseShare}
+          onClick={handleDiscordShare}
           color="secondary"
           variant="contained"
           loading={isSubmitting}
@@ -810,7 +810,7 @@ function OfferShareKeybaseDialog(props: OfferShareKeybaseDialogProps) {
   );
 }
 
-OfferShareKeybaseDialog.defaultProps = {
+OfferShareDiscordDialog.defaultProps = {
   open: false,
   onClose: () => {},
 };
@@ -955,9 +955,9 @@ export default function OfferShareDialog(props: OfferShareDialogProps) {
     );
   }
 
-  async function handleKeybase() {
+  async function handleDiscord() {
     await openDialog(
-      <OfferShareKeybaseDialog offerRecord={offerRecord} offerData={offerData} />
+      <OfferShareDiscordDialog offerRecord={offerRecord} offerData={offerData} />
     );
   }
 
@@ -1014,10 +1014,10 @@ export default function OfferShareDialog(props: OfferShareDialogProps) {
               <Button
                 variant="contained"
                 color="secondary"
-                onClick={handleKeybase}
+                onClick={handleDiscord}
               >
                 <Flex flexDirection="column">
-                  Keybase
+                  Discord
                 </Flex>
               </Button>
             </Flex>

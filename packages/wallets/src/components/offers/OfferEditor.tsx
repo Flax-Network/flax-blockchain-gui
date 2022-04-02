@@ -10,8 +10,8 @@ import {
   Form,
   useShowError,
   useShowSaveDialog,
-} from '@chia/core';
-import { useCreateOfferForIdsMutation } from '@chia/api-react';
+} from '@flax/core';
+import { useCreateOfferForIdsMutation } from '@flax/api-react';
 import {
   Button,
   Divider,
@@ -20,11 +20,11 @@ import {
 import type OfferEditorRowData from './OfferEditorRowData';
 import { suggestedFilenameForOffer } from './utils';
 import useAssetIdName from '../../hooks/useAssetIdName';
-import { WalletType } from '@chia/api';
+import { WalletType } from '@flax/api';
 import OfferEditorConditionsPanel from './OfferEditorConditionsPanel';
 import OfferLocalStorageKeys from './OfferLocalStorage';
 import styled from 'styled-components';
-import { chiaToMojo, catToMojo } from '@chia/core';
+import { flaxToMojo, catToMojo } from '@flax/core';
 import fs from 'fs';
 
 const StyledEditorBox = styled.div`
@@ -64,7 +64,7 @@ function OfferEditor(props: OfferEditorProps) {
     if (assetWalletId > 0) {
       let mojoAmount = 0;
       if (walletType === WalletType.STANDARD_WALLET) {
-        mojoAmount = Number.parseFloat(chiaToMojo(amount));
+        mojoAmount = Number.parseFloat(flaxToMojo(amount));
       }
       else if (walletType === WalletType.CAT) {
         mojoAmount = Number.parseFloat(catToMojo(amount));

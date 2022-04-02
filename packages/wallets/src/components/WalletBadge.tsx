@@ -1,11 +1,11 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { Tooltip } from '@chia/core';
-import { useGetCatListQuery } from '@chia/api-react';
+import { Tooltip } from '@flax/core';
+import { useGetCatListQuery } from '@flax/api-react';
 import { VerifiedUser as VerifiedUserIcon, VerifiedUserProps } from '@material-ui/icons';
 import styled from 'styled-components';
-import type { Wallet } from '@chia/api';
-import { WalletType } from '@chia/api';
+import type { Wallet } from '@flax/api';
+import { WalletType } from '@flax/api';
 
 const StyledSmallBadge = styled(VerifiedUserIcon)`
   font-size: 1rem;

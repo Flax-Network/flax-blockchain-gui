@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import { useWatch } from 'react-hook-form';
 import { t, Trans } from '@lingui/macro';
-import { CardStep, Select, StateColor } from '@chia/core';
-import { useGetPlottersQuery } from '@chia/api-react';
+import { CardStep, Select, StateColor } from '@flax/core';
+import { useGetPlottersQuery } from '@flax/api-react';
 import {
   FormControl,
   FormHelperText,
@@ -12,8 +12,8 @@ import {
   Typography,
 } from '@material-ui/core';
 import styled from 'styled-components';
-import { defaultPlotter, PlotterName } from '@chia/api';
-import type { Plotter, PlotterMap } from '@chia/api';
+import { defaultPlotter, PlotterName } from '@flax/api';
+import type { Plotter, PlotterMap } from '@flax/api';
 
 type Props = {
   step: number;
@@ -32,7 +32,7 @@ export default function PlotAddChoosePlotter(props: Props) {
   function displayablePlotters(plotters: PlotterMap<PlotterName, Plotter>): PlotterName[] {
     const displayablePlotters = Object.keys(plotters) as PlotterName[];
     // Sort chiapos to the top of the list
-    displayablePlotters.sort((a, b) => a == PlotterName.CHIAPOS ? -1 : a.localeCompare(b));
+    displayablePlotters.sort((a, b) => a == PlotterName.FLAXPOS ? -1 : a.localeCompare(b));
     return displayablePlotters;
   }
 
@@ -91,8 +91,8 @@ export default function PlotAddChoosePlotter(props: Props) {
       <Typography variant="subtitle1">
         <Trans>
             Depending on your system configuration, you may find that an alternative plotter
-            produces plots faster than the default Chia Proof of Space plotter. If unsure,
-            use the default Chia Proof of Space plotter.
+            produces plots faster than the default Flax Proof of Space plotter. If unsure,
+            use the default Flax Proof of Space plotter.
         </Trans>
       </Typography>
 

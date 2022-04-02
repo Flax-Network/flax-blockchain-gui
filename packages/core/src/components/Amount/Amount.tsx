@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core';
 import { useWatch, useFormContext } from 'react-hook-form';
 import TextField, { TextFieldProps } from '../TextField';
-import chiaToMojo from '../../utils/chiaToMojo';
+import flaxToMojo from '../../utils/flaxToMojo';
 import catToMojo from '../../utils/catToMojo';
 import useCurrencyCode from '../../hooks/useCurrencyCode';
 import FormatLargeNumber from '../FormatLargeNumber';
@@ -61,9 +61,9 @@ export default function Amount(props: AmountProps) {
   const correctedValue = value[0] === '.' ? `0${value}` : value;
 
   const currencyCode = symbol === undefined ? defaultCurrencyCode : symbol;
-  const isChiaCurrency = ['XCH', 'TXCH'].includes(currencyCode);
-  const mojo = isChiaCurrency 
-    ? chiaToMojo(correctedValue) 
+  const isFlaxCurrency = ['XFX', 'TXFX'].includes(currencyCode);
+  const mojo = isFlaxCurrency 
+    ? flaxToMojo(correctedValue) 
     : catToMojo(correctedValue);
 
   return (
@@ -76,7 +76,7 @@ export default function Amount(props: AmountProps) {
           spellCheck: false,
           inputComponent: NumberFormatCustom as any,
           inputProps: {
-            decimalScale: isChiaCurrency ? 12 : 3,
+            decimalScale: isFlaxCurrency ? 12 : 3,
           },
           endAdornment: (
             <InputAdornment position="end">{currencyCode}</InputAdornment>

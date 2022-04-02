@@ -7,9 +7,8 @@ import {
   Farm as FarmIcon,
   Home as HomeIcon,
   Plot as PlotIcon,
-  Pool as PoolIcon,
-} from '@chia/icons';
-import { Flex, SideBarItem } from '@chia/core';
+} from '@flax/icons';
+import { Flex, SideBarItem } from '@flax/core';
 
 const StyledRoot = styled(Flex)`
   height: 100%;
@@ -44,11 +43,6 @@ export default function DashboardSideBar() {
           to="/dashboard/farm"
           icon={<FarmIcon fontSize="large" />}
           title={<Trans>Farm</Trans>}
-        />
-        <SideBarItem
-          to="/dashboard/pool"
-          icon={<PoolIcon fontSize="large" />}
-          title={<Trans>Pool</Trans>}
         />
       </StyledList>
     </StyledRoot>

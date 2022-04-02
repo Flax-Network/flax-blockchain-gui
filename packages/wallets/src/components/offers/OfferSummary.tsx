@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react';
 import { Trans } from '@lingui/macro';
-import { type OfferSummaryRecord  } from '@chia/api';
+import { type OfferSummaryRecord  } from '@flax/api';
 import {
   Flex,
   StateColor,
-  mojoToChia,
+  mojoToFlax,
   mojoToCAT,
-} from '@chia/core';
+} from '@flax/core';
 import {
   Box,
   Divider,
@@ -40,8 +40,8 @@ export default function OfferSummary(props: Props) {
   const takerEntries: [string, number][] = Object.entries(summary.requested);
   const makerAssetInfo = makerEntries.length === 1 ? lookupByAssetId(makerEntries[0][0]) : undefined;
   const takerAssetInfo = takerEntries.length === 1 ? lookupByAssetId(takerEntries[0][0]) : undefined;
-  const makerAmount = makerEntries[0][0].toLowerCase() === 'xch' ? Number(mojoToChia(makerEntries[0][1])) : Number(mojoToCAT(makerEntries[0][1]));
-  const takerAmount = takerEntries[0][0].toLowerCase() === 'xch' ? Number(mojoToChia(takerEntries[0][1])) : Number(mojoToCAT(takerEntries[0][1]));
+  const makerAmount = makerEntries[0][0].toLowerCase() === 'xfx' ? Number(mojoToFlax(makerEntries[0][1])) : Number(mojoToCAT(makerEntries[0][1]));
+  const takerAmount = takerEntries[0][0].toLowerCase() === 'xfx' ? Number(mojoToFlax(takerEntries[0][1])) : Number(mojoToCAT(takerEntries[0][1]));
   const makerExchangeRate = makerAssetInfo && takerAssetInfo ? takerAmount / makerAmount : undefined;
   const takerExchangeRate = makerAssetInfo && takerAssetInfo ? makerAmount / takerAmount : undefined;
 

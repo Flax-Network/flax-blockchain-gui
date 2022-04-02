@@ -1,8 +1,8 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 import { Alert } from '@material-ui/lab';
-import { DialogActions, Flex, Form, TextField } from '@chia/core';
-import { useOpenFullNodeConnectionMutation } from '@chia/api-react';
+import { DialogActions, Flex, Form, TextField } from '@flax/core';
+import { useOpenFullNodeConnectionMutation } from '@flax/api-react';
 import { useForm } from 'react-hook-form';
 import { Button, Dialog, DialogTitle, DialogContent } from '@material-ui/core';
 

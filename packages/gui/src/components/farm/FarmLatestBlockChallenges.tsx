@@ -1,8 +1,8 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@material-ui/core';
-import { Link, Table, Card } from '@chia/core';
-import { useGetSignagePointsQuery, useGetCombinedPlotsQuery } from '@chia/api-react';
+import { Link, Table, Card } from '@flax/core';
+import { useGetSignagePointsQuery, useGetCombinedPlotsQuery } from '@flax/api-react';
 import type { Row } from '../core/components/Table/Table';
 
 const cols = [
@@ -56,13 +56,13 @@ export default function FarmLatestBlockChallenges() {
       />
       <Typography variant="caption">
         <Trans>
-          *Want to explore Chia’s blocks further? Check out{' '}
+          *Want to explore Flax’s blocks further? Check out{' '}
           <Link
             color="primary"
-            href="https://www.chiaexplorer.com/"
+            href="https://www.flaxexplorer.org/"
             target="_blank"
           >
-            Chia Explorer
+            Flax Explorer
           </Link>{' '}
           built by an open source developer.
         </Trans>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { useShowDebugInformation, Flex } from '@chia/core';
+import { useShowDebugInformation, Flex } from '@flax/core';
 import WalletHistory from '../WalletHistory';
 import WalletStandardCards from './WalletStandardCards';
 import WalletReceiveAddress from '../WalletReceiveAddress';
@@ -20,7 +20,7 @@ export default function StandardWallet(props: StandardWalletProps) {
     <Flex flexDirection="column" gap={2}>
       <WalletHeader
         walletId={walletId}
-        title={<Trans>Chia Wallet</Trans>}
+        title={<Trans>Flax Wallet</Trans>}
       />
 
       <Flex flexDirection="column" gap={3}>

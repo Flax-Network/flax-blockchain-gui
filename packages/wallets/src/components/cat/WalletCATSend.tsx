@@ -10,19 +10,19 @@ import {
   TextFieldNumber,
   TextField,
   useOpenDialog,
-  chiaToMojo,
+  flaxToMojo,
   catToMojo,
   useIsSimulator,
   useCurrencyCode,
   toBech32m,
   getTransactionResult,
-} from '@chia/core';
+} from '@flax/core';
 import { 
   useSpendCATMutation,
   useGetSyncStatusQuery,
   useFarmBlockMutation,
-} from '@chia/api-react';
-import { SyncingStatus } from '@chia/api';
+} from '@flax/api-react';
+import { SyncingStatus } from '@flax/api';
 import isNumeric from 'validator/es/lib/isNumeric';
 import { useForm, useWatch } from 'react-hook-form';
 import { Button, Grid } from '@material-ui/core';
@@ -115,10 +115,10 @@ export default function WalletCATSend(props: Props) {
     }
 
     if (address.includes('colour')) {
-      throw new Error(t`Cannot send chia to coloured address. Please enter a chia address.`);
+      throw new Error(t`Cannot send flax to coloured address. Please enter a flax address.`);
     }
 
-    if (address.includes('chia_addr') || address.includes('colour_desc')) {
+    if (address.includes('flax_addr') || address.includes('colour_desc')) {
       throw new Error(t`Recipient address is not a coloured wallet address. Please enter a coloured wallet address`);
     }
     if (address.slice(0, 14) === 'colour_addr://') {
@@ -129,7 +129,7 @@ export default function WalletCATSend(props: Props) {
       }
     }
 
-    if (address.slice(0, 12) === 'chia_addr://') {
+    if (address.slice(0, 12) === 'flax_addr://') {
       address = address.slice(12);
     }
     if (address.startsWith('0x') || address.startsWith('0X')) {
@@ -137,7 +137,7 @@ export default function WalletCATSend(props: Props) {
     }
 
     const amountValue = catToMojo(amount);
-    const feeValue = chiaToMojo(fee);
+    const feeValue = flaxToMojo(fee);
 
     const memo = data.memo.trim();
     const memos = memo ? [memo] : undefined;

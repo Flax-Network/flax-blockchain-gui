@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Trans } from '@lingui/macro';
-import { useCurrencyCode, mojoToChiaLocaleString, CardSimple } from '@chia/core';
-import { useGetFarmedAmountQuery } from '@chia/api-react';
+import { useCurrencyCode, mojoToFlaxLocaleString, CardSimple } from '@flax/core';
+import { useGetFarmedAmountQuery } from '@flax/api-react';
 
 export default function FarmCardUserFees() {
   const currencyCode = useCurrencyCode();
@@ -13,7 +13,7 @@ export default function FarmCardUserFees() {
     if (feeAmount !== undefined) {
       return (
         <>
-          {mojoToChiaLocaleString(feeAmount)}
+          {mojoToFlaxLocaleString(feeAmount)}
           &nbsp;
           {currencyCode}
         </>

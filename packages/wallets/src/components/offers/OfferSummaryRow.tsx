@@ -6,13 +6,13 @@ import {
   FormatLargeNumber,
   TooltipIcon,
   mojoToCATLocaleString,
-} from '@chia/core';
+} from '@flax/core';
 import {
   Box,
   Typography,
 } from '@material-ui/core';
 import useAssetIdName from '../../hooks/useAssetIdName';
-import { WalletType } from '@chia/api';
+import { WalletType } from '@flax/api';
 import { formatAmountForWalletType } from './utils';
 import styled from 'styled-components';
 
