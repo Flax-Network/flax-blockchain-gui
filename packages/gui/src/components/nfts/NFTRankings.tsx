@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
-import type { NFTAttribute } from '@chia/api';
+import type { NFTAttribute } from '@flax/api';
 import { Trans } from '@lingui/macro';
-import { Flex } from '@chia/core';
+import { Flex } from '@flax/core';
 import { styled, useTheme } from '@mui/material/styles';
 import { Grid, Typography, LinearProgress } from '@mui/material';
 import isRankingAttribute from '../../util/isRankingAttribute';

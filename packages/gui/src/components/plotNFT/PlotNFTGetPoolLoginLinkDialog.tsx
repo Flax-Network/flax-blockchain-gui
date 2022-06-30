@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { t, Trans } from '@lingui/macro';
 import styled from 'styled-components';
-import { Button, CopyToClipboard, Flex, Link, Loading } from '@chia/core';
+import { Button, CopyToClipboard, Flex, Link, Loading } from '@flax/core';
 import {
   Alert,
   Dialog,
@@ -10,8 +10,8 @@ import {
   DialogContent,
   Typography,
 } from '@mui/material';
-import { useGetPoolLoginLinkQuery } from '@chia/api-react';
-import type { PlotNFT, PlotNFTExternal } from '@chia/api';
+import { useGetPoolLoginLinkQuery } from '@flax/api-react';
+import type { PlotNFT, PlotNFTExternal } from '@flax/api';
 
 const StyledLoginLink = styled(Typography)`
   word-break: break-all;
@@ -70,7 +70,7 @@ export default function PlotNFTGetPoolLoginLinkDialog(props: Props) {
                 </Trans>{' '}
                 <Link
                   target="_blank"
-                  href="https://github.com/Chia-Network/pool-reference/blob/main/SPECIFICATION.md#get-login"
+                  href="https://github.com/Flax-Network/pool-reference/blob/main/SPECIFICATION.md#get-login"
                   noWrap
                 >
                   <Trans>Learn More</Trans>

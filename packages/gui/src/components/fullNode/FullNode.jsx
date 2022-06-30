@@ -9,9 +9,9 @@ import {
   StateColor,
   Table,
   LayoutDashboardSub,
-} from '@chia/core';
-import { Status } from '@chia/icons';
-import { useGetLatestBlocksQuery, useGetUnfinishedBlockHeadersQuery } from '@chia/api-react';
+} from '@flax/core';
+import { Status } from '@flax/icons';
+import { useGetLatestBlocksQuery, useGetUnfinishedBlockHeadersQuery } from '@flax/api-react';
 import { useNavigate } from 'react-router-dom';
 import { Box, Tooltip, Typography } from '@mui/material';
 // import HelpIcon from '@mui/icons-material/Help';

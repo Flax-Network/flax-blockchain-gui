@@ -5,10 +5,10 @@ import BigNumber from 'bignumber.js';
 import { orderBy, groupBy, map } from 'lodash';
 import { /* Typography, */ Paper } from '@mui/material';
 import styled from 'styled-components';
-import { useGetWalletBalanceQuery } from '@chia/api-react';
-import { TransactionType } from '@chia/api';
-import type { Transaction } from '@chia/api';
-import { mojoToChia, blockHeightToTimestamp } from '@chia/core';
+import { useGetWalletBalanceQuery } from '@flax/api-react';
+import { TransactionType } from '@flax/api';
+import type { Transaction } from '@flax/api';
+import { mojoToFlax, blockHeightToTimestamp } from '@flax/core';
 import useWalletTransactions from '../hooks/useWalletTransactions';
 
 /*
@@ -202,8 +202,8 @@ function prepareGraphPoints(
   const points = [
     {
       x: peakTransaction.confirmedAtHeight,
-      y: BigNumber.max(0, mojoToChia(start)).toNumber(), // max 21,000,000 safe to number
-      tooltip: mojoToChia(balance).toString(), // bignumber is not supported by react
+      y: BigNumber.max(0, mojoToFlax(start)).toNumber(), // max 21,000,000 safe to number
+      tooltip: mojoToFlax(balance).toString(), // bignumber is not supported by react
     },
   ];
 
@@ -214,8 +214,8 @@ function prepareGraphPoints(
 
     points.push({
       x: timestamp,
-      y: BigNumber.max(0, mojoToChia(start)).toNumber(), // max 21,000,000 safe to number
-      tooltip: mojoToChia(start).toString, // bignumber is not supported by react
+      y: BigNumber.max(0, mojoToFlax(start)).toNumber(), // max 21,000,000 safe to number
+      tooltip: mojoToFlax(start).toString, // bignumber is not supported by react
     });
   });
 

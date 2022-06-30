@@ -7,9 +7,9 @@ import {
   useCheckOfferValidityMutation,
   useGetNFTInfoQuery,
   useGetNFTWallets,
-} from '@chia/api-react';
-import type { Wallet } from '@chia/api';
-import { OfferSummaryRecord, OfferTradeRecord } from '@chia/api';
+} from '@flax/api-react';
+import type { Wallet } from '@flax/api';
+import { OfferSummaryRecord, OfferTradeRecord } from '@flax/api';
 import {
   Back,
   Button,
@@ -21,12 +21,12 @@ import {
   StateColor,
   Tooltip,
   TooltipIcon,
-  chiaToMojo,
-  mojoToChia,
+  flaxToMojo,
+  mojoToFlax,
   useColorModeValue,
   useCurrencyCode,
   useShowError,
-} from '@chia/core';
+} from '@flax/core';
 import { Box, Divider, Grid, Typography } from '@mui/material';
 import { Warning as WarningIcon } from '@mui/icons-material';
 import { useTheme } from '@mui/material/styles';
@@ -92,8 +92,8 @@ function NFTOfferSummaryRow(props: NFTOfferSummaryRowProps) {
         const infoDict = summaryInfo[key];
         let assetType: OfferAsset | undefined;
 
-        if (['xch', 'txch'].includes(key.toLowerCase())) {
-          assetType = OfferAsset.CHIA;
+        if (['xfx', 'txfx'].includes(key.toLowerCase())) {
+          assetType = OfferAsset.FLAX;
         } else if (infoDict?.type) {
           switch (infoDict.type.toLowerCase()) {
             case 'singleton':
@@ -121,7 +121,7 @@ function NFTOfferSummaryRow(props: NFTOfferSummaryRowProps) {
     switch (assetType) {
       case undefined:
         return null;
-      case OfferAsset.CHIA: // fall-through
+      case OfferAsset.FLAX: // fall-through
       case OfferAsset.TOKEN:
         return (
           <OfferSummaryTokenRow
@@ -414,12 +414,12 @@ function NFTOfferDetails(props: NFTOfferDetailsProps) {
     }
 
     const royaltyPercentage = convertRoyaltyToPercentage(nft.royaltyPercentage);
-    const xchMakerFee = mojoToChia(makerFee);
+    const xfxMakerFee = mojoToFlax(makerFee);
 
     return {
       ...calculateNFTRoyalties(
         amount,
-        parseFloat(xchMakerFee),
+        parseFloat(xfxMakerFee),
         convertRoyaltyToPercentage(nft.royaltyPercentage),
         exchangeType,
       ),
@@ -432,7 +432,7 @@ function NFTOfferDetails(props: NFTOfferDetailsProps) {
     : 'textSecondary';
   const overrideNFTSellerAmount =
     exchangeType === NFTOfferExchangeType.XCHForNFT
-      ? chiaToMojo(nftSaleInfo?.nftSellerNetAmount ?? 0)
+      ? flaxToMojo(nftSaleInfo?.nftSellerNetAmount ?? 0)
       : undefined;
 
   useMemo(async () => {

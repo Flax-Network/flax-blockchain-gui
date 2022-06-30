@@ -1,8 +1,8 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { CardSimple } from '@chia/core';
-import { ServiceName } from '@chia/api';
-import { useIsServiceRunningQuery } from '@chia/api-react';
+import { CardSimple } from '@flax/core';
+import { ServiceName } from '@flax/api';
+import { useIsServiceRunningQuery } from '@flax/api-react';
 
 export default function FullNodeCardConnectionStatus() {
   const { data: isRunning, isLoading, error } = useIsServiceRunningQuery({

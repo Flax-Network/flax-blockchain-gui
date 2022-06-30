@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { FormatBytes, CardSimple } from '@chia/core';
-import { useGetTotalHarvestersSummaryQuery } from '@chia/api-react';
+import { FormatBytes, CardSimple } from '@flax/core';
+import { useGetTotalHarvestersSummaryQuery } from '@flax/api-react';
 
 export default function FarmCardTotalSizeOfPlots() {
   const { totalPlotSize, isLoading } = useGetTotalHarvestersSummaryQuery();

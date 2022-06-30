@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Trans } from '@lingui/macro';
-import { Address, TableControlled, Flex, FormatBytes, Tooltip, StateColor } from '@chia/core';
+import { Address, TableControlled, Flex, FormatBytes, Tooltip, StateColor } from '@flax/core';
 import { Warning as WarningIcon } from '@mui/icons-material';
-import { type Plot } from '@chia/api';
-import { useGetHarvesterPlotsValidQuery, useGetHarvesterQuery } from '@chia/api-react';
+import { type Plot } from '@flax/api';
+import { useGetHarvesterPlotsValidQuery, useGetHarvesterQuery } from '@flax/api-react';
 import styled from 'styled-components';
 import { Box, Typography } from '@mui/material';
 import PlotStatus from './PlotStatus';

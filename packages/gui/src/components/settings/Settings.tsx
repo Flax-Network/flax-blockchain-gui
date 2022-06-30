@@ -11,8 +11,8 @@ import {
   useOpenDialog,
   useSkipMigration,
   LayoutDashboardSub,
-} from '@chia/core';
-import { useGetKeyringStatusQuery } from '@chia/api-react';
+} from '@flax/core';
+import { useGetKeyringStatusQuery } from '@flax/api-react';
 import { Grid, Typography, Box, Tooltip, Tab, Tabs } from '@mui/material';
 import {
   Help as HelpIcon,
@@ -240,7 +240,7 @@ export default function Settings() {
   const navigate = useNavigate();
   const isGeneral = !!useMatch({ path: '/dashboard/settings', end: true });
 
-  const activeTab = isGeneral ? 'GENERAL' : 'PROFILES';
+  const activeTab = 'GENERAL';
 
   function handleChangeTab(newTab: string) {
     if (newTab === 'PROFILES') {
@@ -268,15 +268,9 @@ export default function Settings() {
               label={<Trans>General</Trans>}
               style={{ width: '175px' }}
             />
-            <Tab
-              value="PROFILES"
-              label={<Trans>Profiles</Trans>}
-              style={{ width: '175px' }}
-            />
           </Tabs>
 
           <Routes>
-            <Route path="profiles/*" element={<SettingsProfiles />} />
             <Route index element={<SettingsGeneral />} />
           </Routes>
         </Flex>

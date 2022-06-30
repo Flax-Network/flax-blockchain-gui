@@ -1,9 +1,9 @@
 import React, { useState, useMemo } from 'react';
-import { Flex, LayoutDashboardSub, Loading, useTrans, usePersistState } from '@chia/core';
+import { Flex, LayoutDashboardSub, Loading, useTrans, usePersistState } from '@flax/core';
 import { defineMessage } from '@lingui/macro';
-import { WalletReceiveAddressField } from '@chia/wallets';
-import type { NFTInfo, Wallet } from '@chia/api';
-import { useGetNFTWallets } from '@chia/api-react';
+import { WalletReceiveAddressField } from '@flax/wallets';
+import type { NFTInfo, Wallet } from '@flax/api';
+import { useGetNFTWallets } from '@flax/api-react';
 import { Box, Grid } from '@mui/material';
 // import NFTGallerySidebar from './NFTGallerySidebar';
 import NFTCardLazy from '../NFTCardLazy';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { Flex, Loading, StateColor, StateIndicatorDot } from '@chia/core';
-import { useGetWalletConnectionsQuery } from '@chia/api-react';
+import { Flex, Loading, StateColor, StateIndicatorDot } from '@flax/core';
+import { useGetWalletConnectionsQuery } from '@flax/api-react';
 import { Box, ButtonGroup, Button } from '@mui/material';
 import WalletStatus from './WalletStatus';
 import { useTheme } from '@mui/styles';

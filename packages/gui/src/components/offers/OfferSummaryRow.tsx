@@ -7,10 +7,10 @@ import {
   FormatLargeNumber,
   TooltipIcon,
   mojoToCATLocaleString,
-} from '@chia/core';
+} from '@flax/core';
 import { Box, Typography } from '@mui/material';
 import useAssetIdName from '../../hooks/useAssetIdName';
-import { WalletType } from '@chia/api';
+import { WalletType } from '@flax/api';
 import { formatAmountForWalletType } from './utils';
 import { launcherIdToNFTId } from '../../util/nfts';
 import NFTSummary from '../nfts/NFTSummary';
@@ -185,14 +185,6 @@ export function OfferSummaryTokenRow(
               <Box flexGrow={1}>
                 <StyledTitle>Name</StyledTitle>
               </Box>
-              {(!assetIdInfo || assetIdInfo?.walletType === WalletType.CAT) && (
-                <Link
-                  href={`https://www.taildatabase.com/tail/${assetId.toLowerCase()}`}
-                  target="_blank"
-                >
-                  <Trans>Search on Tail Database</Trans>
-                </Link>
-              )}
             </Flex>
 
             <StyledValue>{tooltipDisplayName}</StyledValue>
@@ -263,14 +255,6 @@ export default function OfferSummaryRow(props: Props) {
               <Box flexGrow={1}>
                 <StyledTitle>Name</StyledTitle>
               </Box>
-              {assetIdInfo?.walletType === WalletType.CAT && (
-                <Link
-                  href={`https://www.taildatabase.com/tail/${assetId.toLowerCase()}`}
-                  target="_blank"
-                >
-                  <Trans>Search on Tail Database</Trans>
-                </Link>
-              )}
             </Flex>
 
             <StyledValue>{assetIdInfo?.name}</StyledValue>

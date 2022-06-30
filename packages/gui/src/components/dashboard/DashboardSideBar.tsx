@@ -11,8 +11,8 @@ import {
   Offers as OffersIcon,
   Tokens as TokensIcon,
   Settings as SettingsIcon,
-} from '@chia/icons';
-import { Flex, SideBarItem } from '@chia/core';
+} from '@flax/icons';
+import { Flex, SideBarItem } from '@flax/core';
 
 const StyledItemsContainer = styled(Flex)`
   flex-direction: column;
@@ -94,11 +94,6 @@ export default function DashboardSideBar(props: DashboardSideBarProps) {
               to="/dashboard/farm"
               icon={FarmingIcon}
               title={<Trans>Farming</Trans>}
-            />
-            <SideBarItem
-              to="/dashboard/pool"
-              icon={PoolingIcon}
-              title={<Trans>Pooling</Trans>}
             />
           </>
         )}

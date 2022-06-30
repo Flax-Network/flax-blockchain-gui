@@ -1,10 +1,10 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { ConfirmDialog, More, useOpenDialog } from '@chia/core';
+import { ConfirmDialog, More, useOpenDialog } from '@flax/core';
 import { Box, ListItemIcon, MenuItem, Typography } from '@mui/material';
 import { DeleteForever as DeleteForeverIcon } from '@mui/icons-material';
-import { useDeletePlotMutation } from '@chia/api-react';
-import type { Plot } from '@chia/api';
+import { useDeletePlotMutation } from '@flax/api-react';
+import type { Plot } from '@flax/api';
 
 export type PlotActionProps = {
   plot: Plot;

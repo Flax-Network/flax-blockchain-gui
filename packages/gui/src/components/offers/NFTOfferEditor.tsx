@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import BigNumber from 'bignumber.js';
 import { Trans, t } from '@lingui/macro';
 import { useLocalStorage } from '@rehooks/local-storage';
-import type { NFTInfo, Wallet } from '@chia/api';
+import type { NFTInfo, Wallet } from '@flax/api';
 import {
   useCreateOfferForIdsMutation,
   useGetNFTInfoQuery,
   useGetNFTWallets,
-} from '@chia/api-react';
+} from '@flax/api-react';
 import {
   Amount,
   AmountProps,
@@ -24,12 +24,12 @@ import {
   TextField,
   Tooltip,
   TooltipIcon,
-  chiaToMojo,
+  flaxToMojo,
   useColorModeValue,
   useCurrencyCode,
   useOpenDialog,
   useShowError,
-} from '@chia/core';
+} from '@flax/core';
 import {
   Box,
   Divider,
@@ -55,7 +55,7 @@ import styled from 'styled-components';
 
 /* ========================================================================== */
 /*              Temporary home for the NFT-specific Offer Editor              */
-/*        An NFT offer consists of a single NFT being offered for XCH         */
+/*        An NFT offer consists of a single NFT being offered for XFX         */
 /* ========================================================================== */
 
 const StyledWarningIcon = styled(WarningIcon)`
@@ -93,7 +93,7 @@ function NFTOfferCreationFee(props: NFTOfferCreationFeeProps) {
               <Trans>
                 Including a fee in the offer can help expedite the transaction
                 when the offer is accepted. The recommended minimum fee is
-                0.000005 XCH (5,000,000 mojos)
+                0.000005 XFX (5,000,000 mojos)
               </Trans>
             </TooltipIcon>
           </Box>
@@ -119,7 +119,7 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
   const [makerFeeFocused, setMakerFeeFocused] = useState<boolean>(false);
 
   const tab = methods.watch('exchangeType');
-  const amount = methods.watch('xchAmount');
+  const amount = methods.watch('xfxAmount');
   const makerFee = methods.watch('fee');
   const nftId = methods.watch('nftId');
   const launcherId = launcherIdFromNFTId(nftId ?? '');
@@ -189,7 +189,7 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
         id={`${tab}-amount}`}
         key={`${tab}-amount}`}
         variant="filled"
-        name="xchAmount"
+        name="xfxAmount"
         color="secondary"
         disabled={disabled}
         label={<Trans>Amount</Trans>}
@@ -214,7 +214,7 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
   const showNegativeAmountWarning = (nftSellerNetAmount ?? 0) < 0;
 
   function handleAmountChange(amount: string) {
-    methods.setValue('xchAmount', amount);
+    methods.setValue('xfxAmount', amount);
   }
 
   function handleFeeChange(fee: string) {
@@ -253,12 +253,12 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
       >
         <Tab
           value={NFTOfferExchangeType.NFTForXCH}
-          label={<Trans>NFT for XCH</Trans>}
+          label={<Trans>NFT for XFX</Trans>}
           disabled={disabled}
         />
         <Tab
           value={NFTOfferExchangeType.XCHForNFT}
-          label={<Trans>XCH for NFT</Trans>}
+          label={<Trans>XFX for NFT</Trans>}
           disabled={disabled}
         />
       </Tabs>
@@ -435,20 +435,20 @@ NFTOfferConditionalsPanel.defaultProps = {
 
 /* ========================================================================== */
 /*                              NFT Offer Editor                              */
-/*             Currently only supports a single NFT <--> XCH offer            */
+/*             Currently only supports a single NFT <--> XFX offer            */
 /* ========================================================================== */
 
 type NFTOfferEditorFormData = {
   exchangeType: NFTOfferExchangeType;
   nftId?: string;
-  xchAmount: string;
+  xfxAmount: string;
   fee: string;
 };
 
 type NFTOfferEditorValidatedFormData = {
   exchangeType: NFTOfferExchangeType;
   launcherId: string;
-  xchAmount: string;
+  xfxAmount: string;
   fee: string;
 };
 
@@ -461,17 +461,17 @@ function buildOfferRequest(
   exchangeType: NFTOfferExchangeType,
   nft: NFTInfo,
   nftLauncherId: string,
-  xchAmount: string,
+  xfxAmount: string,
   fee: string,
 ) {
-  const baseMojoAmount: BigNumber = chiaToMojo(xchAmount);
+  const baseMojoAmount: BigNumber = flaxToMojo(xfxAmount);
   const mojoAmount =
     exchangeType === NFTOfferExchangeType.NFTForXCH
       ? baseMojoAmount
       : baseMojoAmount.negated();
-  const feeMojoAmount = chiaToMojo(fee);
+  const feeMojoAmount = flaxToMojo(fee);
   const nftAmount = exchangeType === NFTOfferExchangeType.NFTForXCH ? -1 : 1;
-  const xchWalletId = 1;
+  const xfxWalletId = 1;
   const innerAlsoDict = nft.supportsDid
     ? {
         type: 'ownership',
@@ -502,7 +502,7 @@ function buildOfferRequest(
   return [
     {
       [nftLauncherId]: nftAmount,
-      [xchWalletId]: mojoAmount,
+      [xfxWalletId]: mojoAmount,
     },
     exchangeType === NFTOfferExchangeType.XCHForNFT ? driverDict : undefined,
     // driverDict,
@@ -528,7 +528,7 @@ export default function NFTOfferEditor(props: NFTOfferEditorProps) {
   const defaultValues: NFTOfferEditorFormData = {
     exchangeType: NFTOfferExchangeType.NFTForXCH,
     nftId: nft?.$nftId ?? '',
-    xchAmount: '',
+    xfxAmount: '',
     fee: '',
   };
   const methods = useForm<NFTOfferEditorFormData>({
@@ -542,7 +542,7 @@ export default function NFTOfferEditor(props: NFTOfferEditorProps) {
   function validateFormData(
     unvalidatedFormData: NFTOfferEditorFormData,
   ): NFTOfferEditorValidatedFormData | undefined {
-    const { exchangeType, nftId, xchAmount, fee } = unvalidatedFormData;
+    const { exchangeType, nftId, xfxAmount, fee } = unvalidatedFormData;
     let result: NFTOfferEditorValidatedFormData | undefined = undefined;
 
     if (!nftId) {
@@ -551,13 +551,13 @@ export default function NFTOfferEditor(props: NFTOfferEditorProps) {
       errorDialog(new Error(t`Invalid NFT identifier`));
     } else if (!launcherId) {
       errorDialog(new Error(t`Failed to decode NFT identifier`));
-    } else if (!xchAmount || xchAmount === '0') {
+    } else if (!xfxAmount || xfxAmount === '0') {
       errorDialog(new Error(t`Please enter an amount`));
     } else {
       result = {
         exchangeType,
         launcherId,
-        xchAmount,
+        xfxAmount,
         fee,
       };
     }
@@ -581,7 +581,7 @@ export default function NFTOfferEditor(props: NFTOfferEditorProps) {
       return;
     }
 
-    const { exchangeType, launcherId, xchAmount, fee } = formData;
+    const { exchangeType, launcherId, xfxAmount, fee } = formData;
 
     if (exchangeType === NFTOfferExchangeType.NFTForXCH) {
       const haveNFT =
@@ -615,7 +615,7 @@ export default function NFTOfferEditor(props: NFTOfferEditorProps) {
       exchangeType,
       offerNFT,
       launcherId,
-      xchAmount,
+      xfxAmount,
       fee,
     );
 

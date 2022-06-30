@@ -28,17 +28,17 @@ import {
   TableControlled,
   useCurrencyCode,
   useSerializedNavigationState,
-  mojoToChia,
+  mojoToFlax,
   mojoToCAT,
   FormatLargeNumber,
-} from '@chia/core';
+} from '@flax/core';
 import {
   useGetOfferRecordMutation,
   useGetSyncStatusQuery,
-} from '@chia/api-react';
+} from '@flax/api-react';
 import styled from 'styled-components';
-import type { Row } from '@chia/core';
-import { WalletType, TransactionType, toBech32m } from '@chia/api';
+import type { Row } from '@flax/core';
+import { WalletType, TransactionType, toBech32m } from '@flax/api';
 import useWallet from '../hooks/useWallet';
 import useWalletTransactions from '../hooks/useWalletTransactions';
 
@@ -216,7 +216,7 @@ const getCols = (type: WalletType, isSyncing, getOfferRecord, navigate) => [
               value={
                 type === WalletType.CAT
                   ? mojoToCAT(row.amount)
-                  : mojoToChia(row.amount)
+                  : mojoToFlax(row.amount)
               }
             />
           </strong>
@@ -231,7 +231,7 @@ const getCols = (type: WalletType, isSyncing, getOfferRecord, navigate) => [
     field: (row: Row, metadata) => (
       <>
         <strong>
-          <FormatLargeNumber value={mojoToChia(row.feeAmount)} />
+          <FormatLargeNumber value={mojoToFlax(row.feeAmount)} />
         </strong>
         &nbsp;
         {metadata.feeUnit}

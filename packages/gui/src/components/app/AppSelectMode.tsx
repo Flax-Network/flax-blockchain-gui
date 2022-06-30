@@ -1,14 +1,14 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 import styled from 'styled-components';
-import { Button, Flex, Logo, Card, useMode, Mode } from '@chia/core';
+import { Button, Flex, Logo, Card, useMode, Mode } from '@flax/core';
 import {
   AccountBalanceWallet as AccountBalanceWalletIcon,
   EnergySavingsLeaf as EcoIcon,
   Settings as SettingsIcon,
   Check as CheckIcon,
 } from '@mui/icons-material';
-import { Farming as FarmingIcon } from '@chia/icons';
+import { Farming as FarmingIcon } from '@flax/icons';
 import { Box, Typography, Container, Grid } from '@mui/material';
 
 const StyledCheckIcon = styled(CheckIcon)`
@@ -89,19 +89,7 @@ export default function AppSelectMode() {
                     <Flex gap={1} alignItems="center">
                       <StyledCheckIcon color="primary" />
                       <Typography variant="body2">
-                        <Trans>Store and Send XCH</Trans>
-                      </Typography>
-                    </Flex>
-                    <Flex gap={1} alignItems="center">
-                      <StyledCheckIcon color="primary" />
-                      <Typography variant="body2">
-                        <Trans>Manage CAT tokens</Trans>
-                      </Typography>
-                    </Flex>
-                    <Flex gap={1} alignItems="center">
-                      <StyledCheckIcon color="primary" />
-                      <Typography variant="body2">
-                        <Trans>Trade tokens</Trans>
+                        <Trans>Store and Send XFX</Trans>
                       </Typography>
                     </Flex>
                   </Flex>
@@ -143,12 +131,6 @@ export default function AppSelectMode() {
                       <StyledCheckIcon color="primary" />
                       <Typography variant="body2">
                         <Trans>Create &amp; Manage plots</Trans>
-                      </Typography>
-                    </Flex>
-                    <Flex gap={1} alignItems="center">
-                      <StyledCheckIcon color="primary" />
-                      <Typography variant="body2">
-                        <Trans>Join farming pools</Trans>
                       </Typography>
                     </Flex>
                     <Flex gap={1} alignItems="center">

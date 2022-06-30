@@ -1,4 +1,4 @@
-import { WalletType } from '@chia/api';
+import { WalletType } from '@flax/api';
 import type Wallet from '../types/Wallet';
 
 // deprecated

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { t, Trans } from '@lingui/macro';
-import { CopyToClipboard, Loading, Flex } from '@chia/core';
-import { useGetCurrentAddressQuery, useGetNextAddressMutation } from '@chia/api-react';
+import { CopyToClipboard, Loading, Flex } from '@flax/core';
+import { useGetCurrentAddressQuery, useGetNextAddressMutation } from '@flax/api-react';
 import {
   TextField,
   InputAdornment,

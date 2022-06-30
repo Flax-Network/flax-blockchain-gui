@@ -12,8 +12,8 @@ type Display = {
 const display: {
   [key in Unit]: Display;
 } = {
-  chia: {
-    format: '{amount} XCH',
+  flax: {
+    format: '{amount} XFX',
     fractionDigits: 12,
   },
   mojo: {

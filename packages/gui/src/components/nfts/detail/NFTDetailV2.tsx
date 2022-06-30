@@ -6,9 +6,9 @@ import {
   LayoutDashboardSub,
   Loading,
   useOpenDialog,
-} from '@chia/core';
-import type { NFTInfo } from '@chia/api';
-import { useGetNFTWallets } from '@chia/api-react';
+} from '@flax/core';
+import type { NFTInfo } from '@flax/api';
+import { useGetNFTWallets } from '@flax/api-react';
 import { Box, Grid, Typography, IconButton, Dialog, Paper } from '@mui/material';
 import { MoreVert } from '@mui/icons-material';
 import { useParams } from 'react-router-dom';

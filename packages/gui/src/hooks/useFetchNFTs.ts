@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
-import type { NFTInfo } from '@chia/api';
-import { useGetNFTsQuery } from '@chia/api-react';
+import type { NFTInfo } from '@flax/api';
+import { useGetNFTsQuery } from '@flax/api-react';
 
 type UseFetchNFTsResult = {
   nfts: NFTInfo[];

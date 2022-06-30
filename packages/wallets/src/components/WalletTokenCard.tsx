@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
-import { WalletType } from '@chia/api';
-import { useSetCATNameMutation } from '@chia/api-react';
+import { WalletType } from '@flax/api';
+import { useSetCATNameMutation } from '@flax/api-react';
 import { Trans } from '@lingui/macro';
 import {
   Box,
@@ -9,7 +9,7 @@ import {
   CircularProgress,
   TextField,
 } from '@mui/material';
-import { Tooltip, CardListItem, Flex, Link, useShowError } from '@chia/core';
+import { Tooltip, CardListItem, Flex, Link, useShowError } from '@flax/core';
 
 export type WalletTokenCardProps = {
   item: {
@@ -97,7 +97,7 @@ export default function WalletTokenCard(props: WalletTokenCardProps) {
     return assetId;
   }, [assetId, type, walletType]);
 
-  const currentName = walletType === WalletType.STANDARD_WALLET ? 'Chia' : name;
+  const currentName = walletType === WalletType.STANDARD_WALLET ? 'Flax' : name;
 
   return (
     <CardListItem>
@@ -134,15 +134,6 @@ export default function WalletTokenCard(props: WalletTokenCardProps) {
                     {subTitle}
                   </Typography>
                 </Tooltip>
-              )}
-              {assetId && (
-                <Link
-                  href={`https://www.taildatabase.com/tail/${assetId}`}
-                  target="_blank"
-                  variant="caption"
-                >
-                  <Trans>Search on Tail Database</Trans>
-                </Link>
               )}
             </Flex>
           )}

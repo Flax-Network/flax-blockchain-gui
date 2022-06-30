@@ -1,14 +1,14 @@
 import React, { useMemo } from 'react';
 import { Plural, Trans } from '@lingui/macro';
-import { type OfferSummaryRecord } from '@chia/api';
+import { type OfferSummaryRecord } from '@flax/api';
 import {
   Flex,
   FormatLargeNumber,
   StateColor,
   TooltipIcon,
-  mojoToChia,
+  mojoToFlax,
   mojoToCAT,
-} from '@chia/core';
+} from '@flax/core';
 import { Box, Divider, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import styled from 'styled-components';
@@ -53,14 +53,14 @@ export default function OfferSummary(props: Props) {
     takerEntries.length === 1 ? lookupByAssetId(takerEntries[0][0]) : undefined;
   const makerAmount =
     makerEntries.length > 0
-      ? ['xch', 'txch'].includes(makerEntries[0][0].toLowerCase())
-        ? mojoToChia(makerEntries[0][1])
+      ? ['xfx', 'txfx'].includes(makerEntries[0][0].toLowerCase())
+        ? mojoToFlax(makerEntries[0][1])
         : mojoToCAT(makerEntries[0][1])
       : undefined;
   const takerAmount =
     takerEntries.length > 0
-      ? ['xch', 'txch'].includes(takerEntries[0][0].toLowerCase())
-        ? mojoToChia(takerEntries[0][1])
+      ? ['xfx', 'txfx'].includes(takerEntries[0][0].toLowerCase())
+        ? mojoToFlax(takerEntries[0][1])
         : mojoToCAT(takerEntries[0][1])
       : undefined;
   const canSetExchangeRate =

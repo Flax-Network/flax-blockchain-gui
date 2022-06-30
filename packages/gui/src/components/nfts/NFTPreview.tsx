@@ -15,9 +15,9 @@ import {
   Flex,
   SandboxedIframe,
   usePersistState,
-} from '@chia/core';
+} from '@flax/core';
 import styled from 'styled-components';
-import { type NFTInfo } from '@chia/api';
+import { type NFTInfo } from '@flax/api';
 import isURL from 'validator/lib/isURL';
 import useNFTHash from '../../hooks/useNFTHash';
 

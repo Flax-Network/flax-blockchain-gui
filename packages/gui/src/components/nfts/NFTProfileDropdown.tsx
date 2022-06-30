@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { Trans } from '@lingui/macro';
-import type { Wallet } from '@chia/api';
-import { DropdownActions } from '@chia/core';
+import type { Wallet } from '@flax/api';
+import { DropdownActions } from '@flax/core';
 import {
   AutoAwesome as AutoAwesomeIcon,
   PermIdentity as PermIdentityIcon,
@@ -11,8 +11,8 @@ import {
   useGetDIDsQuery,
   useGetNFTWallets,
   useGetNFTWalletsWithDIDsQuery,
-} from '@chia/api-react';
-import { NFTsSmall as NFTsSmallIcon } from '@chia/icons';
+} from '@flax/api-react';
+import { NFTsSmall as NFTsSmallIcon } from '@flax/icons';
 import { orderBy } from 'lodash';
 
 type Profile = Wallet & {

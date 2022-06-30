@@ -6,13 +6,13 @@ import {
   LayoutDashboard,
   Mode,
   useMode,
-} from '@chia/core';
+} from '@flax/core';
 import {
   WalletAdd,
   WalletImport,
   Wallets,
   WalletStatusHeader,
-} from '@chia/wallets';
+} from '@flax/wallets';
 import AppProviders from './AppProviders';
 import FullNode from '../fullNode/FullNode';
 import Block from '../block/Block';

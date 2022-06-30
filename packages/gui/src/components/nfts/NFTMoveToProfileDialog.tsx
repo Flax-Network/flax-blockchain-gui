@@ -1,13 +1,13 @@
 import React, { useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Trans, t } from '@lingui/macro';
-import { NFTInfo } from '@chia/api';
-import type { Wallet } from '@chia/api';
+import { NFTInfo } from '@flax/api';
+import type { Wallet } from '@flax/api';
 import {
   useGetDIDsQuery,
   useGetNFTWallets,
   useSetNFTDIDMutation,
-} from '@chia/api-react';
+} from '@flax/api-react';
 import {
   AlertDialog,
   Button,
@@ -19,11 +19,11 @@ import {
   Flex,
   Form,
   TooltipIcon,
-  chiaToMojo,
+  flaxToMojo,
   truncateValue,
   useOpenDialog,
   useShowError,
-} from '@chia/core';
+} from '@flax/core';
 import { PermIdentity as PermIdentityIcon } from '@mui/icons-material';
 import {
   Box,
@@ -269,7 +269,7 @@ export function NFTMoveToProfileAction(props: NFTMoveToProfileActionProps) {
 
   async function handleSubmit(formData: NFTMoveToProfileFormData) {
     const { destination, fee } = formData;
-    const feeInMojos = chiaToMojo(fee || 0);
+    const feeInMojos = flaxToMojo(fee || 0);
     let isValid = true;
     let confirmation = false;
 

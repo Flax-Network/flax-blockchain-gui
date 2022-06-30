@@ -1,8 +1,8 @@
 {
-  "name": "@chia/api",
-  "author": "Chia Network <hello@chia.net> (https://chia.net/)",
-  "description": "Chia API Library",
-  "productName": "Chia Blockchain",
+  "name": "@flax/api",
+  "author": "Flax Network <hello@flaxnetwork.org> (https://flaxnetwork.org/)",
+  "description": "Flax API Library",
+  "productName": "Flax Blockchain",
   "private": true,
   "version": "1.0.0",
   "engines": {

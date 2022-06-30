@@ -1,16 +1,16 @@
-import { WalletType } from '@chia/api';
+import { WalletType } from '@flax/api';
 import { t } from '@lingui/macro';
 import type { ChipProps } from '@mui/material';
 import type {
   OfferSummaryAssetInfo,
   OfferSummaryInfos,
   OfferSummaryRecord,
-} from '@chia/api';
+} from '@flax/api';
 import {
-  mojoToChia,
-  mojoToChiaLocaleString,
+  mojoToFlax,
+  mojoToFlaxLocaleString,
   mojoToCATLocaleString,
-} from '@chia/core';
+} from '@flax/core';
 import NFTOfferExchangeType from './NFTOfferExchangeType';
 import OfferState from './OfferState';
 import OfferAsset from './OfferAsset';
@@ -49,7 +49,7 @@ export function summaryStringsForNFTOffer(
   ) => string,
 ): [makerString: string, takerString: string] {
   // const makerAssetType = offerAssetTypeForAssetId
-  // TODO: Remove 1:1 NFT <--> XCH assumption
+  // TODO: Remove 1:1 NFT <--> XFX assumption
   const makerEntry: [string, string] = Object.entries(summary.offered)[0];
   const takerEntry: [string, string] = Object.entries(summary.requested)[0];
   const makerAssetType = offerAssetTypeForAssetId(makerEntry[0], summary);
@@ -202,7 +202,7 @@ export function formatAmountForWalletType(
   locale?: string,
 ): string {
   if (walletType === WalletType.STANDARD_WALLET) {
-    return mojoToChiaLocaleString(amount, locale);
+    return mojoToFlaxLocaleString(amount, locale);
   } else if (walletType === WalletType.CAT) {
     return mojoToCATLocaleString(amount, locale);
   }
@@ -236,8 +236,8 @@ export function offerAssetTypeForAssetId(
 ): OfferAsset | undefined {
   let assetType: OfferAsset | undefined;
 
-  if (['xch', 'txch'].includes(assetId)) {
-    assetType = OfferAsset.CHIA;
+  if (['xfx', 'txfx'].includes(assetId)) {
+    assetType = OfferAsset.FLAX;
   } else {
     const infos: OfferSummaryInfos = offerSummary.infos;
     const info: OfferSummaryAssetInfo = infos[assetId];
@@ -313,12 +313,12 @@ export function determineNFTOfferExchangeType(
 export function getNFTPriceWithoutRoyalties(
   summary: OfferSummaryRecord,
 ): number | undefined {
-  // NFTs can only be exchanged for XCH currently
-  const amountInMojos = offerAssetAmountForAssetId('xch', summary);
+  // NFTs can only be exchanged for XFX currently
+  const amountInMojos = offerAssetAmountForAssetId('xfx', summary);
   if (amountInMojos === undefined) {
     return undefined;
   }
-  return mojoToChia(amountInMojos).toNumber();
+  return mojoToFlax(amountInMojos).toNumber();
 }
 
 /* ========================================================================== */

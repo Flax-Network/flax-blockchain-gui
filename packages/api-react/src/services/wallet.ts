@@ -8,7 +8,7 @@ import {
   Wallet,
   WalletType,
   toBech32m,
-} from '@chia/api';
+} from '@flax/api';
 import type {
   NFTInfo,
   PlotNFT,
@@ -16,7 +16,7 @@ import type {
   Transaction,
   WalletBalance,
   WalletConnections,
-} from '@chia/api';
+} from '@flax/api';
 import BigNumber from 'bignumber.js';
 import onCacheEntryAddedInvalidate from '../utils/onCacheEntryAddedInvalidate';
 import normalizePoolState from '../utils/normalizePoolState';

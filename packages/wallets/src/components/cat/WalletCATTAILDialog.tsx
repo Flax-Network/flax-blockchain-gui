@@ -8,7 +8,7 @@ import {
   InputAdornment,
   TextField,
 } from '@mui/material';
-import { Button, CopyToClipboard, DialogActions, Loading, Link, Flex } from '@chia/core';
+import { Button, CopyToClipboard, DialogActions, Loading, Link, Flex } from '@flax/core';
 import useWallet from '../../hooks/useWallet';
 
 type Props = {
@@ -67,9 +67,6 @@ export default function WalletCATTAILDialog(props: Props) {
                 multiline
               />
             </Box>
-            <Link href={`https://www.taildatabase.com/tail/${wallet.meta?.assetId}`} target="_blank" variant="body2">
-              <Trans>Search on Tail Database</Trans>
-            </Link>
           </Flex>
         )}
       </DialogContent>

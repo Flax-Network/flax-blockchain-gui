@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router';
 import { t, Trans } from '@lingui/macro';
-import { defaultPlotter, toBech32m } from '@chia/api';
+import { defaultPlotter, toBech32m } from '@flax/api';
 import {
   useStartPlottingMutation,
   useCreateNewPoolWalletMutation,
-} from '@chia/api-react';
+} from '@flax/api-react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { Back, useShowError, ButtonLoading, Flex, Form } from '@chia/core';
+import { Back, useShowError, ButtonLoading, Flex, Form } from '@flax/core';
 import PlotAddChoosePlotter from './PlotAddChoosePlotter';
 import PlotAddChooseSize from './PlotAddChooseSize';
 import PlotAddNumberOfPlots from './PlotAddNumberOfPlots';
@@ -77,7 +77,7 @@ export default function PlotAddForm(props: Props) {
   };
 
   const methods = useForm<FormData>({
-    defaultValues: defaultsForPlotter(PlotterName.CHIAPOS),
+    defaultValues: defaultsForPlotter(PlotterName.FLAXPOS),
   });
 
   const { watch, setValue, reset } = methods;
@@ -188,7 +188,6 @@ export default function PlotAddForm(props: Props) {
           <PlotAddSelectTemporaryDirectory step={step++} plotter={plotter} />
         )}
         <PlotAddSelectFinalDirectory step={step++} plotter={plotter} />
-        <PlotAddNFT ref={addNFTref} step={step++} plotter={plotter} />
         <Flex justifyContent="flex-end">
           <ButtonLoading
             loading={loading}
