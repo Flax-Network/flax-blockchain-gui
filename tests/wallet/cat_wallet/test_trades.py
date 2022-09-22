@@ -4,17 +4,17 @@ from typing import Any, Dict, List
 
 import pytest
 
-from chia.full_node.mempool_manager import MempoolManager
-from chia.simulator.simulator_protocol import FarmNewBlockProtocol
-from chia.simulator.time_out_assert import time_out_assert
-from chia.util.ints import uint64
-from chia.wallet.cat_wallet.cat_wallet import CATWallet
-from chia.wallet.outer_puzzles import AssetType
-from chia.wallet.puzzle_drivers import PuzzleInfo
-from chia.wallet.trading.offer import Offer
-from chia.wallet.trading.trade_status import TradeStatus
-from chia.wallet.transaction_record import TransactionRecord
-from chia.wallet.util.transaction_type import TransactionType
+from flax.full_node.mempool_manager import MempoolManager
+from flax.simulator.simulator_protocol import FarmNewBlockProtocol
+from flax.simulator.time_out_assert import time_out_assert
+from flax.util.ints import uint64
+from flax.wallet.cat_wallet.cat_wallet import CATWallet
+from flax.wallet.outer_puzzles import AssetType
+from flax.wallet.puzzle_drivers import PuzzleInfo
+from flax.wallet.trading.offer import Offer
+from flax.wallet.trading.trade_status import TradeStatus
+from flax.wallet.transaction_record import TransactionRecord
+from flax.wallet.util.transaction_type import TransactionType
 
 
 async def tx_in_pool(mempool: MempoolManager, tx_id):
@@ -70,20 +70,20 @@ class TestCATTrades:
         )
 
         # Create the trade parameters
-        MAKER_CHIA_BALANCE = initial_maker_balance - 100
-        TAKER_CHIA_BALANCE = initial_taker_balance - 100
-        await time_out_assert(25, wallet_maker.get_confirmed_balance, MAKER_CHIA_BALANCE)
-        await time_out_assert(25, wallet_taker.get_unconfirmed_balance, TAKER_CHIA_BALANCE)
+        MAKER_FLAX_BALANCE = initial_maker_balance - 100
+        TAKER_FLAX_BALANCE = initial_taker_balance - 100
+        await time_out_assert(25, wallet_maker.get_confirmed_balance, MAKER_FLAX_BALANCE)
+        await time_out_assert(25, wallet_taker.get_unconfirmed_balance, TAKER_FLAX_BALANCE)
         MAKER_CAT_BALANCE = 100
         MAKER_NEW_CAT_BALANCE = 0
         TAKER_CAT_BALANCE = 0
         TAKER_NEW_CAT_BALANCE = 100
 
-        chia_for_cat = {
+        flax_for_cat = {
             wallet_maker.id(): -1,
             bytes.fromhex(new_cat_wallet_maker.get_asset_id()): 2,  # This is the CAT that the taker made
         }
-        cat_for_chia = {
+        cat_for_flax = {
             wallet_maker.id(): 3,
             cat_wallet_maker.id(): -4,  # The taker has no knowledge of this CAT yet
         }
@@ -91,17 +91,17 @@ class TestCATTrades:
             bytes.fromhex(cat_wallet_maker.get_asset_id()): -5,
             new_cat_wallet_maker.id(): 6,
         }
-        chia_for_multiple_cat = {
+        flax_for_multiple_cat = {
             wallet_maker.id(): -7,
             cat_wallet_maker.id(): 8,
             new_cat_wallet_maker.id(): 9,
         }
-        multiple_cat_for_chia = {
+        multiple_cat_for_flax = {
             wallet_maker.id(): 10,
             cat_wallet_maker.id(): -11,
             new_cat_wallet_maker.id(): -12,
         }
-        chia_and_cat_for_cat = {
+        flax_and_cat_for_cat = {
             wallet_maker.id(): -13,
             cat_wallet_maker.id(): -14,
             new_cat_wallet_maker.id(): 15,
@@ -121,8 +121,8 @@ class TestCATTrades:
         trade_manager_taker = wallet_node_taker.wallet_state_manager.trade_manager
 
         # Execute all of the trades
-        # chia_for_cat
-        success, trade_make, error = await trade_manager_maker.create_offer_for_ids(chia_for_cat, fee=uint64(1))
+        # flax_for_cat
+        success, trade_make, error = await trade_manager_maker.create_offer_for_ids(flax_for_cat, fee=uint64(1))
         await asyncio.sleep(1)
         assert error is None
         assert success is True
@@ -138,23 +138,23 @@ class TestCATTrades:
         assert success is True
         assert trade_take is not None
 
-        MAKER_CHIA_BALANCE -= 2  # -1 and -1 for fee
+        MAKER_FLAX_BALANCE -= 2  # -1 and -1 for fee
         MAKER_NEW_CAT_BALANCE += 2
-        TAKER_CHIA_BALANCE += 0  # +1 and -1 for fee
+        TAKER_FLAX_BALANCE += 0  # +1 and -1 for fee
         TAKER_NEW_CAT_BALANCE -= 2
 
-        await time_out_assert(15, wallet_taker.get_unconfirmed_balance, TAKER_CHIA_BALANCE)
+        await time_out_assert(15, wallet_taker.get_unconfirmed_balance, TAKER_FLAX_BALANCE)
         await time_out_assert(15, new_cat_wallet_taker.get_unconfirmed_balance, TAKER_NEW_CAT_BALANCE)
 
         for i in range(0, buffer_blocks):
             await full_node.farm_new_transaction_block(FarmNewBlockProtocol(token_bytes()))
 
-        await time_out_assert(15, wallet_maker.get_confirmed_balance, MAKER_CHIA_BALANCE)
-        await time_out_assert(15, wallet_maker.get_unconfirmed_balance, MAKER_CHIA_BALANCE)
+        await time_out_assert(15, wallet_maker.get_confirmed_balance, MAKER_FLAX_BALANCE)
+        await time_out_assert(15, wallet_maker.get_unconfirmed_balance, MAKER_FLAX_BALANCE)
         await time_out_assert(15, new_cat_wallet_maker.get_confirmed_balance, MAKER_NEW_CAT_BALANCE)
         await time_out_assert(15, new_cat_wallet_maker.get_unconfirmed_balance, MAKER_NEW_CAT_BALANCE)
-        await time_out_assert(15, wallet_taker.get_confirmed_balance, TAKER_CHIA_BALANCE)
-        await time_out_assert(15, wallet_taker.get_unconfirmed_balance, TAKER_CHIA_BALANCE)
+        await time_out_assert(15, wallet_taker.get_confirmed_balance, TAKER_FLAX_BALANCE)
+        await time_out_assert(15, wallet_taker.get_unconfirmed_balance, TAKER_FLAX_BALANCE)
         await time_out_assert(15, new_cat_wallet_taker.get_confirmed_balance, TAKER_NEW_CAT_BALANCE)
         await time_out_assert(15, new_cat_wallet_taker.get_unconfirmed_balance, TAKER_NEW_CAT_BALANCE)
 
@@ -172,8 +172,8 @@ class TestCATTrades:
         await time_out_assert(15, assert_trade_tx_number, True, wallet_node_maker, trade_make.trade_id, 1)
         await time_out_assert(15, assert_trade_tx_number, True, wallet_node_taker, trade_take.trade_id, 3)
 
-        # cat_for_chia
-        success, trade_make, error = await trade_manager_maker.create_offer_for_ids(cat_for_chia)
+        # cat_for_flax
+        success, trade_make, error = await trade_manager_maker.create_offer_for_ids(cat_for_flax)
         await asyncio.sleep(1)
         assert error is None
         assert success is True
@@ -188,26 +188,26 @@ class TestCATTrades:
         assert trade_take is not None
 
         MAKER_CAT_BALANCE -= 4
-        MAKER_CHIA_BALANCE += 3
+        MAKER_FLAX_BALANCE += 3
         TAKER_CAT_BALANCE += 4
-        TAKER_CHIA_BALANCE -= 3
+        TAKER_FLAX_BALANCE -= 3
 
         cat_wallet_taker: CATWallet = await wallet_node_taker.wallet_state_manager.get_wallet_for_asset_id(
             cat_wallet_maker.get_asset_id()
         )
 
-        await time_out_assert(15, wallet_taker.get_unconfirmed_balance, TAKER_CHIA_BALANCE)
+        await time_out_assert(15, wallet_taker.get_unconfirmed_balance, TAKER_FLAX_BALANCE)
         await time_out_assert(15, cat_wallet_taker.get_unconfirmed_balance, TAKER_CAT_BALANCE)
 
         for i in range(0, buffer_blocks):
             await full_node.farm_new_transaction_block(FarmNewBlockProtocol(token_bytes()))
 
-        await time_out_assert(15, wallet_maker.get_confirmed_balance, MAKER_CHIA_BALANCE)
-        await time_out_assert(15, wallet_maker.get_unconfirmed_balance, MAKER_CHIA_BALANCE)
+        await time_out_assert(15, wallet_maker.get_confirmed_balance, MAKER_FLAX_BALANCE)
+        await time_out_assert(15, wallet_maker.get_unconfirmed_balance, MAKER_FLAX_BALANCE)
         await time_out_assert(15, cat_wallet_maker.get_confirmed_balance, MAKER_CAT_BALANCE)
         await time_out_assert(15, cat_wallet_maker.get_unconfirmed_balance, MAKER_CAT_BALANCE)
-        await time_out_assert(15, wallet_taker.get_confirmed_balance, TAKER_CHIA_BALANCE)
-        await time_out_assert(15, wallet_taker.get_unconfirmed_balance, TAKER_CHIA_BALANCE)
+        await time_out_assert(15, wallet_taker.get_confirmed_balance, TAKER_FLAX_BALANCE)
+        await time_out_assert(15, wallet_taker.get_unconfirmed_balance, TAKER_FLAX_BALANCE)
         await time_out_assert(15, cat_wallet_taker.get_confirmed_balance, TAKER_CAT_BALANCE)
         await time_out_assert(15, cat_wallet_taker.get_unconfirmed_balance, TAKER_CAT_BALANCE)
         await time_out_assert(15, get_trade_and_status, TradeStatus.CONFIRMED, trade_manager_maker, trade_make)
@@ -251,9 +251,9 @@ class TestCATTrades:
         await time_out_assert(15, get_trade_and_status, TradeStatus.CONFIRMED, trade_manager_maker, trade_make)
         await time_out_assert(15, get_trade_and_status, TradeStatus.CONFIRMED, trade_manager_taker, trade_take)
 
-        # chia_for_multiple_cat
+        # flax_for_multiple_cat
         success, trade_make, error = await trade_manager_maker.create_offer_for_ids(
-            chia_for_multiple_cat, driver_dict=driver_dict
+            flax_for_multiple_cat, driver_dict=driver_dict
         )
         await asyncio.sleep(1)
         assert error is None
@@ -267,10 +267,10 @@ class TestCATTrades:
         assert success is True
         assert trade_take is not None
 
-        MAKER_CHIA_BALANCE -= 7
+        MAKER_FLAX_BALANCE -= 7
         MAKER_CAT_BALANCE += 8
         MAKER_NEW_CAT_BALANCE += 9
-        TAKER_CHIA_BALANCE += 7
+        TAKER_FLAX_BALANCE += 7
         TAKER_CAT_BALANCE -= 8
         TAKER_NEW_CAT_BALANCE -= 9
 
@@ -291,8 +291,8 @@ class TestCATTrades:
         await time_out_assert(15, get_trade_and_status, TradeStatus.CONFIRMED, trade_manager_maker, trade_make)
         await time_out_assert(15, get_trade_and_status, TradeStatus.CONFIRMED, trade_manager_taker, trade_take)
 
-        # multiple_cat_for_chia
-        success, trade_make, error = await trade_manager_maker.create_offer_for_ids(multiple_cat_for_chia)
+        # multiple_cat_for_flax
+        success, trade_make, error = await trade_manager_maker.create_offer_for_ids(multiple_cat_for_flax)
         await asyncio.sleep(1)
         assert error is None
         assert success is True
@@ -307,10 +307,10 @@ class TestCATTrades:
 
         MAKER_CAT_BALANCE -= 11
         MAKER_NEW_CAT_BALANCE -= 12
-        MAKER_CHIA_BALANCE += 10
+        MAKER_FLAX_BALANCE += 10
         TAKER_CAT_BALANCE += 11
         TAKER_NEW_CAT_BALANCE += 12
-        TAKER_CHIA_BALANCE -= 10
+        TAKER_FLAX_BALANCE -= 10
 
         await time_out_assert(15, new_cat_wallet_taker.get_unconfirmed_balance, TAKER_NEW_CAT_BALANCE)
         await time_out_assert(15, cat_wallet_taker.get_unconfirmed_balance, TAKER_CAT_BALANCE)
@@ -329,8 +329,8 @@ class TestCATTrades:
         await time_out_assert(15, get_trade_and_status, TradeStatus.CONFIRMED, trade_manager_maker, trade_make)
         await time_out_assert(15, get_trade_and_status, TradeStatus.CONFIRMED, trade_manager_taker, trade_take)
 
-        # chia_and_cat_for_cat
-        success, trade_make, error = await trade_manager_maker.create_offer_for_ids(chia_and_cat_for_cat)
+        # flax_and_cat_for_cat
+        success, trade_make, error = await trade_manager_maker.create_offer_for_ids(flax_and_cat_for_cat)
         await asyncio.sleep(1)
         assert error is None
         assert success is True
@@ -343,10 +343,10 @@ class TestCATTrades:
         assert success is True
         assert trade_take is not None
 
-        MAKER_CHIA_BALANCE -= 13
+        MAKER_FLAX_BALANCE -= 13
         MAKER_CAT_BALANCE -= 14
         MAKER_NEW_CAT_BALANCE += 15
-        TAKER_CHIA_BALANCE += 13
+        TAKER_FLAX_BALANCE += 13
         TAKER_CAT_BALANCE += 14
         TAKER_NEW_CAT_BALANCE -= 15
 
@@ -377,11 +377,11 @@ class TestCATTrades:
         wallet_maker = wallet_node_maker.wallet_state_manager.main_wallet
         wallet_taker = wallet_node_taker.wallet_state_manager.main_wallet
 
-        xch_to_cat_amount = uint64(100)
+        xfx_to_cat_amount = uint64(100)
 
         async with wallet_node_maker.wallet_state_manager.lock:
             cat_wallet_maker: CATWallet = await CATWallet.create_new_cat_wallet(
-                wallet_node_maker.wallet_state_manager, wallet_maker, {"identifier": "genesis_by_id"}, xch_to_cat_amount
+                wallet_node_maker.wallet_state_manager, wallet_maker, {"identifier": "genesis_by_id"}, xfx_to_cat_amount
             )
 
             tx_queue: List[TransactionRecord] = await wallet_node_maker.wallet_state_manager.tx_store.get_not_sent()
@@ -392,17 +392,17 @@ class TestCATTrades:
         for i in range(1, buffer_blocks):
             await full_node.farm_new_transaction_block(FarmNewBlockProtocol(token_bytes()))
 
-        await time_out_assert(15, cat_wallet_maker.get_confirmed_balance, xch_to_cat_amount)
-        await time_out_assert(15, cat_wallet_maker.get_unconfirmed_balance, xch_to_cat_amount)
-        maker_funds -= xch_to_cat_amount
+        await time_out_assert(15, cat_wallet_maker.get_confirmed_balance, xfx_to_cat_amount)
+        await time_out_assert(15, cat_wallet_maker.get_unconfirmed_balance, xfx_to_cat_amount)
+        maker_funds -= xfx_to_cat_amount
         await time_out_assert(15, wallet_maker.get_confirmed_balance, maker_funds)
 
-        cat_for_chia = {
+        cat_for_flax = {
             wallet_maker.id(): 1,
             cat_wallet_maker.id(): -2,
         }
 
-        chia_for_cat = {
+        flax_for_cat = {
             wallet_maker.id(): -3,
             cat_wallet_maker.id(): 4,
         }
@@ -414,7 +414,7 @@ class TestCATTrades:
             trade_rec = await trade_manager.get_trade_by_id(trade.trade_id)
             return TradeStatus(trade_rec.status)
 
-        success, trade_make, error = await trade_manager_maker.create_offer_for_ids(cat_for_chia)
+        success, trade_make, error = await trade_manager_maker.create_offer_for_ids(cat_for_flax)
         await asyncio.sleep(1)
         assert error is None
         assert success is True
@@ -465,7 +465,7 @@ class TestCATTrades:
 
         await time_out_assert(15, wallet_maker.get_pending_change_balance, 0)
         await time_out_assert(15, wallet_maker.get_confirmed_balance, maker_funds - fee)
-        await time_out_assert(15, cat_wallet_maker.get_confirmed_balance, xch_to_cat_amount)
+        await time_out_assert(15, cat_wallet_maker.get_confirmed_balance, xfx_to_cat_amount)
         await time_out_assert(15, wallet_taker.get_confirmed_balance, taker_funds)
 
         peer = wallet_node_taker.get_full_node_peer()
@@ -479,7 +479,7 @@ class TestCATTrades:
         assert trade_take is None
 
         # Now we're going to create the other way around for test coverage sake
-        success, trade_make, error = await trade_manager_maker.create_offer_for_ids(chia_for_cat)
+        success, trade_make, error = await trade_manager_maker.create_offer_for_ids(flax_for_cat)
         await asyncio.sleep(1)
         assert error is None
         assert success is True
