@@ -1,5 +1,5 @@
-import type { NFTAttribute } from '@chia-network/api';
-import { CopyToClipboard, Flex, Tooltip } from '@chia-network/core';
+import type { NFTAttribute } from '@flax-network/api';
+import { CopyToClipboard, Flex, Tooltip } from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Grid, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';

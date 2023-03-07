@@ -1,20 +1,20 @@
-import { useGetFarmedAmountQuery } from '@chia-network/api-react';
-import { useCurrencyCode, mojoToChiaLocaleString, CardSimple, useLocale } from '@chia-network/core';
+import { useGetFarmedAmountQuery } from '@flax-network/api-react';
+import { useCurrencyCode, mojoToFlaxLocaleString, CardSimple, useLocale } from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import React, { useMemo } from 'react';
 
-export default function FarmCardTotalChiaFarmed() {
+export default function FarmCardTotalFlaxFarmed() {
   const currencyCode = useCurrencyCode();
   const [locale] = useLocale();
   const { data, isLoading, error } = useGetFarmedAmountQuery();
 
   const farmedAmount = data?.farmedAmount;
 
-  const totalChiaFarmed = useMemo(() => {
+  const totalFlaxFarmed = useMemo(() => {
     if (farmedAmount !== undefined) {
       return (
         <>
-          {mojoToChiaLocaleString(farmedAmount, locale)}
+          {mojoToFlaxLocaleString(farmedAmount, locale)}
           &nbsp;
           {currencyCode}
         </>
@@ -24,6 +24,6 @@ export default function FarmCardTotalChiaFarmed() {
   }, [farmedAmount, locale, currencyCode]);
 
   return (
-    <CardSimple title={<Trans>Total Chia Farmed</Trans>} value={totalChiaFarmed} loading={isLoading} error={error} />
+    <CardSimple title={<Trans>Total Flax Farmed</Trans>} value={totalFlaxFarmed} loading={isLoading} error={error} />
   );
 }

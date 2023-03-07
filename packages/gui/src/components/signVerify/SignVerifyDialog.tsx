@@ -1,4 +1,4 @@
-import { Flex } from '@chia-network/core';
+import { Flex } from '@flax-network/core';
 import { t } from '@lingui/macro';
 import { Dialog, DialogContent, DialogTitle, Typography } from '@mui/material';
 import React from 'react';

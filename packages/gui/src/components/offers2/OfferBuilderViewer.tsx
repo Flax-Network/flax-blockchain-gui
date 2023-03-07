@@ -1,5 +1,5 @@
-import { useGetWalletsQuery, useCheckOfferValidityMutation } from '@chia-network/api-react';
-import { Flex, ButtonLoading, Link, Loading, useShowError } from '@chia-network/core';
+import { useGetWalletsQuery, useCheckOfferValidityMutation } from '@flax-network/api-react';
+import { Flex, ButtonLoading, Link, Loading, useShowError } from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import { Alert, Grid } from '@mui/material';
 import React, { useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState, forwardRef } from 'react';
@@ -171,7 +171,7 @@ function OfferBuilderViewer(props: OfferBuilderViewerProps, ref: any) {
               {'This offer is no longer valid. To understand why, click '}
               <Link
                 target="_blank"
-                href="https://chialisp.com/docs/tutorials/offers_gui_tutorial/#taker-attempts-to-accept-an-invalid-offer"
+                href="https://flaxlisp.com/docs/tutorials/offers_gui_tutorial/#taker-attempts-to-accept-an-invalid-offer"
               >
                 here
               </Link>{' '}

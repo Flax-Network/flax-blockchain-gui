@@ -1,6 +1,6 @@
-import { WalletType } from '@chia-network/api';
-import { useSetCATNameMutation, useGetLocalCatName } from '@chia-network/api-react';
-import { Tooltip, CardListItem, Flex, Link, useShowError, Form, TextField } from '@chia-network/core';
+import { WalletType } from '@flax-network/api';
+import { useSetCATNameMutation, useGetLocalCatName } from '@flax-network/api-react';
+import { Tooltip, CardListItem, Flex, Link, useShowError, Form, TextField } from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Typography, Switch, CircularProgress } from '@mui/material';
 import React, { useEffect, useMemo, useState, useRef } from 'react';
@@ -171,11 +171,6 @@ export default function WalletTokenCard(props: WalletTokenCardProps) {
                     {subTitle}
                   </Typography>
                 </Tooltip>
-              )}
-              {assetId && (
-                <Link href={`https://www.taildatabase.com/tail/${assetId}`} target="_blank" variant="caption">
-                  <Trans>Search on Tail Database</Trans>
-                </Link>
               )}
             </Flex>
           )}

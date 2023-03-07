@@ -1,6 +1,6 @@
-import { SyncingStatus } from '@chia-network/api';
-import { useGetSyncStatusQuery } from '@chia-network/api-react';
-import { Loading, State, StateIndicator } from '@chia-network/core';
+import { SyncingStatus } from '@flax-network/api';
+import { useGetSyncStatusQuery } from '@flax-network/api-react';
+import { Loading, State, StateIndicator } from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Typography } from '@mui/material';
 import React from 'react';

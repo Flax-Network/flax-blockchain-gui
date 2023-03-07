@@ -1,7 +1,7 @@
-import type { Connection } from '@chia-network/api';
-import { ServiceName } from '@chia-network/api';
-import { useGetFarmerFullNodeConnectionsQuery, useService } from '@chia-network/api-react';
-import { Table, Card, FormatBytes, FormatConnectionStatus } from '@chia-network/core';
+import type { Connection } from '@flax-network/api';
+import { ServiceName } from '@flax-network/api';
+import { useGetFarmerFullNodeConnectionsQuery, useService } from '@flax-network/api-react';
+import { Table, Card, FormatBytes, FormatConnectionStatus } from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import { Delete as DeleteIcon } from '@mui/icons-material';
 import { Link, Typography, Tooltip, IconButton } from '@mui/material';
@@ -76,7 +76,7 @@ export default function FarmFullNodeConnections() {
       tooltip={
         <Trans>
           {'The full node that your farmer is connected to is below. '}
-          <Link target="_blank" href="https://github.com/Chia-Network/chia-blockchain/wiki/Network-Architecture">
+          <Link target="_blank" href="https://github.com/Flax-Network/flax-blockchain/wiki/Network-Architecture">
             Learn more
           </Link>
         </Trans>

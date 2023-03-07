@@ -1,4 +1,4 @@
-import type { Wallet } from '@chia-network/api';
+import type { Wallet } from '@flax-network/api';
 
 import findCATWalletByAssetId from './findCATWalletByAssetId';
 

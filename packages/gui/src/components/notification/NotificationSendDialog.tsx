@@ -1,5 +1,5 @@
-import { toBech32m, fromBech32m } from '@chia-network/api';
-import { useGetCurrentAddressQuery, useGetNFTInfoQuery, useSendNotificationsMutation } from '@chia-network/api-react';
+import { toBech32m, fromBech32m } from '@flax-network/api';
+import { useGetCurrentAddressQuery, useGetNFTInfoQuery, useSendNotificationsMutation } from '@flax-network/api-react';
 import {
   AlertDialog,
   Amount,
@@ -10,10 +10,10 @@ import {
   Form,
   Loading,
   TextField,
-  chiaToMojo,
+  flaxToMojo,
   useCurrencyCode,
   useOpenDialog,
-} from '@chia-network/core';
+} from '@flax-network/core';
 import { Trans, t } from '@lingui/macro';
 import {
   Box,
@@ -112,8 +112,8 @@ export default function NotificationSendDialog(props: NotificationSendDialogProp
     const { amount, fee } = values;
     const targetPuzzleHash = fromBech32m(address);
     const senderPuzzleHash = allowCounterOffer ? fromBech32m(currentAddress) : undefined;
-    const amountMojos = chiaToMojo(amount);
-    const feeMojos = chiaToMojo(fee);
+    const amountMojos = flaxToMojo(amount);
+    const feeMojos = flaxToMojo(fee);
     const payload = createOfferNotificationPayload({ offerURL, puzzleHash: senderPuzzleHash });
     let success = false;
     let error = '';

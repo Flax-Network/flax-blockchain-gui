@@ -1,6 +1,6 @@
-import type { Wallet } from '@chia-network/api';
-import { WalletType } from '@chia-network/api';
-import { chiaToMojo, catToMojo } from '@chia-network/core';
+import type { Wallet } from '@flax-network/api';
+import { WalletType } from '@flax-network/api';
+import { flaxToMojo, catToMojo } from '@flax-network/core';
 import { t } from '@lingui/macro';
 import BigNumber from 'bignumber.js';
 
@@ -22,13 +22,13 @@ export default async function offerBuilderDataToOffer(
   validateOnly?: boolean;
 }> {
   const {
-    offered: { xch: offeredXch = [], tokens: offeredTokens = [], nfts: offeredNfts = [], fee: [firstFee] = [] },
-    requested: { xch: requestedXch = [], tokens: requestedTokens = [], nfts: requestedNfts = [] },
+    offered: { xfx: offeredXch = [], tokens: offeredTokens = [], nfts: offeredNfts = [], fee: [firstFee] = [] },
+    requested: { xfx: requestedXch = [], tokens: requestedTokens = [], nfts: requestedNfts = [] },
   } = data;
 
   const usedNFTs: string[] = [];
 
-  const feeInMojos = firstFee ? chiaToMojo(firstFee.amount) : new BigNumber(0);
+  const feeInMojos = firstFee ? flaxToMojo(firstFee.amount) : new BigNumber(0);
 
   const walletIdsAndAmounts: Record<string, BigNumber> = {};
   const driverDict: Record<string, Driver> = {};
@@ -40,10 +40,10 @@ export default async function offerBuilderDataToOffer(
   }
 
   await Promise.all(
-    offeredXch.map(async (xch) => {
-      const { amount } = xch;
+    offeredXch.map(async (xfx) => {
+      const { amount } = xfx;
       if (!amount || amount === '0') {
-        throw new Error(t`Please enter an XCH amount`);
+        throw new Error(t`Please enter an XFX amount`);
       }
 
       const wallet = wallets.find((w) => w.type === WalletType.STANDARD_WALLET);
@@ -51,12 +51,12 @@ export default async function offerBuilderDataToOffer(
         throw new Error(t`No standard wallet found`);
       }
 
-      const mojoAmount = chiaToMojo(amount);
+      const mojoAmount = flaxToMojo(amount);
       walletIdsAndAmounts[wallet.id] = mojoAmount.negated();
 
       const hasEnoughBalance = await hasSpendableBalance(wallet.id, mojoAmount);
       if (!hasEnoughBalance) {
-        throw new Error(t`Amount exceeds XCH spendable balance`);
+        throw new Error(t`Amount exceeds XFX spendable balance`);
       }
     })
   );
@@ -105,10 +105,10 @@ export default async function offerBuilderDataToOffer(
   );
 
   // requested
-  requestedXch.forEach((xch) => {
-    const { amount } = xch;
+  requestedXch.forEach((xfx) => {
+    const { amount } = xfx;
     if (!amount || amount === '0') {
-      throw new Error(t`Please enter an XCH amount`);
+      throw new Error(t`Please enter an XFX amount`);
     }
 
     const wallet = wallets.find((w) => w.type === WalletType.STANDARD_WALLET);
@@ -120,7 +120,7 @@ export default async function offerBuilderDataToOffer(
       throw new Error(t`Cannot offer and request the same asset`);
     }
 
-    walletIdsAndAmounts[wallet.id] = chiaToMojo(amount);
+    walletIdsAndAmounts[wallet.id] = flaxToMojo(amount);
   });
 
   requestedTokens.forEach((token) => {

@@ -1,5 +1,5 @@
-import { Daemon, optionsForPlotter, defaultsForPlotter } from '@chia-network/api';
-import type { KeyringStatus, ServiceName, KeyData } from '@chia-network/api';
+import { Daemon, optionsForPlotter, defaultsForPlotter } from '@flax-network/api';
+import type { KeyringStatus, ServiceName, KeyData } from '@flax-network/api';
 
 import api, { baseQuery } from '../api';
 import onCacheEntryAddedInvalidate from '../utils/onCacheEntryAddedInvalidate';

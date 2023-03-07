@@ -131,7 +131,7 @@ export const chiaposOptions: PlotterOptions = {
 };
 
 export const chiaposDefaults: PlotterDefaults = {
-  plotterName: PlotterName.CHIAPOS,
+  plotterName: PlotterName.FLAXPOS,
   plotSize: 32,
   numThreads: 2,
   numBuckets: 128,

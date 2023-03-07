@@ -1,5 +1,5 @@
-import { toBech32m } from '@chia-network/api';
-import { useGetBlockQuery, useGetBlockRecordQuery } from '@chia-network/api-react';
+import { toBech32m } from '@flax-network/api';
+import { useGetBlockQuery, useGetBlockRecordQuery } from '@flax-network/api-react';
 import {
   Back,
   Button,
@@ -12,9 +12,9 @@ import {
   calculatePoolReward,
   calculateBaseFarmerReward,
   useCurrencyCode,
-  mojoToChia,
+  mojoToFlax,
   Suspender,
-} from '@chia-network/core';
+} from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import { Alert, Paper, TableRow, Table, TableBody, TableCell, TableContainer } from '@mui/material';
 import moment from 'moment';
@@ -145,10 +145,10 @@ export default function Block() {
   const difficulty =
     prevBlockRecord && blockRecord ? blockRecord.weight - prevBlockRecord.weight : blockRecord?.weight ?? 0;
 
-  const poolReward = mojoToChia(calculatePoolReward(blockRecord.height));
-  const baseFarmerReward = mojoToChia(calculateBaseFarmerReward(blockRecord.height));
+  const poolReward = mojoToFlax(calculatePoolReward(blockRecord.height));
+  const baseFarmerReward = mojoToFlax(calculateBaseFarmerReward(blockRecord.height));
 
-  const chiaFees = blockRecord.fees !== undefined ? mojoToChia(blockRecord.fees) : '';
+  const flaxFees = blockRecord.fees !== undefined ? mojoToFlax(blockRecord.fees) : '';
 
   const rows = [
     {
@@ -237,7 +237,7 @@ export default function Block() {
     },
     {
       name: <Trans>Fees Amount</Trans>,
-      value: chiaFees ? `${chiaFees} ${currencyCode}` : '',
+      value: flaxFees ? `${flaxFees} ${currencyCode}` : '',
       tooltip: <Trans>The total transactions fees in this block. Rewarded to the farmer.</Trans>,
     },
   ];
@@ -247,7 +247,7 @@ export default function Block() {
       <Card
         title={
           <Back variant="h5">
-            <Trans>Block at height {blockRecord.height} in the Chia blockchain</Trans>
+            <Trans>Block at height {blockRecord.height} in the Flax blockchain</Trans>
           </Back>
         }
         action={

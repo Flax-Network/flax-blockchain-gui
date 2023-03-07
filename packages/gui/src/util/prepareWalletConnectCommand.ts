@@ -7,8 +7,8 @@ export default function prepareWalletConnectCommand(
   command: string,
   values: Record<string, any>
 ) {
-  // remove chia_ prefix from command
-  const commandName = command.replace(/^chia_/, '');
+  // remove flax_ prefix from command
+  const commandName = command.replace(/^flax_/, '');
 
   const definition = commands.find((c) => c.command === commandName);
   if (!definition) {

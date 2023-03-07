@@ -1,5 +1,5 @@
-import { useGetSignagePointsQuery, useGetTotalHarvestersSummaryQuery } from '@chia-network/api-react';
-import { Table, Card } from '@chia-network/core';
+import { useGetSignagePointsQuery, useGetTotalHarvestersSummaryQuery } from '@flax-network/api-react';
+import { Table, Card } from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 

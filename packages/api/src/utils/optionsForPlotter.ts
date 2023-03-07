@@ -10,7 +10,7 @@ export default function optionsForPlotter(plotterName: PlotterName): PlotterOpti
       return bladebitDiskOptions;
     case PlotterName.MADMAX:
       return madmaxOptions;
-    case PlotterName.CHIAPOS: // fallthrough
+    case PlotterName.FLAXPOS: // fallthrough
     default:
       return chiaposOptions;
   }

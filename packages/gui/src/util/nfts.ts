@@ -1,4 +1,4 @@
-import { toBech32m, fromBech32m } from '@chia-network/api';
+import { toBech32m, fromBech32m } from '@flax-network/api';
 
 export function isValidNFTId(nftId: string): boolean {
   return launcherIdFromNFTId(nftId) !== undefined;

@@ -1,4 +1,4 @@
-export { default as Chia, ChiaBlack } from './Chia';
+export { default as Flax, FlaxBlack } from './Flax';
 export { default as Farm } from './Farm';
 export { default as Farming } from './Farming';
 export { default as Fees } from './Fees';

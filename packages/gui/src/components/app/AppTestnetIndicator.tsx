@@ -1,11 +1,11 @@
-import { AlertDialog, Flex, Tooltip, useCurrencyCode, useDarkMode, useOpenDialog } from '@chia-network/core';
+import { AlertDialog, Flex, Tooltip, useCurrencyCode, useDarkMode, useOpenDialog } from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import { Button, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import React, { useState } from 'react';
 
 export default function AppTestnetIndicator() {
-  const isTestnet = useCurrencyCode() === 'TXCH';
+  const isTestnet = useCurrencyCode() === 'TXFX';
   const theme = useTheme();
   const { isDarkMode } = useDarkMode();
   const borderColor = (theme.palette as any).border[isDarkMode ? 'dark' : 'main'];

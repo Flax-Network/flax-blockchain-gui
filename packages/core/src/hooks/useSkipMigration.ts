@@ -1,4 +1,4 @@
-import { usePrefs } from '@chia-network/api-react';
+import { usePrefs } from '@flax-network/api-react';
 
 export default function useSkipMigration(): [boolean, (skip: boolean) => void] {
   const [skip, setSkip] = usePrefs<boolean>('skipMigration', false);

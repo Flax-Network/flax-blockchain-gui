@@ -6,13 +6,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: zh_CN\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: flax-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-10-24 18:15\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: flax-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /main/packages/gui/src/locales/en-US/messages.po\n"
@@ -47,8 +47,8 @@ msgid "+ Add a Plot"
 msgstr "+ 开垦农田"
 
 #: src/components/settings/ProfileAdd.tsx:80
-msgid "<0>Need some XCH?</0>"
-msgstr "<0>需要一些XCH？</0>"
+msgid "<0>Need some XFX?</0>"
+msgstr "<0>需要一些XFX？</0>"
 
 #: src/components/settings/ProfileAdd.tsx:92
 msgid "<0>Use one (1) mojo to create a Profile.</0>"
@@ -68,8 +68,8 @@ msgstr "建议值 {0}"
 
 #: src/electron/main.tsx:1101
 #: src/electron/main.tsx:1188
-msgid "About Chia Blockchain"
-msgstr "关于奇亚Chia区块链项目"
+msgid "About Flax Blockchain"
+msgstr "关于FlaxFlax区块链项目"
 
 #: src/components/offers/NFTOfferViewer.tsx:638
 #: src/components/offers/OfferAcceptConfirmationDialog.tsx:21
@@ -208,7 +208,7 @@ msgid "Amount before adding royalties"
 msgstr ""
 
 #: src/util/offerBuilderDataToOffer.ts:59
-msgid "Amount exceeds XCH spendable balance"
+msgid "Amount exceeds XFX spendable balance"
 msgstr ""
 
 #: src/components/offers/NFTOfferEditor.tsx:596
@@ -319,16 +319,16 @@ msgid "Back"
 msgstr "后退"
 
 #: src/components/settings/ProfileAdd.tsx:98
-msgid "Balance: {standardBalance} XCH"
-msgstr "余额: {standardBalance} XCH"
+msgid "Balance: {standardBalance} XFX"
+msgstr "余额: {standardBalance} XFX"
 
 #: src/components/block/Block.jsx:235
 msgid "Base Farmer Reward Amount"
 msgstr "基础耕种奖励数量"
 
 #: src/components/offers/OfferShareDialog.tsx:1177
-msgid "Before posting an offer in Keybase to the #{channelName} channel, you must first join the {teamName} team. Please note that it might take a few moments to join the channel."
-msgstr "在 Keybase#{channelName} 频道发布报价之前您必须先加入 {teamName} 团队。 请注意，加入频道可能需要一点时间。"
+msgid "Before posting an offer in Discord to the #{channelName} channel, you must first join the {teamName} team. Please note that it might take a few moments to join the channel."
+msgstr "在 Discord#{channelName} 频道发布报价之前您必须先加入 {teamName} 团队。 请注意，加入频道可能需要一点时间。"
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:35
 msgid "Below are the current block challenges. You may or may not have a proof of space for these challenges. These blocks do not currently contain a proof of time."
@@ -351,8 +351,8 @@ msgid "Block VDF Iterations"
 msgstr "区块可验证延迟函数迭代"
 
 #: src/components/block/Block.jsx:250
-msgid "Block at height {0} in the Chia blockchain"
-msgstr "奇亚区块链上高度为 {0} 的区块"
+msgid "Block at height {0} in the Flax blockchain"
+msgstr "Flax区块链上高度为 {0} 的区块"
 
 #: src/components/block/Block.jsx:120
 msgid "Block with hash {headerHash}"
@@ -474,16 +474,16 @@ msgid "Change Pool"
 msgstr "更换农业合作社"
 
 #: src/components/settings/SettingsStartup.tsx:32
-msgid "Changes will take effect the next time Chia is started"
+msgid "Changes will take effect the next time Flax is started"
 msgstr ""
 
 #: src/components/settings/SettingsDataLayer.tsx:54
-msgid "Changes will take effect the next time Chia is started."
+msgid "Changes will take effect the next time Flax is started."
 msgstr ""
 
 #: src/electron/main.tsx:1080
-msgid "Chat on KeyBase"
-msgstr "在Keybase上参与讨论"
+msgid "Chat on Discord"
+msgstr "在Discord上参与讨论"
 
 #: src/constants/WalletConnectCommands.tsx:278
 msgid "Check Offer Validity"
@@ -500,20 +500,20 @@ msgid "Check Provenance on Spacescan.io"
 msgstr "在Spacescan.io 上检查出处"
 
 #: src/electron/main.tsx:1098
-msgid "Chia"
-msgstr "奇亚"
+msgid "Flax"
+msgstr "Flax"
 
 #: src/components/offers2/OfferBuilderXCHSection.tsx:76
-msgid "Chia ({currencyCode}) is a digital currency that is secure and sustainable"
+msgid "Flax ({currencyCode}) is a digital currency that is secure and sustainable"
 msgstr ""
 
 #: src/components/offers2/OfferBuilderTokensSection.tsx:114
-msgid "Chia Asset Tokens (CATs) are tokens built on top of XCH"
+msgid "Flax Asset Tokens (CATs) are tokens built on top of XFX"
 msgstr ""
 
 #: src/electron/main.tsx:1047
-msgid "Chia Blockchain Wiki"
-msgstr "奇亚区块链项目维基"
+msgid "Flax Blockchain Wiki"
+msgstr "Flax区块链项目维基"
 
 #: src/components/app/AppSelectMode.tsx:145
 msgid "Choose Farming Mode"
@@ -748,7 +748,7 @@ msgid "Create a Plot NFT"
 msgstr "创建农田NFT"
 
 #: src/components/offers/OfferManager.tsx:440
-msgid "Create a file that you can use to trade XCH, Chia Asset Tokens, or NFTs with no counter-party risk."
+msgid "Create a file that you can use to trade XFX, Flax Asset Tokens, or NFTs with no counter-party risk."
 msgstr ""
 
 #: src/components/settings/ProfileAdd.tsx:75
@@ -838,7 +838,7 @@ msgid "DataLayer Services"
 msgstr ""
 
 #: src/components/settings/SettingsDataLayer.tsx:21
-msgid "DataLayer enables rich data to be stored on mirrored databases that can be verified using the Chia Blockchain."
+msgid "DataLayer enables rich data to be stored on mirrored databases that can be verified using the Flax Blockchain."
 msgstr ""
 
 #: src/components/farm/FarmLastAttemptedProof.tsx:31
@@ -877,8 +877,8 @@ msgid "Deleting key"
 msgstr "正在删除密钥"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:81
-msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Chia Proof of Space plotter. If unsure, use the default Chia Proof of Space plotter."
-msgstr "根据您的系统配置，您可能会发现替代的绘图器产生的农田比默认的空间绘图器Chia Proof 更快。 如果不确定, 请使用默认的Chia Proof空间绘图器。"
+msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Flax Proof of Space plotter. If unsure, use the default Flax Proof of Space plotter."
+msgstr "根据您的系统配置，您可能会发现替代的绘图器产生的农田比默认的空间绘图器Flax Proof 更快。 如果不确定, 请使用默认的Flax Proof空间绘图器。"
 
 #: src/components/settings/SettingsPanel.tsx:163
 msgid "Derivation Index"
@@ -1161,8 +1161,8 @@ msgid "Exclude final directory"
 msgstr "不耕种最终输出文件夹"
 
 #: src/components/nfts/gallery/NFTGalleryHero.tsx:18
-msgid "Explore the Chia ecosystem; discover and trade great NFTs"
-msgstr "探索Chia生态系统；发现并交易优秀NFTs"
+msgid "Explore the Flax ecosystem; discover and trade great NFTs"
+msgstr "探索Flax生态系统；发现并交易优秀NFTs"
 
 #: src/components/offers/utils.ts:161
 #: src/components/plot/PlotHarvester.tsx:121
@@ -1178,8 +1178,8 @@ msgid "Failed to decode NFT identifier"
 msgstr "无法解码 NFT 标识符"
 
 #: src/components/offers/OfferShareDialog.tsx:462
-msgid "Failed to execute Keybase command: {stderr}"
-msgstr "无法执行Keybase 命令: {stderr}"
+msgid "Failed to execute Discord command: {stderr}"
+msgstr "无法执行Discord 命令: {stderr}"
 
 #: src/components/notification/NotificationSendDialog.tsx:147
 msgid "Failed to send the notification: {error}"
@@ -1559,8 +1559,8 @@ msgstr ""
 
 #: src/components/offers/NFTOfferEditor.tsx:91
 #: src/components/offers/OfferEditorConditionsPanel.tsx:392
-msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted. The recommended minimum fee is 0.000005 XCH (5,000,000 mojos)"
-msgstr "在报价中加入收费可以帮助在接受报价时加速交易。建议的最低费用为0.000005 XCH (5,000,000 mojos)"
+msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted. The recommended minimum fee is 0.000005 XFX (5,000,000 mojos)"
+msgstr "在报价中加入收费可以帮助在接受报价时加速交易。建议的最低费用为0.000005 XFX (5,000,000 mojos)"
 
 #: src/components/offers2/OfferIncomingTable.tsx:112
 msgid "Incoming Offers"
@@ -1575,8 +1575,8 @@ msgid "Initializing..."
 msgstr "正在初始化..."
 
 #: src/components/offers/OfferShareDialog.tsx:1172
-msgid "Install Keybase"
-msgstr "安装 Keybase"
+msgid "Install Discord"
+msgstr "安装 Discord"
 
 #: src/hooks/useAcceptOfferHook.tsx:67
 msgid ""
@@ -1632,16 +1632,16 @@ msgid "Join a Pool"
 msgstr "加入农业合作社"
 
 #: src/components/plot/add/PlotAddNFT.tsx:41
-msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile."
-msgstr "加入农业合作社来获得持续的XCH耕种收益。平均回报是相同的，但是收益会更加稳定。"
+msgid "Join a pool and get consistent XFX farming rewards. The average returns are the same, but it is much less volatile."
+msgstr "加入农业合作社来获得持续的XFX耕种收益。平均回报是相同的，但是收益会更加稳定。"
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:61
-msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
-msgstr "加入农业合作社来获得持续的XCH耕种收益。平均回报是相同的，但是收益会更加稳定。为已开垦的农田分配农田NFT。你可以轻松切换耕种池，而不比重新开垦现有农田。"
+msgid "Join a pool and get consistent XFX farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+msgstr "加入农业合作社来获得持续的XFX耕种收益。平均回报是相同的，但是收益会更加稳定。为已开垦的农田分配农田NFT。你可以轻松切换耕种池，而不比重新开垦现有农田。"
 
 #: src/components/plot/add/PlotAddNFT.tsx:122
-msgid "Join a pool and get more consistent XCH farming rewards. Create a plot NFT and assign your new plots to a group."
-msgstr "加入农业合作社来获得持续的XCH耕种收益。创建一个农田NFT，然后将新农田分配到组。"
+msgid "Join a pool and get more consistent XFX farming rewards. Create a plot NFT and assign your new plots to a group."
+msgstr "加入农业合作社来获得持续的XFX耕种收益。创建一个农田NFT，然后将新农田分配到组。"
 
 #: src/components/app/AppSelectMode.tsx:133
 msgid "Join farming pools"
@@ -1665,12 +1665,12 @@ msgid "Key switching"
 msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:1086
-msgid "Keybase command failed {e}. If you haven't installed Keybase, you can download from https://keybase.io"
-msgstr "Keybase 命令失败 {e}。如果您尚未安装 Keybase，您可以从 https://keybase.io 下载"
+msgid "Discord command failed {e}. If you haven't installed Discord, you can download from https://keybase.io"
+msgstr "Discord 命令失败 {e}。如果您尚未安装 Discord，您可以从 https://keybase.io 下载"
 
 #: src/components/offers/OfferShareDialog.tsx:1165
-msgid "Keybase is a secure messaging and file sharing application. To share an offer in the Keybase {teamName} team, you must first have Keybase installed."
-msgstr "Keybase 是一个安全的消息和文件共享应用程序。要在Keybase {teamName} 团队中分享一个报价，您必须先安装 Keybase。"
+msgid "Discord is a secure messaging and file sharing application. To share an offer in the Discord {teamName} team, you must first have Discord installed."
+msgstr "Discord 是一个安全的消息和文件共享应用程序。要在Discord {teamName} 团队中分享一个报价，您必须先安装 Discord。"
 
 #: src/components/app/AppKeyringMigrator.tsx:83
 msgid "Keyring migration failed: {0}"
@@ -1791,7 +1791,7 @@ msgid "Log In"
 msgstr ""
 
 #: src/components/app/AppSelectMode.tsx:84
-msgid "Manage CAT tokens"
+msgid "Manage custom asset tokens"
 msgstr "管理 CAT 令牌"
 
 #: src/components/farm/FarmHeader.tsx:30
@@ -2124,8 +2124,8 @@ msgid "Not connected"
 msgstr "未连接"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:152
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XCH reward for pooling plots."
-msgstr "请注意，这将不会改变你的合作社耕作支付地址。这只会影响旧农田文件，以及0.25XCH的合作社耕作奖励。"
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XFX reward for pooling plots."
+msgstr "请注意，这将不会改变你的合作社耕作支付地址。这只会影响旧农田文件，以及0.25XFX的合作社耕作奖励。"
 
 #: src/components/notification/NotificationSendDialog.tsx:145
 msgid "Notification has successfully been sent to a full node and included in the mempool."
@@ -2462,7 +2462,7 @@ msgstr "请输入一个NFT标识符。"
 
 #: src/util/offerBuilderDataToOffer.ts:46
 #: src/util/offerBuilderDataToOffer.ts:111
-msgid "Please enter an XCH amount"
+msgid "Please enter an XFX amount"
 msgstr ""
 
 #: src/components/offers/NFTOfferEditor.tsx:591
@@ -2595,7 +2595,7 @@ msgid "Plots With Missing Keys"
 msgstr "缺少密钥的农田"
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:34
-msgid "Plots are allocated space on your hard drive used to farm and earn Chia.  <0>Learn more</0>"
+msgid "Plots are allocated space on your hard drive used to farm and earn Flax.  <0>Learn more</0>"
 msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:217
@@ -2805,8 +2805,8 @@ msgid "Recommended"
 msgstr "推荐"
 
 #: src/components/settings/ProfileAdd.tsx:114
-msgid "Recommended: 0.000005 XCH"
-msgstr "推荐：0.000005 XCH"
+msgid "Recommended: 0.000005 XFX"
+msgstr "推荐：0.000005 XFX"
 
 #: src/components/nfts/NFTContextualActions.tsx:602
 msgid "Refresh NFT data"
@@ -3010,8 +3010,8 @@ msgid "Self Pooling"
 msgstr "自耕种"
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:86
-msgid "Self pool. When you win a block you will earn XCH rewards."
-msgstr "自耕种。一旦发现新区块，你将得到全部XCH区块奖励。"
+msgid "Self pool. When you win a block you will earn XFX rewards."
+msgstr "自耕种。一旦发现新区块，你将得到全部XFX区块奖励。"
 
 #: src/components/offers/NFTOfferEditor.tsx:313
 msgid "Sell an NFT"
@@ -3068,8 +3068,8 @@ msgid "Share on Hashgreen DEX"
 msgstr "分享到Hashgreen DEX"
 
 #: src/components/offers/OfferShareDialog.tsx:1160
-msgid "Share on Keybase"
-msgstr "分享到Keybase"
+msgid "Share on Discord"
+msgstr "分享到Discord"
 
 #: src/components/offers/OfferShareDialog.tsx:715
 msgid "Share on MintGarden"
@@ -3176,8 +3176,8 @@ msgid "Skips adding a final directory to harvester for farming"
 msgstr "勾选此项，将不会自动把最终目录添加到收割机进行耕种"
 
 #: src/components/pool/PoolHero.tsx:21
-msgid "Smooth out your XCH farming rewards by joining a pool."
-msgstr "加入农业合作社来稳定XCH耕作收益。"
+msgid "Smooth out your XFX farming rewards by joining a pool."
+msgstr "加入农业合作社来稳定XFX耕作收益。"
 
 #: src/components/notification/NotificationNFTTitle.tsx:30
 msgid "Something went wrong"
@@ -3238,8 +3238,8 @@ msgid "Status"
 msgstr "状态"
 
 #: src/components/app/AppSelectMode.tsx:78
-msgid "Store and Send XCH"
-msgstr "存储并发送 XCH"
+msgid "Store and Send XFX"
+msgstr "存储并发送 XFX"
 
 #: src/components/app/AppPassPrompt.tsx:111
 msgid "Submit"
@@ -3288,7 +3288,7 @@ msgid "Temporary folder location"
 msgstr "临时文件夹位置"
 
 #: src/components/app/AppVersionWarning.tsx:35
-msgid "The Chia application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Chia services version: {backV}<2/>Chia application version: {guiV}<3/><4/>It is recommended that you quit the Chia application and stop all Chia services."
+msgid "The Flax application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Flax services version: {backV}<2/>Flax application version: {guiV}<3/><4/>It is recommended that you quit the Flax application and stop all Flax services."
 msgstr ""
 
 #: src/components/nfts/NFTMoveToProfileDialog.tsx:210
@@ -3316,8 +3316,8 @@ msgid "The NFT transfer transaction has been successfully submitted to the block
 msgstr "NFT 传输交易已成功提交到区块链。"
 
 #: src/components/settings/SettingsPanel.tsx:165
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
-msgstr "衍生指数设置钱包链扫描钱包地址的范围。 如果您有大量交易或取消了 XCH、CATs 或 NFT 的报价，这个数字通常更高。 如果你认为你的余额是不正确的，因为它缺少硬币， 增加衍生指数可以帮助钱包在余额总额中包括缺失的硬币。"
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XFX, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgstr "衍生指数设置钱包链扫描钱包地址的范围。 如果您有大量交易或取消了 XFX、CATs 或 NFT 的报价，这个数字通常更高。 如果你认为你的余额是不正确的，因为它缺少硬币， 增加衍生指数可以帮助钱包在余额总额中包括缺失的硬币。"
 
 #: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:88
 #: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:137
@@ -3399,8 +3399,8 @@ msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "本区块上奖励给农民的全部交易费用。"
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:91
-msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XCH address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
-msgstr "这是农民耕种奖励的支付方式。默认情况下，这将是一个XCH钱包地址，但是你可以设置任意长度小于1024的字符串，也就是说，你可以指定其它区块链或者支付系统标识。"
+msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XFX address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+msgstr "这是农民耕种奖励的支付方式。默认情况下，这将是一个XFX钱包地址，但是你可以设置任意长度小于1024的字符串，也就是说，你可以指定其它区块链或者支付系统标识。"
 
 #: src/components/plot/card/PlotCardPlotsFailedToOpen.tsx:13
 msgid "These plots are invalid, you might want to delete them."
@@ -3502,7 +3502,7 @@ msgid "Title Not Available"
 msgstr "标题不可用"
 
 #: src/components/settings/ResyncPrompt.tsx:41
-msgid "To initiate a wallet resync, all Chia services must first be shut down. After shutting down, you will be required to restart Chia to begin the resyncing process. Are you sure you want to shut down and resync?"
+msgid "To initiate a wallet resync, all Flax services must first be shut down. After shutting down, you will be required to restart Flax to begin the resyncing process. Are you sure you want to shut down and resync?"
 msgstr ""
 
 #: src/components/settings/ProfileView.tsx:127
@@ -3536,9 +3536,9 @@ msgstr "要求的金额"
 msgid "Total Amount with Royalties"
 msgstr ""
 
-#: src/components/farm/card/FarmCardTotalChiaFarmed.tsx:27
-msgid "Total Chia Farmed"
-msgstr "总共收获的奇亚"
+#: src/components/farm/card/FarmCardTotalFlaxFarmed.tsx:27
+msgid "Total Flax Farmed"
+msgstr "总共收获的Flax"
 
 #: src/components/plot/card/PlotCardTotalHarvesters.tsx:11
 msgid "Total Harvesters"
@@ -3656,12 +3656,12 @@ msgid "Unable to find NFT {entityId}"
 msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:1099
-msgid "Unable to open Keybase. Install Keybase from https://keybase.io"
-msgstr "无法打开 Keybase。请从 https://keybase.io 安装 Keybase"
+msgid "Unable to open Discord. Install Discord from https://keybase.io"
+msgstr "无法打开 Discord。请从 https://keybase.io 安装 Discord"
 
 #: src/components/offers/OfferShareDialog.tsx:1002
-msgid "Unable to open browser. Install Keybase from https://keybase.io"
-msgstr "无法打开浏览器。请从 https://keybase.io 安装 Keybase"
+msgid "Unable to open browser. Install Discord from https://keybase.io"
+msgstr "无法打开浏览器。请从 https://keybase.io 安装 Discord"
 
 #: src/components/nfts/NFTDetails.tsx:141
 #: src/components/nfts/NFTDetails.tsx:162
@@ -3898,7 +3898,7 @@ msgid "WalletConnect Integration"
 msgstr ""
 
 #: src/components/settings/SettingsIntegration.tsx:26
-msgid "WalletConnect enables a decentralized app on the Chia blockchain to communicate and make requests directly to a Chia wallet."
+msgid "WalletConnect enables a decentralized app on the Flax blockchain to communicate and make requests directly to a Flax wallet."
 msgstr ""
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:59
@@ -4066,14 +4066,14 @@ msgid "Your keyring is locked"
 msgstr "您的钥匙串已锁定"
 
 #: src/components/offers/OfferShareDialog.tsx:1135
-msgid "Your offer has been successfully posted to Keybase."
-msgstr "您的报价已成功发布到Keybase"
+msgid "Your offer has been successfully posted to Discord."
+msgstr "您的报价已成功发布到Discord"
 
 #: src/components/app/AppKeyringMigrator.tsx:229
 #: src/components/settings/ChangePassphrasePrompt.tsx:277
 #: src/components/settings/SetPassphrasePrompt.tsx:246
-msgid "Your passphrase can be stored in your system's secure credential store. Chia will be able to access your keys without prompting for your passphrase."
-msgstr "您的私钥密码可以存储在系统的安全凭据中。Chia将能够访问您的密钥，而无需提示输入您的私钥密码。"
+msgid "Your passphrase can be stored in your system's secure credential store. Flax will be able to access your keys without prompting for your passphrase."
+msgstr "您的私钥密码可以存储在系统的安全凭据中。Flax将能够访问您的密钥，而无需提示输入您的私钥密码。"
 
 #: src/components/settings/SettingsPanel.tsx:55
 msgid "Your passphrase has been set"

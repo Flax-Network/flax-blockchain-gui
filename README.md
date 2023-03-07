@@ -1,36 +1,36 @@
-# chia-blockchain-gui
+# flax-blockchain-gui
 
-![Chia logo](https://www.chia.net/wp-content/uploads/2022/09/chia-logo.svg)
+![Flax logo](https://www.flaxnetwork.org/wp-content/uploads/2022/09/flax-logo.svg)
 
-![GitHub contributors](https://img.shields.io/github/contributors/Chia-Network/chia-blockchain-gui?logo=GitHub)
+![GitHub contributors](https://img.shields.io/github/contributors/Flax-Network/flax-blockchain-gui?logo=GitHub)
 
-Welcome to the Chia GUI repo!
+Welcome to the Flax GUI repo!
 
-Chia GUI is written in TypeScript and uses Electron/React.
+Flax GUI is written in TypeScript and uses Electron/React.
 
 This monorepo consists of the following packages:
 
 | Package name  | Description                                                                                                |
 | ------------- | ---------------------------------------------------------------------------------------------------------- |
-| **api**       | JS/TS library to access the Chia Blockchain RPC                                                            |
+| **api**       | JS/TS library to access the Flax Blockchain RPC                                                            |
 | **api-react** | React library that wraps **api** in hooks                                                                  |
 | **core**      | Common React components and hooks                                                                          |
 | **gui**       | The actual GUI package. It uses our packages like **api-react** and **core** under the hood                |
-| **icons**     | Chia specific icons                                                                                        |
+| **icons**     | Flax specific icons                                                                                        |
 | **wallets**   | Common React components and hooks. Do not use this in you project. Will be merged to **core** package soon |
 
 ## Development
 
-1. This repo (chia-blockchain-gui) must be under chia-blockchain repo. Please follow the [installation steps for the chia-blockchain](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#install-from-source). Make sure to install from source code (git clone...).
-2. Run the `sh install-gui.sh` as instructed in the previous step. This will clone the chia-blockchain-gui under chia-blockchain repo.
+1. This repo (flax-blockchain-gui) must be under flax-blockchain repo. Please follow the [installation steps for the flax-blockchain](https://github.com/Flax-Network/flax-blockchain/wiki/INSTALL#install-from-source). Make sure to install from source code (git clone...).
+2. Run the `sh install-gui.sh` as instructed in the previous step. This will clone the flax-blockchain-gui under flax-blockchain repo.
 3. Run `npm run dev:gui`
 
 **When developing, please:**
 
 - Only edit the code with the **Vscode editor**.
-- Always have **chia-blockchain-gui opened as a root folder in the Vscode** and not chia-blockchain, or chia-blockchain-gui/packages/... Failing to do so will result in incorrect auto linting and auto formatting which would not go trough the CI quality checks.
+- Always have **flax-blockchain-gui opened as a root folder in the Vscode** and not flax-blockchain, or flax-blockchain-gui/packages/... Failing to do so will result in incorrect auto linting and auto formatting which would not go trough the CI quality checks.
 - When you open the repo in the vscode, click on "**Install recommended plugins**" pop-up.
-- To develop in testnet, please follow [these steps](https://github.com/Chia-Network/chia-blockchain/wiki/How-to-connect-to-the-Testnet).
+- To develop in testnet, please follow [these steps](https://github.com/Flax-Network/flax-blockchain/wiki/How-to-connect-to-the-Testnet).
 - Please write tests for your code
 - When disabling an eslint rule, please provide a reason after two dashes (--), example:
 
@@ -41,7 +41,7 @@ This monorepo consists of the following packages:
 To install an NPM package, please navigate to the **root directory** of this repo.
 
 - To install `lodash` for **all** packages: `npx lerna add lodash`
-- To install `lodash` for **single** package: `npx lerna add lodash --scope=@chia-network/icons`
+- To install `lodash` for **single** package: `npx lerna add lodash --scope=@flax-network/icons`
 - To install as a dev dependency, add `--dev`
 
 After adding a new NPM package, please **pin down the package version**. This is done to lower the possibility of supply chain attacks.
@@ -60,7 +60,7 @@ After adding a new NPM package, please **pin down the package version**. This is
 ## Git workflow
 
 - Git branch from "**main**"
-- For Chia employees: **prefix your branch with your name**, like this: `yourName/what-is-the-code-about`. This helps when cleaning up old branches.
+- For Flax employees: **prefix your branch with your name**, like this: `yourName/what-is-the-code-about`. This helps when cleaning up old branches.
 - All commits must be [signed](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits).
 
 ## Git commit messages
@@ -90,7 +90,7 @@ After adding a new NPM package, please **pin down the package version**. This is
 
 ## Localization
 
-Do not edit files directly in the repo, but instead please head over to our [Crowdin project](https://crowdin.com/project/chia-blockchain/) and add/edit translations there.
+Do not edit files directly in the repo, but instead please head over to our [Crowdin project](https://crowdin.com/project/flax-blockchain/) and add/edit translations there.
 
 ## Troubleshooting
 
@@ -100,14 +100,14 @@ Do not edit files directly in the repo, but instead please head over to our [Cro
 
 - **`npm run dev:gui` fails to start the app without providing a reason**
 
-  1. In your command line, please go to the `chia-blockchain` directory (one level up)
+  1. In your command line, please go to the `flax-blockchain` directory (one level up)
   2. Run `. ./activate`
-  3. Run `cd chia-blockchain-gui`
+  3. Run `cd flax-blockchain-gui`
   4. Run `npm run dev:gui` to start the app.
-  5. If still does not work, please open you process manager and kill all Chia / Python related processes.
+  5. If still does not work, please open you process manager and kill all Flax / Python related processes.
 
-## Chia FAQ/WIKI
+## Flax FAQ/WIKI
 
-Please check out the [wiki](https://github.com/Chia-Network/chia-blockchain/wiki)
-and [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ) for
+Please check out the [wiki](https://github.com/Flax-Network/flax-blockchain/wiki)
+and [FAQ](https://github.com/Flax-Network/flax-blockchain/wiki/FAQ) for
 information on this project.

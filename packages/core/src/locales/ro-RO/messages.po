@@ -6,13 +6,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: ro_RO\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: flax-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-10-24 18:14\n"
 "Last-Translator: \n"
 "Language-Team: Romanian\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: flax-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: ro\n"
 "X-Crowdin-File: /main/packages/core/src/locales/en-US/messages.po\n"
@@ -417,8 +417,8 @@ msgid "Wallet {0}"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKey.tsx:142
-msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-msgstr "Bine ati venit la Chia. Va rugam logati-va cu o cheie existenta, sau creati o noua cheie."
+msgid "Welcome to Flax. Please log in with an existing key, or create a new key."
+msgstr "Bine ati venit la Flax. Va rugam logati-va cu o cheie existenta, sau creati o noua cheie."
 
 #: src/components/Back/Back.tsx:40
 #: src/components/FormBackButton/FormBackButton.tsx:31

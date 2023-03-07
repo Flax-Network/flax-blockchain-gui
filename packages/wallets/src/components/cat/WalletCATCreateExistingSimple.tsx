@@ -1,6 +1,6 @@
-import { SyncingStatus } from '@chia-network/api';
-import { useAddCATTokenMutation } from '@chia-network/api-react';
-import { Back, ButtonLoading, Card, Flex, Form, TextField } from '@chia-network/core';
+import { SyncingStatus } from '@flax-network/api';
+import { useAddCATTokenMutation } from '@flax-network/api-react';
+import { Back, ButtonLoading, Card, Flex, Form, TextField } from '@flax-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Grid } from '@mui/material';
 import React from 'react';

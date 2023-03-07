@@ -1,6 +1,6 @@
-import type { NFTInfo, Wallet } from '@chia-network/api';
-import { useGetNFTWallets } from '@chia-network/api-react';
-import { useDarkMode } from '@chia-network/core';
+import type { NFTInfo, Wallet } from '@flax-network/api';
+import { useGetNFTWallets } from '@flax-network/api-react';
+import { useDarkMode } from '@flax-network/core';
 import { t, Trans } from '@lingui/macro';
 import React from 'react';
 import styled from 'styled-components';

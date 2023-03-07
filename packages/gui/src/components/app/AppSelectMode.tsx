@@ -1,5 +1,5 @@
-import { Button, Flex, Logo, Card, useMode, Mode } from '@chia-network/core';
-import { Farming as FarmingIcon } from '@chia-network/icons';
+import { Button, Flex, Logo, Card, useMode, Mode } from '@flax-network/core';
+import { Farming as FarmingIcon } from '@flax-network/icons';
 import { Trans } from '@lingui/macro';
 import {
   AccountBalanceWallet as AccountBalanceWalletIcon,
@@ -75,13 +75,13 @@ export default function AppSelectMode() {
                     <Flex gap={1} alignItems="center">
                       <StyledCheckIcon color="primary" />
                       <Typography variant="body2">
-                        <Trans>Store and Send XCH</Trans>
+                        <Trans>Store and Send XFX</Trans>
                       </Typography>
                     </Flex>
                     <Flex gap={1} alignItems="center">
                       <StyledCheckIcon color="primary" />
                       <Typography variant="body2">
-                        <Trans>Manage CAT tokens</Trans>
+                        <Trans>Manage custom asset tokens</Trans>
                       </Typography>
                     </Flex>
                     <Flex gap={1} alignItems="center">
@@ -125,12 +125,6 @@ export default function AppSelectMode() {
                       <StyledCheckIcon color="primary" />
                       <Typography variant="body2">
                         <Trans>Create &amp; Manage plots</Trans>
-                      </Typography>
-                    </Flex>
-                    <Flex gap={1} alignItems="center">
-                      <StyledCheckIcon color="primary" />
-                      <Typography variant="body2">
-                        <Trans>Join farming pools</Trans>
                       </Typography>
                     </Flex>
                     <Flex gap={1} alignItems="center">

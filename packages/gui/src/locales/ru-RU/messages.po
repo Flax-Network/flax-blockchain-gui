@@ -6,13 +6,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: ru_RU\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: flax-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2023-01-18 21:18\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: flax-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: ru\n"
 "X-Crowdin-File: /main/packages/gui/src/locales/en-US/messages.po\n"
@@ -47,8 +47,8 @@ msgid "+ Add a Plot"
 msgstr "+ Добавить участок"
 
 #: src/components/settings/ProfileAdd.tsx:80
-msgid "<0>Need some XCH?</0>"
-msgstr "<0>Нужны XCH?</0>"
+msgid "<0>Need some XFX?</0>"
+msgstr "<0>Нужны XFX?</0>"
 
 #: src/components/settings/ProfileAdd.tsx:92
 msgid "<0>Use one (1) mojo to create a Profile.</0>"
@@ -68,8 +68,8 @@ msgstr "Рекомендуется значение {0}"
 
 #: src/electron/main.tsx:1101
 #: src/electron/main.tsx:1188
-msgid "About Chia Blockchain"
-msgstr "О программе Chia Blockchain"
+msgid "About Flax Blockchain"
+msgstr "О программе Flax Blockchain"
 
 #: src/components/offers/NFTOfferViewer.tsx:638
 #: src/components/offers/OfferAcceptConfirmationDialog.tsx:21
@@ -208,7 +208,7 @@ msgid "Amount before adding royalties"
 msgstr ""
 
 #: src/util/offerBuilderDataToOffer.ts:59
-msgid "Amount exceeds XCH spendable balance"
+msgid "Amount exceeds XFX spendable balance"
 msgstr ""
 
 #: src/components/offers/NFTOfferEditor.tsx:596
@@ -319,16 +319,16 @@ msgid "Back"
 msgstr "Назад"
 
 #: src/components/settings/ProfileAdd.tsx:98
-msgid "Balance: {standardBalance} XCH"
-msgstr "Баланс: {standardBalance} XCH"
+msgid "Balance: {standardBalance} XFX"
+msgstr "Баланс: {standardBalance} XFX"
 
 #: src/components/block/Block.jsx:235
 msgid "Base Farmer Reward Amount"
 msgstr "Базовая сумма вознаграждения фермера"
 
 #: src/components/offers/OfferShareDialog.tsx:1177
-msgid "Before posting an offer in Keybase to the #{channelName} channel, you must first join the {teamName} team. Please note that it might take a few moments to join the channel."
-msgstr "Прежде чем разместить предложение в Keybase на канале #{channelName}, вы должны присоединиться к команде {teamName}. Пожалуйста, обратите внимание, что присоединение к каналу может занять некоторое время."
+msgid "Before posting an offer in Discord to the #{channelName} channel, you must first join the {teamName} team. Please note that it might take a few moments to join the channel."
+msgstr "Прежде чем разместить предложение в Discord на канале #{channelName}, вы должны присоединиться к команде {teamName}. Пожалуйста, обратите внимание, что присоединение к каналу может занять некоторое время."
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:35
 msgid "Below are the current block challenges. You may or may not have a proof of space for these challenges. These blocks do not currently contain a proof of time."
@@ -351,8 +351,8 @@ msgid "Block VDF Iterations"
 msgstr "VDF итераций блока"
 
 #: src/components/block/Block.jsx:250
-msgid "Block at height {0} in the Chia blockchain"
-msgstr "Блок на высоте {0} в блокчейне Chia"
+msgid "Block at height {0} in the Flax blockchain"
+msgstr "Блок на высоте {0} в блокчейне Flax"
 
 #: src/components/block/Block.jsx:120
 msgid "Block with hash {headerHash}"
@@ -474,16 +474,16 @@ msgid "Change Pool"
 msgstr "Сменить пул"
 
 #: src/components/settings/SettingsStartup.tsx:32
-msgid "Changes will take effect the next time Chia is started"
-msgstr "Изменения вступят в силу при следующем запуске Chia"
+msgid "Changes will take effect the next time Flax is started"
+msgstr "Изменения вступят в силу при следующем запуске Flax"
 
 #: src/components/settings/SettingsDataLayer.tsx:54
-msgid "Changes will take effect the next time Chia is started."
+msgid "Changes will take effect the next time Flax is started."
 msgstr ""
 
 #: src/electron/main.tsx:1080
-msgid "Chat on KeyBase"
-msgstr "Чат в KeyBase"
+msgid "Chat on Discord"
+msgstr "Чат в Discord"
 
 #: src/constants/WalletConnectCommands.tsx:278
 msgid "Check Offer Validity"
@@ -500,41 +500,41 @@ msgid "Check Provenance on Spacescan.io"
 msgstr "Проверить происхождение на Spacescan.io"
 
 #: src/electron/main.tsx:1098
-msgid "Chia"
-msgstr "Чиа"
+msgid "Flax"
+msgstr "Flax"
 
 #: src/components/offers2/OfferBuilderXCHSection.tsx:76
-msgid "Chia ({currencyCode}) is a digital currency that is secure and sustainable"
+msgid "Flax ({currencyCode}) is a digital currency that is secure and sustainable"
 msgstr ""
 
 #: src/components/offers2/OfferBuilderTokensSection.tsx:114
-msgid "Chia Asset Tokens (CATs) are tokens built on top of XCH"
+msgid "Flax Asset Tokens (CATs) are tokens built on top of XFX"
 msgstr ""
 
 #: src/electron/main.tsx:1047
-msgid "Chia Blockchain Wiki"
+msgid "Flax Blockchain Wiki"
 msgstr ""
-"Блокчейн Chia на Wiki                           Chia coin\n"
+"Блокчейн Flax на Wiki                           Flax coin\n"
 "\n"
 "Мы считаем, что криптовалютой должно быть проще пользоваться, чем наличными, ее сложнее потерять и почти невозможно украсть. Любой, кто хочет подтверждать транзакции, должен иметь возможность заниматься майнингом без одноразового оборудования или больших счетов за электроэнергию.\n"
 "9 февраля мы выпустили наш бизнес-документ и запустили основную сеть для получения вознаграждений в пятницу, 19 марта 2021 года. Транзакции будут активированы 3 мая 2021 года около 10:00 по тихоокеанскому времени. Вас также может заинтересовать наш новый согласованный рабочий документ, который впервые был реализован в бета-версии 19 12 января 2021 года.\n"
 "\n"
-"Chia Network разрабатывает блокчейн и платформу интеллектуальных транзакций, созданную изобретателем BitTorrent Брэмом Коэном. Он реализует первый новый алгоритм консенсуса Накамото со времен Биткойна в 2008 году. Доказательства пространства и времени заменяют энергоемкие «доказательства работы».\n"
+"Flax Network разрабатывает блокчейн и платформу интеллектуальных транзакций, созданную изобретателем BitTorrent Брэмом Коэном. Он реализует первый новый алгоритм консенсуса Накамото со времен Биткойна в 2008 году. Доказательства пространства и времени заменяют энергоемкие «доказательства работы».\n"
 "\n"
-"Chialisp - это новый язык программирования Chia, который является мощным, легким для аудита и безопасным. Это упростит использование криптовалюты, чем наличные деньги или кредит. В настоящее время доступны следующие эталонные смарт-транзакции: атомарные свопы, авторизованные получатели, восстанавливаемые кошельки, кошельки с несколькими подписями, кошельки с ограничением скорости и цветные монеты. Брэм представляет Chialisp в нашем блоге.\n"
-"Вам следует ознакомиться с примечаниями к выпуску, а затем установить блокчейн Chia.\n"
+"Flaxlisp - это новый язык программирования Flax, который является мощным, легким для аудита и безопасным. Это упростит использование криптовалюты, чем наличные деньги или кредит. В настоящее время доступны следующие эталонные смарт-транзакции: атомарные свопы, авторизованные получатели, восстанавливаемые кошельки, кошельки с несколькими подписями, кошельки с ограничением скорости и цветные монеты. Брэм представляет Flaxlisp в нашем блоге.\n"
+"Вам следует ознакомиться с примечаниями к выпуску, а затем установить блокчейн Flax.\n"
 "\n"
 "Руководство для начинающих\n"
 "\n"
 "\n"
-"Основная информация о Чиа для начала\n"
-"Chia - это новый тип криптовалюты, основанный на емкости предварительно сохраненных случайных данных, которые пользователь создает и хранит в файлах, называемых графиками, что делает консенсус блокчейна чрезвычайно быстрым и экологически чистым. Это улучшение по сравнению с блокчейнами доказательства работы, которые полагаются на быстрые графические карты и специальные машины, выполняющие миллионы вычислений в секунду и тратящие много электроэнергии. Chia также внесла множество улучшений в сценарии, среду сценариев, криптографию, удобство использования и масштабируемость и стремится быть простым, безопасным и мощным блокчейном.\n"
+"Основная информация о Flax для начала\n"
+"Flax - это новый тип криптовалюты, основанный на емкости предварительно сохраненных случайных данных, которые пользователь создает и хранит в файлах, называемых графиками, что делает консенсус блокчейна чрезвычайно быстрым и экологически чистым. Это улучшение по сравнению с блокчейнами доказательства работы, которые полагаются на быстрые графические карты и специальные машины, выполняющие миллионы вычислений в секунду и тратящие много электроэнергии. Flax также внесла множество улучшений в сценарии, среду сценариев, криптографию, удобство использования и масштабируемость и стремится быть простым, безопасным и мощным блокчейном.\n"
 "\n"
 "Как это работает\n"
 "\n"
-"Вы можете загрузить программное обеспечение Chia на Windows, Mac или Linux. Версия для Windows автоматически запускается при установке, и Mac просто нужно открыть из каталога приложений - он загружается и начинает синхронизацию с остальной сетью и блокчейном. Полная синхронизация может занять 4–6 часов, хотя со временем эта цифра увеличивается. По сути, вы синхронизируетсь со всеми в сети, загружая всю цепочку блоков, которая включает все транзакции, когда-либо обработанные в сети. Копия базы данных блокчейна chia будет храниться на вашем компьютере. У всех остальных есть копия.\n"
+"Вы можете загрузить программное обеспечение Flax на Windows, Mac или Linux. Версия для Windows автоматически запускается при установке, и Mac просто нужно открыть из каталога приложений - он загружается и начинает синхронизацию с остальной сетью и блокчейном. Полная синхронизация может занять 4–6 часов, хотя со временем эта цифра увеличивается. По сути, вы синхронизируетсь со всеми в сети, загружая всю цепочку блоков, которая включает все транзакции, когда-либо обработанные в сети. Копия базы данных блокчейна flax будет храниться на вашем компьютере. У всех остальных есть копия.\n"
 "\n"
-"После того, как chia заработала, ее концепция: пользователи создают графики (каждый размером 101 гигабайт), пользователь сохраняет эти графики на компьютерном оборудовании, а затем обрабатывает созданные участки для потенциального заработка монет.\n"
+"После того, как flax заработала, ее концепция: пользователи создают графики (каждый размером 101 гигабайт), пользователь сохраняет эти графики на компьютерном оборудовании, а затем обрабатывает созданные участки для потенциального заработка монет.\n"
 "\n"
 "Внутри каждого графика находится большое количество предварительно сформулированных вычислений, хранящихся в блоках листа Excel, называемых (хеш-ячейками). Пользователь выигрывает потенциальные монеты, предоставляя заранее сформулированный (хеш-код) выигрышный код, позволяющий совершить транзакцию. Выигрышная транзакция выполняется очень быстро в течение 2-3 секунд, и пользователю выплачивается компенсация монетами для облегчения транзакции. Сюжеты содержат много (хеш-ячеек) внутри, поэтому, если используется 1, остается еще много ячеек. Земельный участок рассчитан на срок более 5 лет.\n"
 "\n"
@@ -547,17 +547,17 @@ msgstr ""
 "\n"
 "Вкладка \"Кошелек\"\n"
 "\n"
-"Вы увидите свои монеты Чиа по мере их выигрыша\n"
+"Вы увидите свои монеты Flax по мере их выигрыша\n"
 "\n"
 "Руководство для начинающих\n"
 "lon12 отредактировал эту страницу 10 дней назад • 57 редакций\n"
-"Основная информация о Чиа для начала\n"
-"Chia - это новый тип криптовалюты, основанный на емкости предварительно сохраненных случайных данных, которые пользователь создает и хранит в файлах, называемых графиками, что делает консенсус блокчейна чрезвычайно быстрым и экологически чистым. Это улучшение по сравнению с блокчейнами доказательства работы, которые полагаются на быстрые графические карты и специальные машины, выполняющие миллионы вычислений в секунду и тратящие много электроэнергии. Chia также внесла множество улучшений в сценарии, среду сценариев, криптографию, удобство использования и масштабируемость и стремится быть простым, безопасным и мощным блокчейном.\n"
+"Основная информация о Flax для начала\n"
+"Flax - это новый тип криптовалюты, основанный на емкости предварительно сохраненных случайных данных, которые пользователь создает и хранит в файлах, называемых графиками, что делает консенсус блокчейна чрезвычайно быстрым и экологически чистым. Это улучшение по сравнению с блокчейнами доказательства работы, которые полагаются на быстрые графические карты и специальные машины, выполняющие миллионы вычислений в секунду и тратящие много электроэнергии. Flax также внесла множество улучшений в сценарии, среду сценариев, криптографию, удобство использования и масштабируемость и стремится быть простым, безопасным и мощным блокчейном.\n"
 "\n"
 "Как это работает\n"
-"Вы можете загрузить программное обеспечение Chia на Windows, Mac или Linux. Версия для Windows автоматически запускается при установке, и Mac просто нужно открыть из каталога приложений - он загружается и начинает синхронизацию с остальной сетью и блокчейном. Полная синхронизация может занять 4–6 часов, хотя со временем эта цифра увеличивается. По сути, вы синхронизируете со всеми в сети, загружая всю цепочку блоков, которая включает все транзакции, когда-либо обработанные в сети. Копия базы данных блокчейна chia будет храниться на вашем компьютере. У всех остальных есть копия.\n"
+"Вы можете загрузить программное обеспечение Flax на Windows, Mac или Linux. Версия для Windows автоматически запускается при установке, и Mac просто нужно открыть из каталога приложений - он загружается и начинает синхронизацию с остальной сетью и блокчейном. Полная синхронизация может занять 4–6 часов, хотя со временем эта цифра увеличивается. По сути, вы синхронизируете со всеми в сети, загружая всю цепочку блоков, которая включает все транзакции, когда-либо обработанные в сети. Копия базы данных блокчейна flax будет храниться на вашем компьютере. У всех остальных есть копия.\n"
 "\n"
-"После того, как chia заработала, ее концепция: пользователи создают графики (каждый размером 101 гигабайт), пользователь сохраняет эти графики на компьютерном оборудовании, а затем обрабатывает созданные участки для потенциального заработка монет.\n"
+"После того, как flax заработала, ее концепция: пользователи создают графики (каждый размером 101 гигабайт), пользователь сохраняет эти графики на компьютерном оборудовании, а затем обрабатывает созданные участки для потенциального заработка монет.\n"
 "\n"
 "Внутри каждого графика находится большое количество предварительно сформулированных вычислений, хранящихся в блоках листа Excel, называемых (хеш-ячейками). Пользователь выигрывает потенциальные монеты, предоставляя заранее сформулированный (хеш-код) выигрышный код, позволяющий совершить транзакцию. Выигрышная транзакция выполняется очень быстро в течение 2-3 секунд, и пользователю выплачивается компенсация монетами для облегчения транзакции. Сюжеты содержат много (хеш-ячеек) внутри, поэтому, если используется 1, остается еще много ячеек. Земельный участок рассчитан на срок более 5 лет.\n"
 "\n"
@@ -567,7 +567,7 @@ msgstr ""
 "Блоки: это работает блокчейн.\n"
 "Подключения: это подключения к вам и другим пользователям и их ПК (узлам).\n"
 "Вкладка \"Кошелек\"\n"
-"Вы увидите свои монеты Чиа по мере их выигрыша\n"
+"Вы увидите свои монеты Flax по мере их выигрыша\n"
 "\n"
 "История: вы можете увидеть время / дату, когда вы заработали монеты или частичные монеты\n"
 "\n"
@@ -583,8 +583,8 @@ msgstr ""
 "Вот почему транзакции такие зеленые /\n"
 "\n"
 "Вкладка \"Ферма\"\n"
-"Это покажет вам, сколько PLOTS-полей вы создали. Вверху будет показано, сколько Chias было выращено. Также он показывает, сколько гигов участков у вас в сети. Если у вас есть 2 участка по 101 ГиБ. Затем в левом верхнем углу отображается «Общий размер участков» .\n"
-"2 TIB означает, что вы предлагаете такой объем хранилища для формул сети chia. Рассчитано, как если бы у вас 101 ГиБ x 2 = 202 ГиБ.\n"
+"Это покажет вам, сколько PLOTS-полей вы создали. Вверху будет показано, сколько Flaxs было выращено. Также он показывает, сколько гигов участков у вас в сети. Если у вас есть 2 участка по 101 ГиБ. Затем в левом верхнем углу отображается «Общий размер участков» .\n"
+"2 TIB означает, что вы предлагаете такой объем хранилища для формул сети flax. Рассчитано, как если бы у вас 101 ГиБ x 2 = 202 ГиБ.\n"
 "\n"
 "Последние испытания блоков: здесь показаны последние испытания и указатели, которые можно рассматривать как мини-лотереи. Каждые 9 секунд появляется новая вывеска, а это означает, что у вас есть новая возможность проверить свои участки и узнать, выиграли ли вы. Любая другая точка вывески будет выигрышной для кого-то в сети, поэтому каждые 18 секунд создается новый блок.\n"
 "\n"
@@ -593,7 +593,7 @@ msgstr ""
 "Шаг 2 - Выбранный участок проверяется на выигрышный хэш. Итак, в качестве примера - ваша система работает - есть 5 строк, если у вас 157 графиков - каждая из 5 строк читает 0/157. Если выбран график или второй график, это хорошая новость, и число изменится на 1/157 или 2/157, может быть, 3/157. После прохождения фильтра каждый выбранный участок будет проходить «качественный поиск», который выполняет примерно 7 считываний на вашем графике и сообщает вам, выиграли ли участки. Если вы выиграли, это не показывает никаких признаков, так как транзакция выполняется быстро. Ваш кошелек увеличивается.\n"
 "\n"
 "Как только это совпадение появится в первой строке, оно переместится вниз к строкам 2-5, затем, если другой график пройдет шаг 1, он также начнется сверху, amd переместится, выполнив процесс фильтрации.\n"
-"Выигрыши случаются очень редко: в среднем один человек во всем мире выигрывает каждые 18 секунд. На каждой точке указателя (9 секунд) все ваши участки проверяются, чтобы увидеть, какие из них проходят [фильтр поля]. (https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#what-is-the-plot-filter-and-why-didnt-my-plot-pass-it). Примерно 1/512 всех участков пройдут через фильтр в каждом испытании, поэтому здесь вы можете увидеть, сколько ваших участков прошло. Однако есть 4 608 шансов выиграть 2 чиа каждый день.\n"
+"Выигрыши случаются очень редко: в среднем один человек во всем мире выигрывает каждые 18 секунд. На каждой точке указателя (9 секунд) все ваши участки проверяются, чтобы увидеть, какие из них проходят [фильтр поля]. (https://github.com/Flax-Network/flax-blockchain/wiki/FAQ#what-is-the-plot-filter-and-why-didnt-my-plot-pass-it). Примерно 1/512 всех участков пройдут через фильтр в каждом испытании, поэтому здесь вы можете увидеть, сколько ваших участков прошло. Однако есть 4 608 шансов выиграть 2 чиа каждый день.\n"
 "\n"
 "Если по какой-то причине эти строки перестают двигаться, это еще один признак того, что вы не синхронизированы с базой данных и вам необходимо выполнить повторную синхронизацию - см. Ниже.\n"
 "\n"
@@ -667,23 +667,23 @@ msgstr ""
 "Примечания. \n"
 "Предлагается использовать дополнительное хранилище SSD или NVME для создания полей, а не основной жесткий диск (особенно для несменного NVME, например, на некоторых Mac или ноутбуках с Windows). Если по какой-то причине процесс записи поля не может быть завершен, его следует удален, удалив все временные файлы. Будьте осторожны, чтобы не удалить временные файлы другого строящегося поля.\n"
 "\n"
-"В Windows вы можете использовать chia CLI из Windows PowerShell, что обеспечивает большую гибкость и контроль. PowerShell - это программа, в которой вы вводите команды, нажимаете клавишу ВВОД и выполняете такие действия, как изменение папок, перемещение файлов или запуск программ, таких как chia.\n"
+"В Windows вы можете использовать flax CLI из Windows PowerShell, что обеспечивает большую гибкость и контроль. PowerShell - это программа, в которой вы вводите команды, нажимаете клавишу ВВОД и выполняете такие действия, как изменение папок, перемещение файлов или запуск программ, таких как flax.\n"
 "\n"
 "1. Параллельное построение с использованием PowerShell\n"
-"    cd C:\\Users\\yourUserName\\AppData\\Local\\Chia-Blockchain\\app-1.0.5\\resources\\app.asar.unpacked\\daemon\\\n"
-"    start-process .\\chia.exe -argumentlist \"plots create yourParametersGoHere\"\n"
+"    cd C:\\Users\\yourUserName\\AppData\\Local\\Flax-Blockchain\\app-1.0.5\\resources\\app.asar.unpacked\\daemon\\\n"
+"    start-process .\\flax.exe -argumentlist \"plots create yourParametersGoHere\"\n"
 "    start-process ....\n"
 "\n"
-"   Если start-process не работает, попробуйте. .\\chia.exe plots create yourParametersGoHere\n"
+"   Если start-process не работает, попробуйте. .\\flax.exe plots create yourParametersGoHere\n"
 "\n"
 "Или добавьте путь\n"
-" \"%USERPROFILE%\\AppData\\Local\\chia-blockchain\\app-1.0.5\\resources\\app.asar.unpacked\\daemon\"\n"
+" \"%USERPROFILE%\\AppData\\Local\\flax-blockchain\\app-1.0.5\\resources\\app.asar.unpacked\\daemon\"\n"
 "\n"
-"Чтобы добавить задержку между вашими параллельными процессами, вы можете поместить sleep <seconds> между каждой командой создания полей chia chia plots create , например чтобы отложить следующий процесс на час sleep 3600\n"
+"Чтобы добавить задержку между вашими параллельными процессами, вы можете поместить sleep <seconds> между каждой командой создания полей flax flax plots create , например чтобы отложить следующий процесс на час sleep 3600\n"
 "\n"
 "Конкретный пример:\n"
-"    cd C:\\Users\\yourUserName\\AppData\\Local\\Chia-Blockchain\\app-1.0.5\\resources\\app.asar.unpacked\\daemon\\\n"
-"    start-process ./chia.exe -argumentlist \"plots create -k 32 -b 4000 -u 128 -r 4 -t d:\\tempdrive1 -2 e:\\tempdrive2 -d F:\\plots -n 1\"\n"
+"    cd C:\\Users\\yourUserName\\AppData\\Local\\Flax-Blockchain\\app-1.0.5\\resources\\app.asar.unpacked\\daemon\\\n"
+"    start-process ./flax.exe -argumentlist \"plots create -k 32 -b 4000 -u 128 -r 4 -t d:\\tempdrive1 -2 e:\\tempdrive2 -d F:\\plots -n 1\"\n"
 "\n"
 "Приведенная выше команда создает одио поле (указывается -n 1), для параллельного построения вам нужно повторить команду (не закрывая первую). Увеличьте значение -n для последовательного построения, то есть после завершения первого участка запускается следующий."
 
@@ -920,7 +920,7 @@ msgid "Create a Plot NFT"
 msgstr "Создать участок NFT"
 
 #: src/components/offers/OfferManager.tsx:440
-msgid "Create a file that you can use to trade XCH, Chia Asset Tokens, or NFTs with no counter-party risk."
+msgid "Create a file that you can use to trade XFX, Flax Asset Tokens, or NFTs with no counter-party risk."
 msgstr ""
 
 #: src/components/settings/ProfileAdd.tsx:75
@@ -1010,7 +1010,7 @@ msgid "DataLayer Services"
 msgstr ""
 
 #: src/components/settings/SettingsDataLayer.tsx:21
-msgid "DataLayer enables rich data to be stored on mirrored databases that can be verified using the Chia Blockchain."
+msgid "DataLayer enables rich data to be stored on mirrored databases that can be verified using the Flax Blockchain."
 msgstr ""
 
 #: src/components/farm/FarmLastAttemptedProof.tsx:31
@@ -1049,8 +1049,8 @@ msgid "Deleting key"
 msgstr "Удаление ключа"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:81
-msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Chia Proof of Space plotter. If unsure, use the default Chia Proof of Space plotter."
-msgstr "В зависимости от конфигурации системы, вы можете заметить, что альтернативный плоттер создает участки быстрее, чем стандартный плоттер Chia Proof Space. Если вы не уверены, то используйте стандартный плоттер Chia Proof Space."
+msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Flax Proof of Space plotter. If unsure, use the default Flax Proof of Space plotter."
+msgstr "В зависимости от конфигурации системы, вы можете заметить, что альтернативный плоттер создает участки быстрее, чем стандартный плоттер Flax Proof Space. Если вы не уверены, то используйте стандартный плоттер Flax Proof Space."
 
 #: src/components/settings/SettingsPanel.tsx:163
 msgid "Derivation Index"
@@ -1333,8 +1333,8 @@ msgid "Exclude final directory"
 msgstr "Исключить окончательную директорию"
 
 #: src/components/nfts/gallery/NFTGalleryHero.tsx:18
-msgid "Explore the Chia ecosystem; discover and trade great NFTs"
-msgstr "Исследуйте экосистему Chia; открывать и торговать отличными NFT"
+msgid "Explore the Flax ecosystem; discover and trade great NFTs"
+msgstr "Исследуйте экосистему Flax; открывать и торговать отличными NFT"
 
 #: src/components/offers/utils.ts:161
 #: src/components/plot/PlotHarvester.tsx:121
@@ -1350,8 +1350,8 @@ msgid "Failed to decode NFT identifier"
 msgstr "Не удалось расшифровать идентификатор NFT"
 
 #: src/components/offers/OfferShareDialog.tsx:462
-msgid "Failed to execute Keybase command: {stderr}"
-msgstr "Не удалось выполнить команду Keybase: {stderr}"
+msgid "Failed to execute Discord command: {stderr}"
+msgstr "Не удалось выполнить команду Discord: {stderr}"
 
 #: src/components/notification/NotificationSendDialog.tsx:147
 msgid "Failed to send the notification: {error}"
@@ -1731,7 +1731,7 @@ msgstr ""
 
 #: src/components/offers/NFTOfferEditor.tsx:91
 #: src/components/offers/OfferEditorConditionsPanel.tsx:392
-msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted. The recommended minimum fee is 0.000005 XCH (5,000,000 mojos)"
+msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted. The recommended minimum fee is 0.000005 XFX (5,000,000 mojos)"
 msgstr ""
 
 #: src/components/offers2/OfferIncomingTable.tsx:112
@@ -1747,7 +1747,7 @@ msgid "Initializing..."
 msgstr "Инициализация..."
 
 #: src/components/offers/OfferShareDialog.tsx:1172
-msgid "Install Keybase"
+msgid "Install Discord"
 msgstr ""
 
 #: src/hooks/useAcceptOfferHook.tsx:67
@@ -1800,16 +1800,16 @@ msgid "Join a Pool"
 msgstr "Присоединиться к пулу"
 
 #: src/components/plot/add/PlotAddNFT.tsx:41
-msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile."
-msgstr "Присоединяйтесь к пулу и получайте последовательные награды за фермерство в XCH. Средний доход одинаковый, но намного, менее волатильный."
+msgid "Join a pool and get consistent XFX farming rewards. The average returns are the same, but it is much less volatile."
+msgstr "Присоединяйтесь к пулу и получайте последовательные награды за фермерство в XFX. Средний доход одинаковый, но намного, менее волатильный."
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:61
-msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
-msgstr "Присоединяйтесь к пулу и получайте последовательные награды за фермерство в XCH. Средний доход одинаковый, но намного, менее волатильный. Назначить участки в NFT участки. Вы можете легко переключаться на пулы без повторного засеивания."
+msgid "Join a pool and get consistent XFX farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+msgstr "Присоединяйтесь к пулу и получайте последовательные награды за фермерство в XFX. Средний доход одинаковый, но намного, менее волатильный. Назначить участки в NFT участки. Вы можете легко переключаться на пулы без повторного засеивания."
 
 #: src/components/plot/add/PlotAddNFT.tsx:122
-msgid "Join a pool and get more consistent XCH farming rewards. Create a plot NFT and assign your new plots to a group."
-msgstr "Присоединяйтесь к пулу и получите более последовательные награды за фермерство в XCH. Создайте участки NFT и назначьте свои новые участки в группу."
+msgid "Join a pool and get more consistent XFX farming rewards. Create a plot NFT and assign your new plots to a group."
+msgstr "Присоединяйтесь к пулу и получите более последовательные награды за фермерство в XFX. Создайте участки NFT и назначьте свои новые участки в группу."
 
 #: src/components/app/AppSelectMode.tsx:133
 msgid "Join farming pools"
@@ -1833,11 +1833,11 @@ msgid "Key switching"
 msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:1086
-msgid "Keybase command failed {e}. If you haven't installed Keybase, you can download from https://keybase.io"
+msgid "Discord command failed {e}. If you haven't installed Discord, you can download from https://keybase.io"
 msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:1165
-msgid "Keybase is a secure messaging and file sharing application. To share an offer in the Keybase {teamName} team, you must first have Keybase installed."
+msgid "Discord is a secure messaging and file sharing application. To share an offer in the Discord {teamName} team, you must first have Discord installed."
 msgstr ""
 
 #: src/components/app/AppKeyringMigrator.tsx:83
@@ -1959,7 +1959,7 @@ msgid "Log In"
 msgstr ""
 
 #: src/components/app/AppSelectMode.tsx:84
-msgid "Manage CAT tokens"
+msgid "Manage custom asset tokens"
 msgstr "Управление CAT токенами"
 
 #: src/components/farm/FarmHeader.tsx:30
@@ -2292,8 +2292,8 @@ msgid "Not connected"
 msgstr "Нет подключения"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:152
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XCH reward for pooling plots."
-msgstr "Обратите внимание, что это не меняет адреса выплат пула. Это влияет только на старый формат участков и на вознаграждение 0.25XCH за участки в пуле."
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XFX reward for pooling plots."
+msgstr "Обратите внимание, что это не меняет адреса выплат пула. Это влияет только на старый формат участков и на вознаграждение 0.25XFX за участки в пуле."
 
 #: src/components/notification/NotificationSendDialog.tsx:145
 msgid "Notification has successfully been sent to a full node and included in the mempool."
@@ -2630,7 +2630,7 @@ msgstr ""
 
 #: src/util/offerBuilderDataToOffer.ts:46
 #: src/util/offerBuilderDataToOffer.ts:111
-msgid "Please enter an XCH amount"
+msgid "Please enter an XFX amount"
 msgstr ""
 
 #: src/components/offers/NFTOfferEditor.tsx:591
@@ -2763,7 +2763,7 @@ msgid "Plots With Missing Keys"
 msgstr "Участки с отсутствующими ключами"
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:34
-msgid "Plots are allocated space on your hard drive used to farm and earn Chia.  <0>Learn more</0>"
+msgid "Plots are allocated space on your hard drive used to farm and earn Flax.  <0>Learn more</0>"
 msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:217
@@ -2973,7 +2973,7 @@ msgid "Recommended"
 msgstr "Рекомендуется"
 
 #: src/components/settings/ProfileAdd.tsx:114
-msgid "Recommended: 0.000005 XCH"
+msgid "Recommended: 0.000005 XFX"
 msgstr ""
 
 #: src/components/nfts/NFTContextualActions.tsx:602
@@ -3178,8 +3178,8 @@ msgid "Self Pooling"
 msgstr "Самостоятельное выставление счетов"
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:86
-msgid "Self pool. When you win a block you will earn XCH rewards."
-msgstr "Cвой пул. Когда вы выиграете блок, вы получите награду в XCH."
+msgid "Self pool. When you win a block you will earn XFX rewards."
+msgstr "Cвой пул. Когда вы выиграете блок, вы получите награду в XFX."
 
 #: src/components/offers/NFTOfferEditor.tsx:313
 msgid "Sell an NFT"
@@ -3236,7 +3236,7 @@ msgid "Share on Hashgreen DEX"
 msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:1160
-msgid "Share on Keybase"
+msgid "Share on Discord"
 msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:715
@@ -3344,8 +3344,8 @@ msgid "Skips adding a final directory to harvester for farming"
 msgstr "Пропускает добавление окончательной директории в комбайн для фермерства"
 
 #: src/components/pool/PoolHero.tsx:21
-msgid "Smooth out your XCH farming rewards by joining a pool."
-msgstr "Получите свои награды за фарм XCH, присоединившись к пулу."
+msgid "Smooth out your XFX farming rewards by joining a pool."
+msgstr "Получите свои награды за фарм XFX, присоединившись к пулу."
 
 #: src/components/notification/NotificationNFTTitle.tsx:30
 msgid "Something went wrong"
@@ -3406,8 +3406,8 @@ msgid "Status"
 msgstr "Статус"
 
 #: src/components/app/AppSelectMode.tsx:78
-msgid "Store and Send XCH"
-msgstr "Хранить и отправлять XCH"
+msgid "Store and Send XFX"
+msgstr "Хранить и отправлять XFX"
 
 #: src/components/app/AppPassPrompt.tsx:111
 msgid "Submit"
@@ -3456,7 +3456,7 @@ msgid "Temporary folder location"
 msgstr "Расположение временной папки"
 
 #: src/components/app/AppVersionWarning.tsx:35
-msgid "The Chia application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Chia services version: {backV}<2/>Chia application version: {guiV}<3/><4/>It is recommended that you quit the Chia application and stop all Chia services."
+msgid "The Flax application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Flax services version: {backV}<2/>Flax application version: {guiV}<3/><4/>It is recommended that you quit the Flax application and stop all Flax services."
 msgstr ""
 
 #: src/components/nfts/NFTMoveToProfileDialog.tsx:210
@@ -3484,7 +3484,7 @@ msgid "The NFT transfer transaction has been successfully submitted to the block
 msgstr ""
 
 #: src/components/settings/SettingsPanel.tsx:165
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XFX, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
 msgstr ""
 
 #: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:88
@@ -3567,8 +3567,8 @@ msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Общая комиссия за транзакции в этом блоке, полученная в награду фермерами."
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:91
-msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XCH address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
-msgstr "Это инструкции по поводу того, как фермер хочет заплатить. По умолчанию это будет XCH адрес, но он может быть установлен в любую строку размером менее 1024 символов,, чтобы он мог представить другой идентификатор блокчейна или платежной системы."
+msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XFX address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+msgstr "Это инструкции по поводу того, как фермер хочет заплатить. По умолчанию это будет XFX адрес, но он может быть установлен в любую строку размером менее 1024 символов,, чтобы он мог представить другой идентификатор блокчейна или платежной системы."
 
 #: src/components/plot/card/PlotCardPlotsFailedToOpen.tsx:13
 msgid "These plots are invalid, you might want to delete them."
@@ -3670,7 +3670,7 @@ msgid "Title Not Available"
 msgstr ""
 
 #: src/components/settings/ResyncPrompt.tsx:41
-msgid "To initiate a wallet resync, all Chia services must first be shut down. After shutting down, you will be required to restart Chia to begin the resyncing process. Are you sure you want to shut down and resync?"
+msgid "To initiate a wallet resync, all Flax services must first be shut down. After shutting down, you will be required to restart Flax to begin the resyncing process. Are you sure you want to shut down and resync?"
 msgstr ""
 
 #: src/components/settings/ProfileView.tsx:127
@@ -3704,8 +3704,8 @@ msgstr ""
 msgid "Total Amount with Royalties"
 msgstr ""
 
-#: src/components/farm/card/FarmCardTotalChiaFarmed.tsx:27
-msgid "Total Chia Farmed"
+#: src/components/farm/card/FarmCardTotalFlaxFarmed.tsx:27
+msgid "Total Flax Farmed"
 msgstr "Всего выращено монет"
 
 #: src/components/plot/card/PlotCardTotalHarvesters.tsx:11
@@ -3824,11 +3824,11 @@ msgid "Unable to find NFT {entityId}"
 msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:1099
-msgid "Unable to open Keybase. Install Keybase from https://keybase.io"
+msgid "Unable to open Discord. Install Discord from https://keybase.io"
 msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:1002
-msgid "Unable to open browser. Install Keybase from https://keybase.io"
+msgid "Unable to open browser. Install Discord from https://keybase.io"
 msgstr ""
 
 #: src/components/nfts/NFTDetails.tsx:141
@@ -4066,7 +4066,7 @@ msgid "WalletConnect Integration"
 msgstr ""
 
 #: src/components/settings/SettingsIntegration.tsx:26
-msgid "WalletConnect enables a decentralized app on the Chia blockchain to communicate and make requests directly to a Chia wallet."
+msgid "WalletConnect enables a decentralized app on the Flax blockchain to communicate and make requests directly to a Flax wallet."
 msgstr ""
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:59
@@ -4234,13 +4234,13 @@ msgid "Your keyring is locked"
 msgstr "Ваша связка ключей заблокирована"
 
 #: src/components/offers/OfferShareDialog.tsx:1135
-msgid "Your offer has been successfully posted to Keybase."
+msgid "Your offer has been successfully posted to Discord."
 msgstr ""
 
 #: src/components/app/AppKeyringMigrator.tsx:229
 #: src/components/settings/ChangePassphrasePrompt.tsx:277
 #: src/components/settings/SetPassphrasePrompt.tsx:246
-msgid "Your passphrase can be stored in your system's secure credential store. Chia will be able to access your keys without prompting for your passphrase."
+msgid "Your passphrase can be stored in your system's secure credential store. Flax will be able to access your keys without prompting for your passphrase."
 msgstr ""
 
 #: src/components/settings/SettingsPanel.tsx:55

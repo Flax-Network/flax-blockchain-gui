@@ -1,4 +1,4 @@
-import { usePrefs } from '@chia-network/api-react';
+import { usePrefs } from '@flax-network/api-react';
 import React, { createContext, ReactNode, useState, useMemo, useCallback } from 'react';
 
 import Mode from '../../constants/Mode';

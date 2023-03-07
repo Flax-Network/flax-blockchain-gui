@@ -1,5 +1,5 @@
-import { ServiceName } from '@chia-network/api';
-import { useService } from '@chia-network/api-react';
+import { ServiceName } from '@flax-network/api';
+import { useService } from '@flax-network/api-react';
 
 import FarmerStatus from '../constants/FarmerStatus';
 import FullNodeState from '../constants/FullNodeState';

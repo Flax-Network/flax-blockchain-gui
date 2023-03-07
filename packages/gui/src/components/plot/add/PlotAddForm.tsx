@@ -1,6 +1,6 @@
-import { defaultPlotter, toBech32m, fromBech32m } from '@chia-network/api';
-import { useStartPlottingMutation, useCreateNewPoolWalletMutation } from '@chia-network/api-react';
-import { Back, useShowError, ButtonLoading, Flex, Form } from '@chia-network/core';
+import { defaultPlotter, toBech32m, fromBech32m } from '@flax-network/api';
+import { useStartPlottingMutation, useCreateNewPoolWalletMutation } from '@flax-network/api-react';
+import { Back, useShowError, ButtonLoading, Flex, Form } from '@flax-network/core';
 import { t, Trans } from '@lingui/macro';
 import React, { useState, useEffect, useRef } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
@@ -85,7 +85,7 @@ export default function PlotAddForm(props: Props) {
   };
 
   const methods = useForm<FormData>({
-    defaultValues: defaultsForPlotter(PlotterName.CHIAPOS),
+    defaultValues: defaultsForPlotter(PlotterName.FLAXPOS),
   });
 
   const { watch, setValue, reset } = methods;
@@ -185,7 +185,6 @@ export default function PlotAddForm(props: Props) {
         <PlotAddNumberOfPlots step={step++} plotter={plotter} />
         {allowTempDirectorySelection && <PlotAddSelectTemporaryDirectory step={step++} plotter={plotter} />}
         <PlotAddSelectFinalDirectory step={step++} plotter={plotter} />
-        <PlotAddNFT ref={addNFTref} step={step++} plotter={plotter} />
         <Flex justifyContent="flex-end">
           <ButtonLoading loading={loading} color="primary" type="submit" variant="contained">
             <Trans>Create</Trans>

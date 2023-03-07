@@ -7,7 +7,7 @@ import {
   Checkbox,
   TooltipIcon,
   Select,
-} from '@chia-network/core';
+} from '@flax-network/core';
 import { Trans, t } from '@lingui/macro';
 import {
   Grid,

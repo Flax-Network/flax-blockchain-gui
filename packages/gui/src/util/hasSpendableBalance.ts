@@ -1,4 +1,4 @@
-import { store, walletApi } from '@chia-network/api-react';
+import { store, walletApi } from '@flax-network/api-react';
 import BigNumber from 'bignumber.js';
 
 export default async function hasSpendableBalance(walletId: number, amount: BigNumber) {

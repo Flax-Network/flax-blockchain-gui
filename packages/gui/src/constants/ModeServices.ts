@@ -1,5 +1,5 @@
-import { ServiceName } from '@chia-network/api';
-import { Mode } from '@chia-network/core';
+import { ServiceName } from '@flax-network/api';
+import { Mode } from '@flax-network/core';
 
 export default {
   [Mode.WALLET]: [ServiceName.WALLET],

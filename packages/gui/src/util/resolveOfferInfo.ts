@@ -1,4 +1,4 @@
-import { OfferSummaryRecord } from '@chia-network/api';
+import { OfferSummaryRecord } from '@flax-network/api';
 import { t } from '@lingui/macro';
 
 import OfferAsset from '../components/offers/OfferAsset';

@@ -1,6 +1,6 @@
-import { Connection, ServiceConnectionName } from '@chia-network/api';
-import { useGetWalletConnectionsQuery } from '@chia-network/api-react';
-import { Card, FormatBytes, Loading, Table } from '@chia-network/core';
+import { Connection, ServiceConnectionName } from '@flax-network/api';
+import { useGetWalletConnectionsQuery } from '@flax-network/api-react';
+import { Card, FormatBytes, Loading, Table } from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import { Tooltip } from '@mui/material';
 import React from 'react';

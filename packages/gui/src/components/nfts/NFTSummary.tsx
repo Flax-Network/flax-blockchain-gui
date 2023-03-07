@@ -1,6 +1,6 @@
-import type { NFTAttribute } from '@chia-network/api';
-import { useGetNFTInfoQuery } from '@chia-network/api-react';
-import { CopyToClipboard, Flex, Loading, TooltipIcon, truncateValue } from '@chia-network/core';
+import type { NFTAttribute } from '@flax-network/api';
+import { useGetNFTInfoQuery } from '@flax-network/api-react';
+import { CopyToClipboard, Flex, Loading, TooltipIcon, truncateValue } from '@flax-network/core';
 import { t, Trans } from '@lingui/macro';
 import { Box, Card, CardContent, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';

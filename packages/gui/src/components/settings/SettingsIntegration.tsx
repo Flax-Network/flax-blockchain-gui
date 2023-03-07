@@ -1,4 +1,4 @@
-import { Flex, SettingsHR, SettingsSection, SettingsTitle, SettingsText } from '@chia-network/core';
+import { Flex, SettingsHR, SettingsSection, SettingsTitle, SettingsText } from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import { FormControlLabel, Grid, Switch } from '@mui/material';
 import React from 'react';
@@ -24,8 +24,8 @@ export default function SettingsIntegration() {
           </SettingsSection>
           <SettingsText>
             <Trans>
-              WalletConnect enables a decentralized app on the Chia blockchain to communicate and make requests directly
-              to a Chia wallet.
+              WalletConnect enables a decentralized app on the Flax blockchain to communicate and make requests directly
+              to a Flax wallet.
             </Trans>
           </SettingsText>
         </Flex>

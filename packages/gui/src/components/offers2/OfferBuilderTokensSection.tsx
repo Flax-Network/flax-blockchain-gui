@@ -1,8 +1,8 @@
-import { WalletType } from '@chia-network/api';
-import type { Wallet } from '@chia-network/api';
-import { useGetWalletsQuery } from '@chia-network/api-react';
-import { Flex, Loading, catToMojo, mojoToCATLocaleString } from '@chia-network/core';
-import { Tokens } from '@chia-network/icons';
+import { WalletType } from '@flax-network/api';
+import type { Wallet } from '@flax-network/api';
+import { useGetWalletsQuery } from '@flax-network/api-react';
+import { Flex, Loading, catToMojo, mojoToCATLocaleString } from '@flax-network/core';
+import { Tokens } from '@flax-network/icons';
 import { Trans } from '@lingui/macro';
 import BigNumber from 'bignumber.js';
 import React, { useMemo } from 'react';
@@ -111,7 +111,7 @@ export default function OfferBuilderTokensSection(props: OfferBuilderTokensSecti
     <OfferBuilderSection
       icon={<Tokens />}
       title={<Trans>Tokens</Trans>}
-      subtitle={<Trans>Chia Asset Tokens (CATs) are tokens built on top of XCH</Trans>}
+      subtitle={<Trans>Flax Asset Tokens (CATs) are tokens built on top of XFX</Trans>}
       onAdd={showAdd ? handleAdd : undefined}
       expanded={!!fields.length}
       muted={muted}

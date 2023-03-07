@@ -1,6 +1,6 @@
-import { NFTInfo } from '@chia-network/api';
-import type { Wallet } from '@chia-network/api';
-import { useGetDIDsQuery, useGetNFTWallets, useSetNFTDIDMutation, useLocalStorage } from '@chia-network/api-react';
+import { NFTInfo } from '@flax-network/api';
+import type { Wallet } from '@flax-network/api';
+import { useGetDIDsQuery, useGetNFTWallets, useSetNFTDIDMutation, useLocalStorage } from '@flax-network/api-react';
 import {
   AlertDialog,
   Button,
@@ -11,11 +11,11 @@ import {
   Flex,
   Form,
   TooltipIcon,
-  chiaToMojo,
+  flaxToMojo,
   truncateValue,
   useOpenDialog,
   useShowError,
-} from '@chia-network/core';
+} from '@flax-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Box, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from '@mui/material';
 import React, { useMemo, useState } from 'react';
@@ -146,7 +146,7 @@ export function NFTMoveToProfileAction(props: NFTMoveToProfileActionProps) {
 
   async function handleSubmit(formData: NFTMoveToProfileFormData) {
     const { destination: destinationLocal, fee } = formData;
-    const feeInMojos = chiaToMojo(fee || 0);
+    const feeInMojos = flaxToMojo(fee || 0);
     let isValid = true;
 
     if (!destinationLocal || destinationLocal === currentDIDId) {

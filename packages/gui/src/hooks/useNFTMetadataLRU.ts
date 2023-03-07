@@ -1,4 +1,4 @@
-import LRU from '@chia-network/core';
+import LRU from '@flax-network/core';
 import { useContext } from 'react';
 
 import { LRUsContext } from '../components/lrus/LRUsProvider';

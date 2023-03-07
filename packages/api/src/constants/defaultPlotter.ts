@@ -3,8 +3,8 @@ import optionsForPlotter from '../utils/optionsForPlotter';
 import PlotterName from './PlotterName';
 
 export default {
-  displayName: 'Chia Proof of Space',
-  options: optionsForPlotter(PlotterName.CHIAPOS),
-  defaults: defaultsForPlotter(PlotterName.CHIAPOS),
+  displayName: 'Flax Proof of Space',
+  options: optionsForPlotter(PlotterName.FLAXPOS),
+  defaults: defaultsForPlotter(PlotterName.FLAXPOS),
   installInfo: { installed: true },
 };

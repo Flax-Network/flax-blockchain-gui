@@ -1,5 +1,5 @@
-import { WalletType } from '@chia-network/api';
-import type { Wallet } from '@chia-network/api';
+import { WalletType } from '@flax-network/api';
+import type { Wallet } from '@flax-network/api';
 
 /**
  * Locate the NFT "inbox" from a list of NFT wallets. The inbox is the NFT wallet

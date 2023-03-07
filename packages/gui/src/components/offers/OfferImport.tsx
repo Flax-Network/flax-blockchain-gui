@@ -1,7 +1,7 @@
 import fs, { Stats } from 'fs';
 
-import { type OfferSummaryRecord } from '@chia-network/api';
-import { useGetOfferSummaryMutation } from '@chia-network/api-react';
+import { type OfferSummaryRecord } from '@flax-network/api';
+import { useGetOfferSummaryMutation } from '@flax-network/api-react';
 import {
   Back,
   Card,
@@ -10,7 +10,7 @@ import {
   useOpenDialog,
   useSerializedNavigationState,
   useShowError,
-} from '@chia-network/core';
+} from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import { Button, Grid, Typography } from '@mui/material';
 import React from 'react';

@@ -4,9 +4,9 @@ import initDebug from 'debug';
 import walletConnectCommands from '../constants/WalletConnectCommands';
 import { type Pairs } from '../hooks/useWalletConnectPairs';
 
-const log = initDebug('chia-gui:walletConnect');
+const log = initDebug('flax-gui:walletConnect');
 
-const availableCommands = walletConnectCommands.map((command) => `chia_${command.command}`);
+const availableCommands = walletConnectCommands.map((command) => `flax_${command.command}`);
 
 export function processError(error: Error) {
   if (error.message.includes('No matching key')) {
@@ -33,7 +33,7 @@ export async function processSessionProposal(
         };
       };
       requiredNamespaces: {
-        chia: {
+        flax: {
           chains: string[];
           methods: string[];
         };
@@ -59,13 +59,13 @@ export async function processSessionProposal(
       throw new Error('Pairing topic not found');
     }
 
-    const requiredNamespace = requiredNamespaces.chia;
+    const requiredNamespace = requiredNamespaces.flax;
     if (!requiredNamespace) {
-      throw new Error('Missing required chia namespace');
+      throw new Error('Missing required flax namespace');
     }
 
     const { chains, methods } = requiredNamespace;
-    const chain = chains.find((item) => ['chia:testnet', 'chia:mainnet'].includes(item));
+    const chain = chains.find((item) => ['flax:testnet', 'flax:mainnet'].includes(item));
     if (!chain) {
       throw new Error('Chain not supported');
     }
@@ -87,10 +87,10 @@ export async function processSessionProposal(
 
     const { fingerprints, mainnet } = pair;
     const instance = mainnet ? 'mainnet' : 'testnet';
-    const accounts = fingerprints.map((fingerprint) => `chia:${instance}:${fingerprint}`);
+    const accounts = fingerprints.map((fingerprint) => `flax:${instance}:${fingerprint}`);
 
     const namespaces = {
-      chia: {
+      flax: {
         accounts,
         methods,
         events: [],
@@ -175,7 +175,7 @@ export async function processSessionRequest(
     }
 
     const [network, instance] = chainId.split(':');
-    if (network !== 'chia') {
+    if (network !== 'flax') {
       throw new Error('Network not supported');
     }
 

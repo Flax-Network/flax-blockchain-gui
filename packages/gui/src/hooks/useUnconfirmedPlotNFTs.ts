@@ -1,4 +1,4 @@
-import { useGetLoggedInFingerprintQuery } from '@chia-network/api-react';
+import { useGetLoggedInFingerprintQuery } from '@flax-network/api-react';
 import { useLocalStorage, writeStorage } from '@rehooks/local-storage';
 import { useMemo } from 'react';
 

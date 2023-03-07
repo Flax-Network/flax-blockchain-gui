@@ -1,4 +1,4 @@
-import { Flex, LayoutDashboardSub } from '@chia-network/core';
+import { Flex, LayoutDashboardSub } from '@flax-network/core';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 

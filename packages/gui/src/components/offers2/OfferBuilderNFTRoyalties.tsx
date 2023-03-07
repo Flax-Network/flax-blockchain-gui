@@ -1,5 +1,5 @@
-import type { NFTInfo } from '@chia-network/api';
-import { useGetCatListQuery } from '@chia-network/api-react';
+import type { NFTInfo } from '@flax-network/api';
+import { useGetCatListQuery } from '@flax-network/api-react';
 import {
   CopyToClipboard,
   Flex,
@@ -9,11 +9,11 @@ import {
   TooltipIcon,
   Truncate,
   useCurrencyCode,
-  mojoToChia,
-  mojoToChiaLocaleString,
+  mojoToFlax,
+  mojoToFlaxLocaleString,
   mojoToCAT,
   mojoToCATLocaleString,
-} from '@chia-network/core';
+} from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Typography } from '@mui/material';
 import React, { useMemo } from 'react';
@@ -52,11 +52,11 @@ export default function OfferBuilderNFTRoyalties(props: OfferBuilderNFTRoyalties
         const { address, amount, asset } = royalty;
         const assetLowerCase = asset.toLowerCase();
 
-        if (assetLowerCase === 'xch' || assetLowerCase === currencyCode.toUpperCase()) {
+        if (assetLowerCase === 'xfx' || assetLowerCase === currencyCode.toUpperCase()) {
           return {
             address,
-            amount: mojoToChia(amount),
-            amountString: mojoToChiaLocaleString(amount),
+            amount: mojoToFlax(amount),
+            amountString: mojoToFlaxLocaleString(amount),
             symbol: currencyCode.toUpperCase(),
             displaySymbol: currencyCode.toUpperCase(),
           };

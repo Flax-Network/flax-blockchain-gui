@@ -1,7 +1,7 @@
 import fs, { Stats } from 'fs';
 
-import { useGetOfferSummaryMutation } from '@chia-network/api-react';
-import { Dropzone, Flex, useSerializedNavigationState, useShowError } from '@chia-network/core';
+import { useGetOfferSummaryMutation } from '@flax-network/api-react';
+import { Dropzone, Flex, useSerializedNavigationState, useShowError } from '@flax-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Box, Card, Typography } from '@mui/material';
 import React from 'react';

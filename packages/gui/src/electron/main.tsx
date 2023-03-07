@@ -16,7 +16,7 @@ import fs from 'fs';
 import path from 'path';
 import url from 'url';
 
-import { NFTInfo } from '@chia-network/api';
+import { NFTInfo } from '@flax-network/api';
 import { initialize, enable } from '@electron/remote/main';
 import axios from 'axios';
 import chokidar from 'chokidar';
@@ -30,10 +30,10 @@ import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 // handle setupevents as quickly as possible
 import '../config/env';
 import packageJson from '../../package.json';
-import AppIcon from '../assets/img/chia64x64.png';
+import AppIcon from '../assets/img/flax64x64.png';
 import About from '../components/about/About';
 import { i18n } from '../config/locales';
-import chiaEnvironment from '../util/chiaEnvironment';
+import flaxEnvironment from '../util/flaxEnvironment';
 import computeHash from '../util/computeHash';
 import loadConfig from '../util/loadConfig';
 import manageDaemonLifetime from '../util/manageDaemonLifetime';
@@ -85,7 +85,7 @@ function watchCacheFolder(folder: string) {
 
 let cacheLimitSize: number = 1024;
 
-// Set the userData directory to its location within CHIA_ROOT/gui
+// Set the userData directory to its location within FLAX_ROOT/gui
 setUserDataDir();
 
 function renderAbout(): string {
@@ -171,7 +171,7 @@ if (!handleSquirrelEvent()) {
 
   const ensureCorrectEnvironment = () => {
     // check that the app is either packaged or running in the python venv
-    if (!chiaEnvironment.guessPackaged() && !('VIRTUAL_ENV' in process.env)) {
+    if (!flaxEnvironment.guessPackaged() && !('VIRTUAL_ENV' in process.env)) {
       app.quit();
       return false;
     }
@@ -197,7 +197,7 @@ if (!handleSquirrelEvent()) {
 
     const createWindow = async () => {
       if (manageDaemonLifetime(NET)) {
-        chiaEnvironment.startChiaDaemon();
+        flaxEnvironment.startFlaxDaemon();
       }
 
       ipcMain.handle('getConfig', () => loadConfig(NET));
@@ -1054,27 +1054,27 @@ function getMenuTemplate() {
       role: 'help',
       submenu: [
         {
-          label: i18n._(/* i18n */ { id: 'Chia Blockchain Wiki' }),
+          label: i18n._(/* i18n */ { id: 'Flax Blockchain Wiki' }),
           click: () => {
-            openExternal('https://github.com/Chia-Network/chia-blockchain/wiki');
+            openExternal('https://github.com/Flax-Network/flax-blockchain/wiki');
           },
         },
         {
           label: i18n._(/* i18n */ { id: 'Frequently Asked Questions' }),
           click: () => {
-            openExternal('https://github.com/Chia-Network/chia-blockchain/wiki/FAQ');
+            openExternal('https://github.com/Flax-Network/flax-blockchain/wiki/FAQ');
           },
         },
         {
           label: i18n._(/* i18n */ { id: 'Release Notes' }),
           click: () => {
-            openExternal('https://github.com/Chia-Network/chia-blockchain/releases');
+            openExternal('https://github.com/Flax-Network/flax-blockchain/releases');
           },
         },
         {
           label: i18n._(/* i18n */ { id: 'Contribute on GitHub' }),
           click: () => {
-            openExternal('https://github.com/Chia-Network/chia-blockchain/blob/main/CONTRIBUTING.md');
+            openExternal('https://github.com/Flax-Network/flax-blockchain/blob/main/CONTRIBUTING.md');
           },
         },
         {
@@ -1083,19 +1083,19 @@ function getMenuTemplate() {
         {
           label: i18n._(/* i18n */ { id: 'Report an Issue...' }),
           click: () => {
-            openExternal('https://github.com/Chia-Network/chia-blockchain/issues');
+            openExternal('https://github.com/Flax-Network/flax-blockchain/issues');
           },
         },
         {
-          label: i18n._(/* i18n */ { id: 'Chat on KeyBase' }),
+          label: i18n._(/* i18n */ { id: 'Chat on Discord' }),
           click: () => {
-            openExternal('https://keybase.io/team/chia_network.public');
+            openExternal('https://discord.gg/yEWaF6CQcA');
           },
         },
         {
           label: i18n._(/* i18n */ { id: 'Follow on Twitter' }),
           click: () => {
-            openExternal('https://twitter.com/chia_project');
+            openExternal('https://twitter.com/FlaxNetwork');
           },
         },
       ],
@@ -1103,12 +1103,12 @@ function getMenuTemplate() {
   ];
 
   if (process.platform === 'darwin') {
-    // Chia Blockchain menu (Mac)
+    // Flax Blockchain menu (Mac)
     template.unshift({
-      label: i18n._(/* i18n */ { id: 'Chia' }),
+      label: i18n._(/* i18n */ { id: 'Flax' }),
       submenu: [
         {
-          label: i18n._(/* i18n */ { id: 'About Chia Blockchain' }),
+          label: i18n._(/* i18n */ { id: 'About Flax Blockchain' }),
           click: () => {
             openAbout();
           },
@@ -1195,7 +1195,7 @@ function getMenuTemplate() {
         type: 'separator',
       },
       {
-        label: i18n._(/* i18n */ { id: 'About Chia Blockchain' }),
+        label: i18n._(/* i18n */ { id: 'About Flax Blockchain' }),
         click() {
           openAbout();
         },

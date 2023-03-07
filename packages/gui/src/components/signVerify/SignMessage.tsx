@@ -1,6 +1,6 @@
-import { toBech32m, toSnakeCase } from '@chia-network/api';
-import { useSignMessageByAddressMutation, useSignMessageByIdMutation } from '@chia-network/api-react';
-import { Button, Card, Flex, Form, TextField, useOpenDialog, useShowError } from '@chia-network/core';
+import { toBech32m, toSnakeCase } from '@flax-network/api';
+import { useSignMessageByAddressMutation, useSignMessageByIdMutation } from '@flax-network/api-react';
+import { Button, Card, Flex, Form, TextField, useOpenDialog, useShowError } from '@flax-network/core';
 import { Trans, t } from '@lingui/macro';
 import { ButtonGroup, DialogActions, Typography } from '@mui/material';
 import React, { ReactNode } from 'react';
@@ -102,7 +102,7 @@ export default function SignMessage(props: SignMessageProps) {
 
       if (missingNFTMatch || missingDIDMatch) {
         const entityPuzzleHash = missingNFTMatch ? missingNFTMatch[1] : missingDIDMatch![1];
-        const entityId = toBech32m(entityPuzzleHash, missingNFTMatch ? 'nft' : 'did:chia:');
+        const entityId = toBech32m(entityPuzzleHash, missingNFTMatch ? 'nft' : 'did:flax:');
 
         if (missingNFTMatch) {
           showError(new Error(t`Unable to find NFT ${entityId}`));

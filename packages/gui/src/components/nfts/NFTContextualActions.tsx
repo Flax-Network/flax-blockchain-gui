@@ -1,13 +1,13 @@
 /* eslint-disable no-bitwise -- enable bitwise operators for this file */
 
-import type { NFTInfo } from '@chia-network/api';
-import { useSetNFTStatusMutation, useLocalStorage } from '@chia-network/api-react';
-import { AlertDialog, DropdownActions, MenuItem, useOpenDialog } from '@chia-network/core';
+import type { NFTInfo } from '@flax-network/api';
+import { useSetNFTStatusMutation, useLocalStorage } from '@flax-network/api-react';
+import { AlertDialog, DropdownActions, MenuItem, useOpenDialog } from '@flax-network/core';
 import {
   LinkSmall as LinkSmallIcon,
   NFTsSmall as NFTsSmallIcon,
   OffersSmall as OffersSmallIcon,
-} from '@chia-network/icons';
+} from '@flax-network/icons';
 import { Trans } from '@lingui/macro';
 import {
   ArrowForward as TransferIcon,

@@ -1,5 +1,5 @@
-import { toBech32m } from '@chia-network/api';
-import { useCurrencyCode } from '@chia-network/core';
+import { toBech32m } from '@flax-network/api';
+import { useCurrencyCode } from '@flax-network/core';
 import { useMemo } from 'react';
 
 export default function useBurnAddress(): string | undefined {

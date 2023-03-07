@@ -1,4 +1,4 @@
-import type { KeyData } from '@chia-network/api';
+import type { KeyData } from '@flax-network/api';
 import {
   useGetKeyringStatusQuery,
   useDeleteAllKeysMutation,
@@ -6,8 +6,8 @@ import {
   useGetKeysQuery,
   useLogout,
   useLocalStorage,
-} from '@chia-network/api-react';
-import { ChiaBlack } from '@chia-network/icons';
+} from '@flax-network/api-react';
+import { FlaxBlack } from '@flax-network/icons';
 import { Trans } from '@lingui/macro';
 import { Delete as DeleteIcon } from '@mui/icons-material';
 import { Alert, Typography, Container, ListItemIcon } from '@mui/material';
@@ -223,7 +223,7 @@ export default function SelectKey() {
             sx={{ borderBottom: '1px solid #CCDDE1', paddingBottom: '30px' }}
           >
             <Flex alignItems="left">
-              <ChiaBlack color="secondary" />
+              <FlaxBlack color="secondary" />
               <Typography variant="h4" component="h1" sx={{ position: 'relative', left: '15px', top: '5px' }}>
                 <Trans>Wallet Keys</Trans>
               </Typography>
@@ -236,7 +236,7 @@ export default function SelectKey() {
               <Trans>Sign In</Trans>
             </Typography>
             <Typography variant="subtitle1" align="center">
-              <Trans>Welcome to Chia. Please log in with an existing key, or create a new key.</Trans>
+              <Trans>Welcome to Flax. Please log in with an existing key, or create a new key.</Trans>
             </Typography>
             {NewWalletButtonGroup}
           </>

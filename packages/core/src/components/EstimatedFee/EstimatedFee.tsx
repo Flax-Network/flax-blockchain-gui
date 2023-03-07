@@ -1,4 +1,4 @@
-import { useGetFeeEstimateQuery } from '@chia-network/api-react';
+import { useGetFeeEstimateQuery } from '@flax-network/api-react';
 import { Trans, t } from '@lingui/macro';
 import {
   Box,
@@ -14,7 +14,7 @@ import { Controller, useFormContext, useWatch } from 'react-hook-form';
 
 import useCurrencyCode from '../../hooks/useCurrencyCode';
 import useLocale from '../../hooks/useLocale';
-import mojoToChiaLocaleString from '../../utils/mojoToChiaLocaleString';
+import mojoToFlaxLocaleString from '../../utils/mojoToFlaxLocaleString';
 import Fee from '../Fee';
 import Flex from '../Flex';
 
@@ -214,7 +214,7 @@ export default function EstimatedFee(props: FeeProps) {
   const formatEst = useCallback(
     (number: number, multiplierLocal: number, localeLocal: string) => {
       const num = multiplyEstimate(number, multiplierLocal);
-      return mojoToChiaLocaleString(num, localeLocal);
+      return mojoToFlaxLocaleString(num, localeLocal);
     },
     [multiplyEstimate]
   );
@@ -255,9 +255,9 @@ export default function EstimatedFee(props: FeeProps) {
       if (selectedTime) {
         const estimate = formattedEstimates.find((formattedEstimate) => formattedEstimate.minutes === selectedTime);
         if (estimate) {
-          const xchFee = mojoToChiaLocaleString(estimate.estimate, 'en-US');
+          const xfxFee = mojoToFlaxLocaleString(estimate.estimate, 'en-US');
           setSelectedValue(estimate.formattedEstimate);
-          setValue(name, xchFee);
+          setValue(name, xfxFee);
         }
       }
     }

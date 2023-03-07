@@ -1,4 +1,4 @@
-import type { CalculateRoyaltiesResponse } from '@chia-network/api';
+import type { CalculateRoyaltiesResponse } from '@flax-network/api';
 import { createContext } from 'react';
 
 import OfferState from '../offers/OfferState';

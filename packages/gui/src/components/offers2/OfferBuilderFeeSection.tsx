@@ -1,6 +1,6 @@
-import { Loading } from '@chia-network/core';
-import { Fees } from '@chia-network/icons';
-import { useWallet } from '@chia-network/wallets';
+import { Loading } from '@flax-network/core';
+import { Fees } from '@flax-network/icons';
+import { useWallet } from '@flax-network/wallets';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 import { useFieldArray } from 'react-hook-form';

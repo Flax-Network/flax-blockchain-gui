@@ -1,4 +1,4 @@
-import { mojoToCAT, mojoToChia } from '@chia-network/core';
+import { mojoToCAT, mojoToFlax } from '@flax-network/core';
 import BigNumber from 'bignumber.js';
 
 import type OfferBuilderData from '../@types/OfferBuilderData';
@@ -12,13 +12,13 @@ export default function offerToOfferBuilderData(
 ): OfferBuilderData {
   const { fees, offered, requested, infos } = offerSummary;
 
-  const defaultFeeXCH = defaultFee ? mojoToChia(defaultFee).toFixed() : '';
+  const defaultFeeXCH = defaultFee ? mojoToFlax(defaultFee).toFixed() : '';
 
-  const offeredXch: OfferBuilderData['offered']['xch'] = [];
+  const offeredXch: OfferBuilderData['offered']['xfx'] = [];
   const offeredTokens: OfferBuilderData['offered']['tokens'] = [];
   const offeredNfts: OfferBuilderData['offered']['nfts'] = [];
   const offeredFee: OfferBuilderData['offered']['fee'] = setDefaultOfferedFee ? [{ amount: defaultFeeXCH }] : [];
-  const requestedXch: OfferBuilderData['requested']['xch'] = [];
+  const requestedXch: OfferBuilderData['requested']['xfx'] = [];
   const requestedTokens: OfferBuilderData['requested']['tokens'] = [];
   const requestedNfts: OfferBuilderData['requested']['nfts'] = [];
 
@@ -37,9 +37,9 @@ export default function offerToOfferBuilderData(
       offeredNfts.push({
         nftId: launcherIdToNFTId(info.launcherId),
       });
-    } else if (id === 'xch') {
+    } else if (id === 'xfx') {
       offeredXch.push({
-        amount: mojoToChia(amount).toFixed(),
+        amount: mojoToFlax(amount).toFixed(),
       });
     }
   });
@@ -57,27 +57,27 @@ export default function offerToOfferBuilderData(
       requestedNfts.push({
         nftId: launcherIdToNFTId(info.launcherId),
       });
-    } else if (id === 'xch') {
+    } else if (id === 'xfx') {
       requestedXch.push({
-        amount: mojoToChia(amount).toFixed(),
+        amount: mojoToFlax(amount).toFixed(),
       });
     }
   });
 
   return {
     offered: {
-      xch: offeredXch,
+      xfx: offeredXch,
       tokens: offeredTokens,
       nfts: offeredNfts,
       fee: offeredFee,
     },
     requested: {
-      xch: requestedXch,
+      xfx: requestedXch,
       tokens: requestedTokens,
       nfts: requestedNfts,
       fee: [
         {
-          amount: mojoToChia(fees).toFixed(),
+          amount: mojoToFlax(fees).toFixed(),
         },
       ],
     },

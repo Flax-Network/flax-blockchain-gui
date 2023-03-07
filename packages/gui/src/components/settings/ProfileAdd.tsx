@@ -1,5 +1,5 @@
-import { useCreateNewWalletMutation, useGetWalletBalanceQuery } from '@chia-network/api-react';
-import { ButtonLoading, chiaToMojo, EstimatedFee, Flex, Form, mojoToChiaLocaleString } from '@chia-network/core';
+import { useCreateNewWalletMutation, useGetWalletBalanceQuery } from '@flax-network/api-react';
+import { ButtonLoading, flaxToMojo, EstimatedFee, Flex, Form, mojoToFlaxLocaleString } from '@flax-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Card, Typography } from '@mui/material';
 import React from 'react';
@@ -44,7 +44,7 @@ export default function ProfileAdd() {
   const openExternal = useOpenExternal();
 
   function handleClick() {
-    openExternal('https://faucet.chia.net/');
+    openExternal('https://discord.gg/yEWaF6CQcA');
   }
 
   async function handleSubmit(data: CreateProfileData) {
@@ -59,13 +59,13 @@ export default function ProfileAdd() {
 
     const walletId = await createProfile({
       walletType: 'did_wallet',
-      options: { did_type: 'new', backup_dids: [], num_of_backup_ids_needed: '0', amount: 1, fee: chiaToMojo(fee) },
+      options: { did_type: 'new', backup_dids: [], num_of_backup_ids_needed: '0', amount: 1, fee: flaxToMojo(fee) },
     }).unwrap();
 
     navigate(`/dashboard/settings/profiles/${walletId}`);
   }
 
-  const standardBalance = mojoToChiaLocaleString(balance?.confirmedWalletBalance);
+  const standardBalance = mojoToFlaxLocaleString(balance?.confirmedWalletBalance);
 
   return (
     <div style={{ width: '70%' }}>
@@ -78,13 +78,13 @@ export default function ProfileAdd() {
         <StyledCard>
           <Flex flexDirection="column" gap={2.5} paddingBottom={1}>
             <Trans>
-              <strong>Need some XCH?</strong>
+              <strong>Need some XFX?</strong>
             </Trans>
           </Flex>
           <div style={{ cursor: 'pointer' }}>
             <Flex paddingBottom={5}>
               <Typography onClick={handleClick} sx={{ textDecoration: 'underline' }}>
-                Get Mojos from the Chia Faucet
+                Get Mojos from the Flax Faucet
               </Typography>
             </Flex>
           </div>
@@ -95,7 +95,7 @@ export default function ProfileAdd() {
           </Flex>
           <Flex flexDirection="column" gap={2.5} paddingBottom={3}>
             <Typography variant="caption">
-              <Trans>Balance: {standardBalance} XCH</Trans>
+              <Trans>Balance: {standardBalance} XFX</Trans>
             </Typography>
           </Flex>
           <Flex flexDirection="column" gap={2.5} paddingBottom={1}>
@@ -111,7 +111,7 @@ export default function ProfileAdd() {
           </Flex>
           <Flex flexDirection="column" gap={2.5} paddingBottom={3}>
             <Typography variant="caption">
-              <Trans>Recommended: 0.000005 XCH</Trans>
+              <Trans>Recommended: 0.000005 XFX</Trans>
             </Typography>
           </Flex>
           <Flex justifyContent="flex-end">

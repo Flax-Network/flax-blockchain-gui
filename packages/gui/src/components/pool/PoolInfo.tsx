@@ -1,4 +1,4 @@
-import { CardKeyValue, Flex, Link } from '@chia-network/core';
+import { CardKeyValue, Flex, Link } from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import React from 'react';

@@ -1,4 +1,4 @@
-import { Button, Flex, CardStep, useCurrencyCode } from '@chia-network/core';
+import { Button, Flex, CardStep, useCurrencyCode } from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Typography } from '@mui/material';
 import React from 'react';
@@ -16,7 +16,7 @@ export default function PlotNFTSelectFaucet(props: Props) {
   const openExternal = useOpenExternal();
 
   function handleClick() {
-    openExternal('https://faucet.chia.net/');
+    openExternal('https://discord.gg/yEWaF6CQcA');
   }
 
   return (

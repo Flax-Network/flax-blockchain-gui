@@ -6,13 +6,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: ko_KR\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: flax-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-10-24 18:14\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: flax-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: ko\n"
 "X-Crowdin-File: /main/packages/core/src/locales/en-US/messages.po\n"
@@ -417,8 +417,8 @@ msgid "Wallet {0}"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKey.tsx:142
-msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-msgstr "Chia에 오신 것을 환영합니다. 사용하고 계신 키로 로그인하시거나 새로운 키를 만드세요."
+msgid "Welcome to Flax. Please log in with an existing key, or create a new key."
+msgstr "Flax에 오신 것을 환영합니다. 사용하고 계신 키로 로그인하시거나 새로운 키를 만드세요."
 
 #: src/components/Back/Back.tsx:40
 #: src/components/FormBackButton/FormBackButton.tsx:31

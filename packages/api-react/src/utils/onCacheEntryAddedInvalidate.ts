@@ -1,4 +1,4 @@
-import type { Service } from '@chia-network/api';
+import type { Service } from '@flax-network/api';
 
 type Invalidate =
   | {

@@ -1,4 +1,4 @@
-import type { Transaction } from '@chia-network/api';
+import type { Transaction } from '@flax-network/api';
 
 const BLOCK_DURATION_SECONDS = (24 * 60 * 60) / 4608;
 

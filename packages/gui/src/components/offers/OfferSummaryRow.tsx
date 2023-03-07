@@ -1,5 +1,5 @@
-import { WalletType } from '@chia-network/api';
-import { CopyToClipboard, Flex, Link, FormatLargeNumber, TooltipIcon, mojoToCATLocaleString } from '@chia-network/core';
+import { WalletType } from '@flax-network/api';
+import { CopyToClipboard, Flex, Link, FormatLargeNumber, TooltipIcon, mojoToCATLocaleString } from '@flax-network/core';
 import { Plural, t, Trans } from '@lingui/macro';
 import { Box, Typography } from '@mui/material';
 import React from 'react';
@@ -166,11 +166,6 @@ export function OfferSummaryTokenRow(props: OfferSummaryTokenRowProps): React.Re
               <Box flexGrow={1}>
                 <StyledTitle>Name</StyledTitle>
               </Box>
-              {(!assetIdInfo || assetIdInfo?.walletType === WalletType.CAT) && (
-                <Link href={`https://www.taildatabase.com/tail/${assetId.toLowerCase()}`} target="_blank">
-                  <Trans>Search on Tail Database</Trans>
-                </Link>
-              )}
             </Flex>
 
             <StyledValue>{tooltipDisplayName}</StyledValue>

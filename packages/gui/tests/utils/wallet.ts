@@ -1,7 +1,7 @@
 import ChildProcess from 'child_process';
 
 export function runWalletCommandWithArgs(commandArgs: string[]): string {
-  const command = 'chia';
+  const command = 'flax';
   const args = ['wallet', ...commandArgs];
   const cli = `${command} ${args.join(' ')}`;
 
@@ -28,13 +28,13 @@ export function isWalletSynced(fingerprint: string | number) {
 export function getWalletBalance(fingerprint: string | number): string | undefined {
   const output = runWalletCommandWithArgs(['show', '--fingerprint', fingerprint.toString()]);
 
-  const balanceMatch = output.match(/Chia Wallet:\s+-Total Balance:\s+([^\s]+)/);
+  const balanceMatch = output.match(/Flax Wallet:\s+-Total Balance:\s+([^\s]+)/);
   const balance = balanceMatch?.[1];
   return balance;
 }
 
-export function stopAllChia() {
-  const command = 'chia';
+export function stopAllFlax() {
+  const command = 'flax';
   ChildProcess.spawnSync(command, ['stop', 'all', '-d'], { stdio: 'pipe' });
   console.log(command);
 }

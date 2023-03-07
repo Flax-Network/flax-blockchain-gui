@@ -7,7 +7,7 @@ import { useWatch, useFormContext } from 'react-hook-form';
 
 import useCurrencyCode from '../../hooks/useCurrencyCode';
 import catToMojo from '../../utils/catToMojo';
-import chiaToMojo from '../../utils/chiaToMojo';
+import flaxToMojo from '../../utils/flaxToMojo';
 import Flex from '../Flex';
 import FormatLargeNumber from '../FormatLargeNumber';
 import TextField, { TextFieldProps } from '../TextField';
@@ -47,8 +47,8 @@ export default function Amount(props: AmountProps) {
   const correctedValue = value && value[0] === '.' ? `0${value}` : value;
 
   const currencyCode = symbol === undefined ? defaultCurrencyCode : symbol;
-  const isChiaCurrency = ['XCH', 'TXCH'].includes(currencyCode);
-  const mojo = isChiaCurrency ? chiaToMojo(correctedValue) : catToMojo(correctedValue);
+  const isFlaxCurrency = ['XFX', 'TXFX'].includes(currencyCode);
+  const mojo = isFlaxCurrency ? flaxToMojo(correctedValue) : catToMojo(correctedValue);
 
   return (
     <FormControl variant={variant} fullWidth={fullWidth}>
@@ -60,7 +60,7 @@ export default function Amount(props: AmountProps) {
           spellCheck: false,
           inputComponent: NumberFormatCustom as any,
           inputProps: {
-            decimalScale: isChiaCurrency ? 12 : 3,
+            decimalScale: isFlaxCurrency ? 12 : 3,
             'data-testid': dataTestid,
           },
           endAdornment: dropdownAdornment ? (

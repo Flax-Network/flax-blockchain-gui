@@ -1,6 +1,6 @@
-import { OfferSummaryRecord } from '@chia-network/api';
-import { useTakeOfferMutation } from '@chia-network/api-react';
-import { AlertDialog, chiaToMojo, useOpenDialog, useShowError } from '@chia-network/core';
+import { OfferSummaryRecord } from '@flax-network/api';
+import { useTakeOfferMutation } from '@flax-network/api-react';
+import { AlertDialog, flaxToMojo, useOpenDialog, useShowError } from '@flax-network/core';
 import { Trans, t } from '@lingui/macro';
 import BigNumber from 'bignumber.js';
 import React from 'react';
@@ -31,7 +31,7 @@ export default function useAcceptOfferHook(): [AcceptOfferHook] {
     onUpdate?: (accepting: boolean) => void,
     onSuccess?: () => void
   ): Promise<void> {
-    const feeInMojos: BigNumber = fee ? chiaToMojo(fee) : new BigNumber(0);
+    const feeInMojos: BigNumber = fee ? flaxToMojo(fee) : new BigNumber(0);
     const offeredUnknownCATs: string[] = Object.entries(offerSummary.offered)
       .filter(
         ([assetId]) =>

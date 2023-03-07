@@ -1,11 +1,11 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 
-import chiaLazyBaseQuery from './chiaLazyBaseQuery';
+import flaxLazyBaseQuery from './flaxLazyBaseQuery';
 
-export const baseQuery = chiaLazyBaseQuery({});
+export const baseQuery = flaxLazyBaseQuery({});
 
 export default createApi({
-  reducerPath: 'chiaApi',
+  reducerPath: 'flaxApi',
   baseQuery,
   endpoints: () => ({}),
 });

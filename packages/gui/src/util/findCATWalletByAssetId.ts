@@ -1,5 +1,5 @@
-import type { Wallet } from '@chia-network/api';
-import { WalletType } from '@chia-network/api';
+import type { Wallet } from '@flax-network/api';
+import { WalletType } from '@flax-network/api';
 
 export default function findCATWalletByAssetId(wallets: Wallet[], assetId: string) {
   return wallets.find(

@@ -1,6 +1,6 @@
-import { WalletType } from '@chia-network/api';
-import { useGetWalletsQuery } from '@chia-network/api-react';
-import { Flex, LayoutDashboardSub } from '@chia-network/core';
+import { WalletType } from '@flax-network/api';
+import { useGetWalletsQuery } from '@flax-network/api-react';
+import { Flex, LayoutDashboardSub } from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import { Add } from '@mui/icons-material';
 import { IconButton, Typography } from '@mui/material';

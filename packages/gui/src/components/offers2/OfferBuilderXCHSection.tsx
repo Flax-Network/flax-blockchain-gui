@@ -1,5 +1,5 @@
-import { Loading, chiaToMojo, mojoToChiaLocaleString, useCurrencyCode } from '@chia-network/core';
-import { Farming } from '@chia-network/icons';
+import { Loading, flaxToMojo, mojoToFlaxLocaleString, useCurrencyCode } from '@flax-network/core';
+import { Farming } from '@flax-network/icons';
 import { Trans } from '@lingui/macro';
 import React, { useMemo } from 'react';
 import { useFieldArray, useWatch } from 'react-hook-form';
@@ -25,10 +25,10 @@ export default function OfferBuilderXCHSection(props: OfferBuilderXCHSectionProp
   const amount =
     useWatch({
       name,
-    })?.[0]?.amount ?? 0; // Assume there's only 1 XCH field per trade side
+    })?.[0]?.amount ?? 0; // Assume there's only 1 XFX field per trade side
   const { requestedRoyalties, offeredRoyalties, isCalculatingRoyalties } = useOfferBuilderContext();
 
-  // Yes, this is correct. Fungible (XCH) assets used to pay royalties are from the opposite side of the trade.
+  // Yes, this is correct. Fungible (XFX) assets used to pay royalties are from the opposite side of the trade.
   const allRoyalties = offering ? requestedRoyalties : offeredRoyalties;
 
   const loading = isLoadingWallet || isCalculatingRoyalties;
@@ -38,23 +38,23 @@ export default function OfferBuilderXCHSection(props: OfferBuilderXCHSectionProp
       return [];
     }
 
-    let amountWithRoyaltiesLocal = chiaToMojo(amount);
+    let amountWithRoyaltiesLocal = flaxToMojo(amount);
     const rows: Record<string, any>[] = [];
     Object.entries(allRoyalties).forEach(([nftId, royaltyPaymentsLocal]) => {
-      const matchingPayment = royaltyPaymentsLocal?.find((payment) => payment.asset === 'xch');
+      const matchingPayment = royaltyPaymentsLocal?.find((payment) => payment.asset === 'xfx');
       if (matchingPayment) {
         amountWithRoyaltiesLocal = amountWithRoyaltiesLocal.plus(matchingPayment.amount);
         rows.push({
           nftId,
           payment: {
             ...matchingPayment,
-            displayAmount: mojoToChiaLocaleString(matchingPayment.amount),
+            displayAmount: mojoToFlaxLocaleString(matchingPayment.amount),
           },
         });
       }
     });
 
-    return [mojoToChiaLocaleString(amountWithRoyaltiesLocal), rows];
+    return [mojoToFlaxLocaleString(amountWithRoyaltiesLocal), rows];
   }, [allRoyalties, amount]);
 
   function handleAdd() {
@@ -73,7 +73,7 @@ export default function OfferBuilderXCHSection(props: OfferBuilderXCHSectionProp
     <OfferBuilderSection
       icon={<Farming />}
       title={currencyCode}
-      subtitle={<Trans>Chia ({currencyCode}) is a digital currency that is secure and sustainable</Trans>}
+      subtitle={<Trans>Flax ({currencyCode}) is a digital currency that is secure and sustainable</Trans>}
       onAdd={!fields.length ? handleAdd : undefined}
       expanded={!!fields.length}
       muted={muted}

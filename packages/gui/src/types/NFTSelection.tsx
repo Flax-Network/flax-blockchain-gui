@@ -1,4 +1,4 @@
-import type NFTInfo from '@chia-network/api';
+import type NFTInfo from '@flax-network/api';
 
 type NFTSelection = {
   items: NFTInfo[];

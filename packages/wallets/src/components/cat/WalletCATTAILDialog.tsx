@@ -1,4 +1,4 @@
-import { Button, CopyToClipboard, DialogActions, Loading, Link, Flex } from '@chia-network/core';
+import { Button, CopyToClipboard, DialogActions, Loading, Link, Flex } from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Dialog, DialogTitle, DialogContent, InputAdornment, TextField } from '@mui/material';
 import React from 'react';
@@ -55,9 +55,6 @@ export default function WalletCATTAILDialog(props: Props) {
                 multiline
               />
             </Box>
-            <Link href={`https://www.taildatabase.com/tail/${wallet.meta?.assetId}`} target="_blank" variant="body2">
-              <Trans>Search on Tail Database</Trans>
-            </Link>
           </Flex>
         )}
       </DialogContent>

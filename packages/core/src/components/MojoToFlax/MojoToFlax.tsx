@@ -2,17 +2,17 @@ import BigNumber from 'bignumber.js';
 import React from 'react';
 
 import useCurrencyCode from '../../hooks/useCurrencyCode';
-import mojoToChia from '../../utils/mojoToChiaLocaleString';
+import mojoToFlax from '../../utils/mojoToFlaxLocaleString';
 import FormatLargeNumber from '../FormatLargeNumber';
 
-export type MojoToChiaProps = {
+export type MojoToFlaxProps = {
   value: number | BigNumber;
 };
 
-export default function MojoToChia(props: MojoToChiaProps) {
+export default function MojoToFlax(props: MojoToFlaxProps) {
   const { value } = props;
   const currencyCode = useCurrencyCode();
-  const updatedValue = mojoToChia(value);
+  const updatedValue = mojoToFlax(value);
 
   return (
     <>

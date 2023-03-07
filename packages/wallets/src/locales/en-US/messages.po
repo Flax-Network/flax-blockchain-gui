@@ -6,13 +6,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: en_US\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: flax-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-10-24 18:17\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: flax-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: en\n"
 "X-Crowdin-File: /main/packages/wallets/src/locales/en-US/messages.po\n"
@@ -84,8 +84,8 @@ msgstr "Cancel"
 
 #: src/components/WalletSend.tsx:106
 #: src/components/cat/WalletCATSend.tsx:116
-msgid "Cannot send chia to coloured address. Please enter a chia address."
-msgstr "Cannot send chia to coloured address. Please enter a chia address."
+msgid "Cannot send flax to coloured address. Please enter a flax address."
+msgstr "Cannot send flax to coloured address. Please enter a flax address."
 
 #: src/components/WalletsSidebar.tsx:130
 msgid "Check my snapshot balance"
@@ -94,8 +94,8 @@ msgstr "Check my snapshot balance"
 #: src/components/cat/WalletCATSelect.tsx:25
 #: src/components/create/WalletCreateList.tsx:32
 #: src/constants/WalletName.ts:23
-msgid "Chia Asset Token"
-msgstr "Chia Asset Token"
+msgid "Flax Asset Token"
+msgstr "Flax Asset Token"
 
 #: src/components/WalletsSidebar.tsx:141
 msgid "Click here to download an older version of the wallet"
@@ -176,8 +176,8 @@ msgid "Distributed Identity"
 msgstr "Distributed Identity"
 
 #: src/components/WalletImport.tsx:158
-msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Chia wallet."
-msgstr "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Chia wallet."
+msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Flax wallet."
+msgstr "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Flax wallet."
 
 #: src/components/cat/WalletCATSend.tsx:126
 msgid "Error the entered address appears to be for a different colour."
@@ -468,8 +468,8 @@ msgid "Syncing"
 msgstr "Syncing"
 
 #: src/components/card/WalletCardTotalBalance.tsx:70
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
-msgstr "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XFX, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgstr "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XFX, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
 
 #: src/components/WalletSendTransactionResultDialog.tsx:34
 msgid "The transaction could not be immediately included in the mempool because the specified fee is too low. The transaction will be retried periodically, and may be included in the mempool once fees are lower, or if space becomes available."
@@ -484,8 +484,8 @@ msgid "This is not a valid address for sending funds to"
 msgstr "This is not a valid address for sending funds to"
 
 #: src/components/standard/WalletStandardCards.tsx:23
-msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
-msgstr "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
+msgid "This is the amount of Flax that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Flax that you have just spent but is not yet in the blockchain."
+msgstr "This is the amount of Flax that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Flax that you have just spent but is not yet in the blockchain."
 
 #: src/components/standard/WalletStandardCards.tsx:42
 msgid "This is the pending change, which are change coins which you have sent to yourself, but have not been confirmed yet."
@@ -496,8 +496,8 @@ msgid "This is the sum of the incoming and outgoing pending transactions (not ye
 msgstr "This is the sum of the incoming and outgoing pending transactions (not yet included into the blockchain). This does not include farming rewards."
 
 #: src/components/standard/WalletStandardCards.tsx:17
-msgid "This is the total amount of chia in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
-msgstr "This is the total amount of chia in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of flax in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgstr "This is the total amount of flax in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 
 #: src/components/standard/WalletStandardCards.tsx:30
 msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
@@ -565,8 +565,8 @@ msgid "Welcome! The following words are used for your wallet backup. Without the
 msgstr "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
 
 #: src/components/WalletsSidebar.tsx:106
-msgid "Your CAT tokens have been upgraded!"
-msgstr "Your CAT tokens have been upgraded!"
+msgid "Your custom asset tokens have been upgraded!"
+msgstr "Your custom asset tokens have been upgraded!"
 
 #: src/components/WalletImport.tsx:72
 msgid "Your pasted list does not include {mnemonicWordCount} valid mnemonic words."

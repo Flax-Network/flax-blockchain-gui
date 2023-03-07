@@ -1,6 +1,6 @@
-import { ServiceName } from '@chia-network/api';
-import { useService } from '@chia-network/api-react';
-import { CardSimple } from '@chia-network/core';
+import { ServiceName } from '@flax-network/api';
+import { useService } from '@flax-network/api-react';
+import { CardSimple } from '@flax-network/core';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 

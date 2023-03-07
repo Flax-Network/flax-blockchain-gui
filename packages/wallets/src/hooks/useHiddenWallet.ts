@@ -1,4 +1,4 @@
-import { useGetLoggedInFingerprintQuery, usePrefs } from '@chia-network/api-react';
+import { useGetLoggedInFingerprintQuery, usePrefs } from '@flax-network/api-react';
 import { useCallback } from 'react';
 
 export default function useHiddenWallet(): {

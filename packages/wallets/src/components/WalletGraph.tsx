@@ -1,7 +1,7 @@
-import { TransactionType, WalletType } from '@chia-network/api';
-import type { Transaction } from '@chia-network/api';
-import { useGetWalletBalanceQuery } from '@chia-network/api-react';
-import { mojoToChia, mojoToCAT, blockHeightToTimestamp } from '@chia-network/core';
+import { TransactionType, WalletType } from '@flax-network/api';
+import type { Transaction } from '@flax-network/api';
+import { useGetWalletBalanceQuery } from '@flax-network/api-react';
+import { mojoToFlax, mojoToCAT, blockHeightToTimestamp } from '@flax-network/core';
 import BigNumber from 'bignumber.js';
 import { orderBy, groupBy, map } from 'lodash';
 import React, { ReactNode } from 'react';
@@ -103,8 +103,8 @@ function prepareGraphPoints(
   const points = [
     {
       x: blockHeightToTimestamp(peakTransaction.confirmedAtHeight, peakTransaction),
-      y: BigNumber.max(0, (walletType === WalletType.CAT ? mojoToCAT(start) : mojoToChia(start)).toNumber()), // max 21,000,000 safe to number
-      tooltip: (walletType === WalletType.CAT ? mojoToCAT(balance) : mojoToChia(balance)).toString(), // bignumber is not supported by react
+      y: BigNumber.max(0, (walletType === WalletType.CAT ? mojoToCAT(start) : mojoToFlax(start)).toNumber()), // max 21,000,000 safe to number
+      tooltip: (walletType === WalletType.CAT ? mojoToCAT(balance) : mojoToFlax(balance)).toString(), // bignumber is not supported by react
     },
   ];
 
@@ -120,8 +120,8 @@ function prepareGraphPoints(
 
     points.push({
       x: timestamp,
-      y: BigNumber.max(0, (walletType === WalletType.CAT ? mojoToCAT(start) : mojoToChia(start)).toNumber()), // max 21,000,000 safe to number
-      tooltip: walletType === WalletType.CAT ? mojoToCAT(start) : mojoToChia(start).toString(), // bignumber is not supported by react
+      y: BigNumber.max(0, (walletType === WalletType.CAT ? mojoToCAT(start) : mojoToFlax(start)).toNumber()), // max 21,000,000 safe to number
+      tooltip: walletType === WalletType.CAT ? mojoToCAT(start) : mojoToFlax(start).toString(), // bignumber is not supported by react
     });
   });
 

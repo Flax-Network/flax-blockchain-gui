@@ -1,4 +1,4 @@
-import { ConnectionState, ServiceName } from '@chia-network/api';
+import { ConnectionState, ServiceName } from '@flax-network/api';
 
 import api, { baseQuery } from '../api';
 

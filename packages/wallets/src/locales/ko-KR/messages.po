@@ -6,13 +6,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: ko_KR\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: flax-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-10-24 18:16\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: flax-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: ko\n"
 "X-Crowdin-File: /main/packages/wallets/src/locales/en-US/messages.po\n"
@@ -84,7 +84,7 @@ msgstr "취소"
 
 #: src/components/WalletSend.tsx:106
 #: src/components/cat/WalletCATSend.tsx:116
-msgid "Cannot send chia to coloured address. Please enter a chia address."
+msgid "Cannot send flax to coloured address. Please enter a flax address."
 msgstr ""
 
 #: src/components/WalletsSidebar.tsx:130
@@ -94,8 +94,8 @@ msgstr ""
 #: src/components/cat/WalletCATSelect.tsx:25
 #: src/components/create/WalletCreateList.tsx:32
 #: src/constants/WalletName.ts:23
-msgid "Chia Asset Token"
-msgstr "치아 자산 토큰"
+msgid "Flax Asset Token"
+msgstr "Flax 자산 토큰"
 
 #: src/components/WalletsSidebar.tsx:141
 msgid "Click here to download an older version of the wallet"
@@ -176,7 +176,7 @@ msgid "Distributed Identity"
 msgstr ""
 
 #: src/components/WalletImport.tsx:158
-msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Chia wallet."
+msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Flax wallet."
 msgstr ""
 
 #: src/components/cat/WalletCATSend.tsx:126
@@ -468,7 +468,7 @@ msgid "Syncing"
 msgstr "동기화 중"
 
 #: src/components/card/WalletCardTotalBalance.tsx:70
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XFX, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
 msgstr ""
 
 #: src/components/WalletSendTransactionResultDialog.tsx:34
@@ -484,8 +484,8 @@ msgid "This is not a valid address for sending funds to"
 msgstr ""
 
 #: src/components/standard/WalletStandardCards.tsx:23
-msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
-msgstr "이것은 거래를하기 위해 현재 사용할 수있는 Chia의 양입니다. 여기에는 보류중인 농업 보상, 보류중인 수신 거래 및 방금 지출했지만 아직 블록 체인에 포함되지 않은 Chia는 포함되지 않습니다."
+msgid "This is the amount of Flax that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Flax that you have just spent but is not yet in the blockchain."
+msgstr "이것은 거래를하기 위해 현재 사용할 수있는 Flax의 양입니다. 여기에는 보류중인 농업 보상, 보류중인 수신 거래 및 방금 지출했지만 아직 블록 체인에 포함되지 않은 Flax는 포함되지 않습니다."
 
 #: src/components/standard/WalletStandardCards.tsx:42
 msgid "This is the pending change, which are change coins which you have sent to yourself, but have not been confirmed yet."
@@ -496,7 +496,7 @@ msgid "This is the sum of the incoming and outgoing pending transactions (not ye
 msgstr "이것은 들어오고 나가는 보류 트랜잭션의 합계입니다 (아직 블록 체인에 포함되지 않음). 여기에는 농업 보상이 포함되지 않습니다."
 
 #: src/components/standard/WalletStandardCards.tsx:17
-msgid "This is the total amount of chia in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of flax in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 msgstr ""
 
 #: src/components/standard/WalletStandardCards.tsx:30
@@ -565,7 +565,7 @@ msgid "Welcome! The following words are used for your wallet backup. Without the
 msgstr "환영합니다. 다음의 단어들은 당신의 지갑 백업에 사용됩니다. 단어를 잊는다면, 지갑 접근 권한을 잃게 될 것이기 때문에 꼭 저장하세요. 각각의 단어를 순서에 맞게 적어두세요. (순서가 매우 중요합니다)"
 
 #: src/components/WalletsSidebar.tsx:106
-msgid "Your CAT tokens have been upgraded!"
+msgid "Your custom asset tokens have been upgraded!"
 msgstr ""
 
 #: src/components/WalletImport.tsx:72

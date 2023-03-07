@@ -1,6 +1,6 @@
-import type { Wallet } from '@chia-network/api';
-import { WalletType } from '@chia-network/api';
-import { useGetWalletsQuery, useGetWalletBalanceQuery } from '@chia-network/api-react';
+import type { Wallet } from '@flax-network/api';
+import { WalletType } from '@flax-network/api';
+import { useGetWalletsQuery, useGetWalletBalanceQuery } from '@flax-network/api-react';
 import { useMemo } from 'react';
 
 export default function useStandardWallet(): {

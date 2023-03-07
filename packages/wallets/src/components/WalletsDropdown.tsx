@@ -1,6 +1,6 @@
-import { WalletType, type Wallet } from '@chia-network/api';
-import { useGetWalletsQuery } from '@chia-network/api-react';
-import { Dropdown, Flex, Loading, useTrans } from '@chia-network/core';
+import { WalletType, type Wallet } from '@flax-network/api';
+import { useGetWalletsQuery } from '@flax-network/api-react';
+import { Dropdown, Flex, Loading, useTrans } from '@flax-network/core';
 import { ListItemIcon, ListItemText, Typography } from '@mui/material';
 import React, { useMemo } from 'react';
 import { useNavigate } from 'react-router';
@@ -12,7 +12,7 @@ import WalletIcon from './WalletIcon';
 function getPrimaryTitle(wallet: Wallet): string {
   switch (wallet.type) {
     case WalletType.STANDARD_WALLET:
-      return 'Chia';
+      return 'Flax';
     default:
       return wallet.name;
   }

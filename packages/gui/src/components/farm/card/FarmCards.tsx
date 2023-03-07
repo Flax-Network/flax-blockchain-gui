@@ -6,7 +6,7 @@ import FarmCardExpectedTimeToWin from './FarmCardExpectedTimeToWin';
 import FarmCardLastHeightFarmed from './FarmCardLastHeightFarmed';
 import FarmCardPlotCount from './FarmCardPlotCount';
 import FarmCardStatus from './FarmCardStatus';
-import FarmCardTotalChiaFarmed from './FarmCardTotalChiaFarmed';
+import FarmCardTotalFlaxFarmed from './FarmCardTotalFlaxFarmed';
 import FarmCardTotalNetworkSpace from './FarmCardTotalNetworkSpace';
 import FarmCardTotalSizeOfPlots from './FarmCardTotalSizeOfPlots';
 import FarmCardUserFees from './FarmCardUserFees';
@@ -19,7 +19,7 @@ export default function FarmCards() {
           <FarmCardStatus />
         </Grid>
         <Grid xs={12} sm={6} md={4} item>
-          <FarmCardTotalChiaFarmed />
+          <FarmCardTotalFlaxFarmed />
         </Grid>
         <Grid xs={12} sm={6} md={4} item>
           <FarmCardBlockRewards />

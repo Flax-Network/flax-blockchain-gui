@@ -1,4 +1,4 @@
-import { Flex, SideBarItem } from '@chia-network/core';
+import { Flex, SideBarItem } from '@flax-network/core';
 import {
   Farming as FarmingIcon,
   FullNode as FullNodeIcon,
@@ -8,7 +8,7 @@ import {
   Offers as OffersIcon,
   Tokens as TokensIcon,
   Settings as SettingsIcon,
-} from '@chia-network/icons';
+} from '@flax-network/icons';
 import { Trans } from '@lingui/macro';
 import { Box } from '@mui/material';
 import React from 'react';
@@ -96,12 +96,6 @@ export default function DashboardSideBar(props: DashboardSideBarProps) {
               icon={FarmingIcon}
               title={<Trans>Farming</Trans>}
               data-testid="DashboardSideBar-farming"
-            />
-            <SideBarItem
-              to="/dashboard/pool"
-              icon={PoolingIcon}
-              title={<Trans>Pooling</Trans>}
-              data-testid="DashboardSideBar-pooling"
             />
           </>
         )}

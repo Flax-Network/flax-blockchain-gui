@@ -1,6 +1,6 @@
-import { WalletType } from '@chia-network/api';
-import type { OfferSummaryAssetInfo, OfferSummaryRecord } from '@chia-network/api';
-import { mojoToCAT, mojoToChia, mojoToCATLocaleString, mojoToChiaLocaleString } from '@chia-network/core';
+import { WalletType } from '@flax-network/api';
+import type { OfferSummaryAssetInfo, OfferSummaryRecord } from '@flax-network/api';
+import { mojoToCAT, mojoToFlax, mojoToCATLocaleString, mojoToFlaxLocaleString } from '@flax-network/core';
 import { t } from '@lingui/macro';
 import type { ChipProps } from '@mui/material';
 
@@ -40,7 +40,7 @@ export function summaryStringsForNFTOffer(
   builder: (filename: string, args: [assetInfo: AssetIdMapEntry | undefined, amount: string]) => string
 ): [makerString: string, takerString: string] {
   // const makerAssetType = offerAssetTypeForAssetId
-  // TODO: Remove 1:1 NFT <--> XCH assumption
+  // TODO: Remove 1:1 NFT <--> XFX assumption
   const makerEntry: [string, string] = Object.entries(summary.offered)[0] as [string, string];
   const takerEntry: [string, string] = Object.entries(summary.requested)[0] as [string, string];
   const makerAssetType = offerAssetTypeForAssetId(makerEntry[0], summary);
@@ -185,7 +185,7 @@ export function colorForOfferState(state: OfferState): ChipProps['color'] {
 
 export function formatAmountForWalletType(amount: string | number, walletType: WalletType, locale?: string): string {
   if (walletType === WalletType.STANDARD_WALLET) {
-    return mojoToChiaLocaleString(amount, locale);
+    return mojoToFlaxLocaleString(amount, locale);
   }
   if (walletType === WalletType.CAT) {
     return mojoToCATLocaleString(amount, locale);
@@ -223,8 +223,8 @@ export function offerContainsAssetOfType(
 export function offerAssetTypeForAssetId(assetId: string, offerSummary: OfferSummaryRecord): OfferAsset | undefined {
   let assetType: OfferAsset | undefined;
 
-  if (['xch', 'txch'].includes(assetId)) {
-    assetType = OfferAsset.CHIA;
+  if (['xfx', 'txfx'].includes(assetId)) {
+    assetType = OfferAsset.FLAX;
   } else {
     const { infos } = offerSummary;
     const info: OfferSummaryAssetInfo = infos[assetId];
@@ -258,8 +258,8 @@ export function offerAssetIdForAssetType(
     keys = [...Object.keys(offerSummary.offered), ...Object.keys(offerSummary.requested)];
   }
 
-  if (assetType === OfferAsset.CHIA) {
-    return keys.includes('xch') ? 'xch' : undefined;
+  if (assetType === OfferAsset.FLAX) {
+    return keys.includes('xfx') ? 'xfx' : undefined;
   }
 
   const assetId = Object.keys(offerSummary.infos).find(
@@ -308,12 +308,12 @@ export function getNFTPriceWithoutRoyalties(
   summary: OfferSummaryRecord
 ): GetNFTPriceWithoutRoyaltiesResult | undefined {
   // eslint-disable-next-line no-restricted-syntax -- We are returning a value, so cannot use .forEach()
-  for (const assetType of [OfferAsset.TOKEN, OfferAsset.CHIA]) {
+  for (const assetType of [OfferAsset.TOKEN, OfferAsset.FLAX]) {
     const assetId = offerAssetIdForAssetType(assetType, summary);
     if (assetId) {
       const amountInMojos = offerAssetAmountForAssetId(assetId, summary);
       if (amountInMojos) {
-        const amountInTokens = assetType === OfferAsset.CHIA ? mojoToChia(amountInMojos) : mojoToCAT(amountInMojos);
+        const amountInTokens = assetType === OfferAsset.FLAX ? mojoToFlax(amountInMojos) : mojoToCAT(amountInMojos);
         return { amount: amountInTokens.toNumber(), assetId, assetType };
       }
     }
